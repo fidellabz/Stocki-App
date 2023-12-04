@@ -1,0 +1,33 @@
+.main-bg{
+    background-image: url(../Assest/ved.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 200px;
+    
+}
+
+
+.contact-right{
+    background-color: #FF5722;
+    color: white;
+}
+
+.contact-box{
+    margin: 100px 0 0 100px;
+    position: absolute;   
+}
+
+.signup{
+    justify-items: center;
+}
+
+.contact-icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-bax{
+    background-color: #cce0f4;
+    margin-top: 100px;
+}

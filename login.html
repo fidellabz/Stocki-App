@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Stocki | Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+        integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets//css//login.css">
+
+</head>
+
+<body>
+
+    <div class="login-container" style="background-color: #fff;">
+        <div class="row">
+            <!-- First Column: Login Form -->
+            <div class="col-md-6" style="width: 720px;">
+                <div class="login-form text-center shadow" style="background-color:#FAFAFC;">
+                    <h2 class="mb-2 fw-bold">Welcome back!</h2>
+                    <p class="fs-6 pb-4">Sign in to access your inventory</p>
+                    <form action="#" onsubmit="login(event)">
+                        <div class="mb-3">
+                            <input type="email" id="email" class="form-control py-3" placeholder=" email" required>
+                        </div>
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <input type="password" class="form-control py-3 border border-end-0" id="password"
+                                    placeholder="Enter your password" required>
+                                <button class="btn border border-start-0" type="button" id="togglePassword">
+                                    <i class="bi bi-eye-slash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mb-3 text-end">
+                            <a href="./forgotpw.html" class="text-decoration-none" style="font-size:15px; font-weight:400;">Forgot Password?</a>
+                        </div>
+                        <div class="mt-4 button-container">
+                            <button id="signIn" value="Sign In" class="btn btn-b btn-login py-2">Login</button>
+                        </div>
+
+                    </form>
+
+                    <div class="or-divider button-container py-4">
+                        <hr><span style="font-size:small">OR</span>
+                        <hr>
+                    </div>
+
+                    <div class="social-login button-container">
+                        <a class="btn btn-b btn-social btn-outline-dark py-2 mb-3 text-center" href="#">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+                                    fill="#FFC107" />
+                                <path
+                                    d="M3.15283 7.3455L6.43833 9.755C7.32733 7.554 9.48033 6 11.9998 6C13.5293 6 14.9208 6.577 15.9803 7.5195L18.8088 4.691C17.0228 3.0265 14.6338 2 11.9998 2C8.15883 2 4.82783 4.1685 3.15283 7.3455Z"
+                                    fill="#FF3D00" />
+                                <path
+                                    d="M12.0002 22.0001C14.5832 22.0001 16.9302 21.0116 18.7047 19.4041L15.6097 16.7851C14.5719 17.5743 13.3039 18.0011 12.0002 18.0001C9.39916 18.0001 7.19066 16.3416 6.35866 14.0271L3.09766 16.5396C4.75266 19.7781 8.11366 22.0001 12.0002 22.0001Z"
+                                    fill="#4CAF50" />
+                                <path
+                                    d="M21.8055 10.0415H21V10H12V14H17.6515C17.2571 15.1082 16.5467 16.0766 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+                                    fill="#1976D2" />
+                            </svg>
+                            <span class="ps-2">Sign in with Google</span></a>
+                        <!-- <button class="btn btn-b btn-social btn-outline-dark py-2 text-center" href="#">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.1521 6.896C11.2041 6.896 9.73711 5.818 8.19211 5.856C6.15211 5.883 4.28211 7.039 3.23111 8.87C1.11411 12.545 2.68511 17.973 4.75011 20.96C5.76311 22.414 6.95811 24.05 8.54211 23.999C10.0621 23.934 10.6321 23.012 12.4771 23.012C14.3081 23.012 14.8271 23.999 16.4371 23.96C18.0741 23.934 19.1131 22.48 20.1131 21.012C21.2691 19.324 21.7491 17.687 21.7751 17.597C21.7361 17.584 18.5931 16.376 18.5551 12.74C18.5291 9.7 21.0351 8.246 21.1521 8.181C19.7231 6.091 17.5291 5.857 16.7621 5.805C14.7621 5.649 13.0871 6.896 12.1521 6.896ZM15.5301 3.83C16.3731 2.818 16.9301 1.403 16.7751 0C15.5681 0.052 14.1131 0.805 13.2431 1.818C12.4631 2.714 11.7891 4.156 11.9701 5.532C13.3081 5.636 14.6851 4.844 15.5291 3.831"
+                                    fill="black" />
+                            </svg>
+                            <span class="ps-2">Sign in with Apple</span></button> -->
+                        <div class="text-black text-center pt-3" style="font-size:small">
+                            <p class="">Do you have a stocki account? <a href="./signup.html"
+                                    style="color:#fd7e14;text-decoration: none; font-weight: bold;">SignUp now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Column: Image -->
+            <div class="col-md-6 d-flex align-items-center justify-content-center" style="width: 500px; ">
+                <div class="image-container text-center" style="margin-left: 100px;">
+                    <img src="./assets/img/login-img.png" alt="Logo" class="img-fluid">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> <!-- Include jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+       <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            var passwordInput = document.getElementById('password');
+            var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+        });
+    </script>
+    <script src="./assets/script/login.js" type="module"></script>
+
+</body>
+
+</html>

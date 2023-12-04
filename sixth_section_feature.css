@@ -1,0 +1,28 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+h1 {
+    font-size: 56px;
+}
+.contain-text {
+    font-size: 32px;
+}
+.btn-1-bg-col {
+    background-color: #0074E4;
+}
+
+.btn-2-bg-col {
+    background-color: #FF5722;
+}
+.get-started {
+    transition: all ease-in-out 0.5s;
+}
+.get-started:hover {
+    background-color: rgb(2, 45, 85);  
+}
+.see-plan {
+    transition: all ease-in-out 0.5s;
+}
+.see-plan:hover {
+    background-color: rgb(116, 30, 4); 
+}

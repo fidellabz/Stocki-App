@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Kodecamp-Dashboard</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+<!-- fontawesome cdn  -->
+<link rel="stylesheet" href="https://cdnjs cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="assets/css/dashboard1.css" rel="stylesheet">
+
+    <!-- bootstrap icon cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+</head>
+
+<body id="page-top" >
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav  sidebar sidebar-dark accordion shadow" id="accordionSidebar" style="background-color: #FAFAFC;">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                </div>
+                <div class="sidebar-brand-text text-start " style="margin-right: 80px;">
+                    <img src="assets/img/logo word.png" alt="">
+                </div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0 mt-4">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active mt-2">
+                <a class="nav-link" href="" style="color: #0074E4;">
+                    <span><img src="assets/img/Dashboard.png" alt=""></span>
+                    <span class="pt-2" style="font-size: 16px; font-weight: 700;">Dashboard</span></a>
+            </li>
+
+          
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item mt-2">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo" style="color: #1b1b1b;">
+                    <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                    <span style="font-size: 16px; font-weight: 400;">Users</span>
+                </a>
+                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded" style="color: #1b1b1b;">
+                        <h6 class="collapse-header">User Profile</h6>
+                        <a class="collapse-item" href="">Admin</a>
+                        <a class="collapse-item" href="">Client</a>
+                    </div>
+                </div> -->
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a href="/coming-soon.html" class="nav-link" href="#" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities" style="color: #1b1b1b;">
+                    <span><i class="bi bi-clock" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                    <span style="font-size: 16px; font-weight: 400;">Notification</span>
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a href="/coming-soon.html" class="nav-link collapsed" href="#" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities" style="color: #1b1b1b;">
+                    <span><i class="bi bi-calendar-week" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                    <span class="" style="font-size: 16px; font-weight: 400;">Report</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider mt-2">
+
+            <!-- Heading -->
+            <div class="sidebar-heading mt-2" style="color: #b2b2b2;">
+               Inventory
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a href="/product.html" class="nav-link collapsed" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
+                  <span><i class="bi bi-kanban" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                    <span style="font-size: 16px; font-weight: 400;">Product</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a href="/coming-soon.html" class="nav-link" style="color: #1b1b1b;">
+                  <span><i class="bi bi-graph-up" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                    <span style="font-size: 16px; font-weight: 400;">Stock Level</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a href="/coming-soon.html" class="nav-link" style="color: #1b1b1b;">
+                    <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                    <span style="font-size: 16px; font-weight: 400;">Supplier</span></a>
+            </li>
+
+             <!-- Nav Item - Tables -->
+             <li class="nav-item">
+                <a href="/coming-soon.html" class="nav-link" style="color: #1b1b1b;">
+                    <span><i class="bi bi-hourglass" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                    <span style="font-size: 16px; font-weight: 400;">Expiring Date</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block mt-2"></hr>
+
+               <!-- Heading -->
+            <div class="sidebar-heading mt-2" style="color: #b2b2b2;">
+                Finance
+             </div>
+ 
+             <!-- Nav Item - Pages Collapse Menu -->
+             <li class="nav-item">
+                 <a href="/coming-soon.html" class="nav-link collapsed" data-target="#collapsePages"
+                     aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
+                     <span><i class="bi bi-coin" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                     <span style="font-size: 16px; font-weight: 400;">Sales Tracking</span>
+                 </a>
+              
+             </li>
+ 
+             <!-- Nav Item - Charts -->
+             <li class="nav-item">
+                 <a href="/coming-soon.html" class="nav-link" style="color: #1b1b1b;">
+                     <span><i class="bi bi-credit-card" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                     <span style="font-size: 16px; font-weight: 400;">Expenses</span></a>
+             </li>
+ 
+             <!-- Nav Item - Tables -->
+             <li class="nav-item">
+                 <a href="/coming-soon.html" class="nav-link" style="color: #1b1b1b;">
+                     <span><i class="bi bi-bar-chart-line" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                     <span style="font-size: 16px; font-weight: 400;">Profit Analysis</span></a>
+             </li>
+ 
+             
+              <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block mt-2">
+
+         
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item mt-2">
+              <a class="nav-link collapsed" data-target="#collapsePages"
+                  aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
+                  <span><i class="bi bi-gear" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                  <span style="font-size: 16px; font-weight: 400;">Settings</span>
+              </a>
+          </li>
+
+          <!-- Nav Item - Charts -->
+          <li class="nav-item">
+              <a class="nav-link" href="logout.html" style="color: #ff0000;">
+                  <span><i class="bi bi-box-arrow-in-right" style="color: #ff0000; font-size: 18px;"></i></span>
+                  <span style="font-size: 16px; font-weight: 400;">Logout</span></a>
+          </li>
+        </ul>
+        <!-- End of Sidebar -->
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <main class="bg-white" style="margin: 0;">
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav
+                class="m-3 py-5 navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm rounded">
+                <div style="width:70rem">
+                    <h3 class="pt-4" style="font-size: 16px;font-weight:bold;">Dashboard - Kodecamp
+                        SuperMarket</h3>
+                    <p class="pb-3" style="font-size: 12px; font-weight: 400px;" id="datetime2"></p>
+                </div>
+                <!-- Topbar Search -->
+                <form class=" d-none d-sm-inline-block form-inline mr-5 ml-md-3 my-2 my-md-0 navbar-search"
+                    style="width:80rem">
+                    <div class="input-group">
+                        <input type="text" class="form-control border" placeholder="Search..."
+                            aria-label="Search" aria-describedby="basic-addon2">
+                    </div>
+                </form>
+
+                <div class=" d-flex ml-5" style="margin-right: 10px;">
+                    <div style="margin-left: 20px;">
+                        <img src="assets/img/iconamoon_scanner-light.png" alt="">
+                    </div>
+
+                    <div style="margin-left: 20px;">
+                        <img src="assets/img/Notifications.png" alt="">
+                    </div>
+                </div>
+
+                <div class="d-flex ml-5 mr-5">
+                    <img src="assets/img/Button Dark Mode.png" alt="">
+                </div>
+                <!-- Topbar Navbar -->
+
+
+
+                <!-- Nav Item - User Information -->
+                <div class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">   
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee <br> Admin</span>
+                        <img class="img-profile rounded-circle mr-2" src="assets/img/Douglas.png">
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.563 6.46634L8.56302 10.4663C8.42969 10.5997 8.29635 10.6663 8.09635 10.6663C7.89635 10.6663 7.76302 10.5997 7.62969 10.4663L3.62969 6.46634C3.36302 6.19967 3.36302 5.79967 3.62969 5.53301C3.89635 5.26634 4.29635 5.26634 4.56302 5.53301L8.09635 9.06634L11.6297 5.53301C11.8964 5.26634 12.2964 5.26634 12.563 5.53301C12.8297 5.79967 12.8297 6.19967 12.563 6.46634Z" fill="black"/>
+                            <mask id="mask0_1675_2336" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="3" y="5" width="10" height="6">
+                            <path d="M12.563 6.46634L8.56302 10.4663C8.42969 10.5997 8.29635 10.6663 8.09635 10.6663C7.89635 10.6663 7.76302 10.5997 7.62969 10.4663L3.62969 6.46634C3.36302 6.19967 3.36302 5.79967 3.62969 5.53301C3.89635 5.26634 4.29635 5.26634 4.56302 5.53301L8.09635 9.06634L11.6297 5.53301C11.8964 5.26634 12.2964 5.26634 12.563 5.53301C12.8297 5.79967 12.8297 6.19967 12.563 6.46634Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_1675_2336)">
+                            <rect x="-7.90234" width="16" height="16" fill="#6E6B7B"/>
+                            </g>
+                            </svg>
+                    </a>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                        aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#">
+                                <i class="bi bi-gear mr-2 text-gray-40"></i>
+                            Settings
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-sliders2 mr-2 text-gray-400"></i>
+                            Preferences
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-credit-card mr-2 text-gray-400"></i>
+                            Plan & Billings
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2" style="color:red"></i>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+
+                </ul>
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid bg-white">
+                <!-- Content Row -->
+
+                <!-- First Row -->
+                <div class="row mb-4">
+                    <!-- Column 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow" style="height: 14rem;">
+                            <!-- Content for Column 1 -->
+                            <div class="card-body">
+                                <div class="">
+                                    <h6 style="font-size: 16px; font-weight: 400;">Good Afternoon<i
+                                            class="bi bi-cloud-sun"
+                                            style="color: #FBFF22; font-weight: bolder;"></i>Kodecamp</h6>
+                                </div>
+
+                                <div class="d-flex">
+                                    <div class="mb-3">
+                                        <p class="text-start" style="font-size: 11px; font-weight: 400;">Here is
+                                            your weekly overview <br> report</p>
+                                        <button class="btn blue-cta-btn text-center mt-4"
+                                            style=" font-size: 11px; font-weight: 400; border-radius:8px; white-space: nowrap;">View
+                                            Report</button>
+                                    </div>
+                                    <div>
+                                        <img src="assets/img/Greetings.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Column underneath -->
+                        <div class="card mt-4 shadow"
+                            style="height:26rem;width:58rem;max-width: auto;">
+
+                            <!-- Content for Additional Column 1 -->
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between bg-white">
+                                    <h6 class="m-0 text-dark" style="font-size: 16px;"><b>Overall
+                                            Earnings</b><span style="font-weight: 400; font-size: 16px;"> - This
+                                            Week </span> <span style="margin-left: 20px;"><img
+                                                src="assets/img/arrow-2.png" alt=""></span></h6>
+
+                                    <h5 class="pri-text-col pt-2" style="font-size: 16px;">₦900.9k</h5>
+
+                                    <!-- Example single danger button -->
+
+                                    <div class="btn-group">
+                                        <div class="dropdown">
+                                            <button class="btn border px-4 dropdown-toggle"
+                                                type="button" id="statusDropdown1" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"
+                                                style="white-space:nowrap;font-size: small;">
+                                                Daily
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="updateDropdownText('Daily', 'statusDropdown1')">Daily</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="updateDropdownText('Weekly', 'statusDropdown1')">Weekly</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="updateDropdownText('Monthly', 'statusDropdown1')">Monthly</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="updateDropdownText('Yearly', 'statusDropdown1')">Yearly</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <canvas id="myAreaChart"
+                                        style="display:block;width:501px;height:100%;height:300px;"
+                                        class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow p-4" style="height: 14rem;">
+                            <!-- Content for Column 2 -->
+                            <div class="mt-2 d-flex justify-content-between">
+                                <!-- ... your card 2 content ... -->
+                                <h5 class="mt-2" style="font-size: 16px; font-weight: 600;">Products Overview
+                                </h5>
+                                <!-- Example single danger button -->
+                                <div class="btn-group">
+                                    <div class="dropdown">
+                                        <button class="btn border dropdown-toggle" type="button"
+                                            id="statusDropdown1" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false" style="white-space: nowrap;font-size: small;">
+                                            in last 7 Days
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="statusDropdown1">
+                                            <a class="dropdown-item" href="#"
+                                                onclick="updateDropdownText('Weekly', 'statusDropdown1')">Last week</a>
+                                            <a class="dropdown-item" href="#"
+                                                onclick="updateDropdownText('Monthly', 'statusDropdown1')">Last month</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between mt-3">
+                                <p style="font-size: 14px; font-weight: 400;"><img src="assets/img/book.png"
+                                        alt=""> Exercise
+                                    Books 80L</p>
+                                <p style="font-size: 14px; font-weight: 400;">351 Pcs</p>
+                                <p style="font-size: 14px; font-weight: 400;">34% <img
+                                        src="assets/img/arrow3.png" alt=""></p>
+                            </div>
+
+                            <div class="d-flex justify-content-between mt-2">
+                                <p style="font-size: 14px; font-weight: 400;"><img src="assets/img/book.png"
+                                        alt=""> Tissue
+                                    Papper</p>
+                                <p style="font-size: 14px; font-weight: 400;  margin-left: 40px;">281 Pcs
+                                </p>
+                                <p style="font-size: 14px; font-weight: 400;">7.3% <img
+                                        src="assets/img/Arrow-4.png" alt=""></p>
+                            </div>
+
+                            <div class="d-flex justify-content-between mt-2">
+                                <p style="font-size: 14px; font-weight: 400;">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.9987 0.333008C10.6654 0.333008 13.6654 2.57301 13.6654 5.33301C13.6654 6.45967 13.172 7.49967 12.332 8.33301V13.6663H1.66536V8.33301C0.825365 7.49967 0.332031 6.45967 0.332031 5.33301C0.332031 2.57301 3.33203 0.333008 6.9987 0.333008ZM10.9987 7.75967C11.8254 7.11301 12.332 6.25967 12.332 5.33301C12.332 3.30634 9.94536 1.66634 6.9987 1.66634C4.05203 1.66634 1.66536 3.30634 1.66536 5.33301C1.66536 6.25967 2.17203 7.11301 2.9987 7.75967V12.333H10.9987V7.75967ZM4.33203 10.9997V8.33301H6.9987V10.9997H4.33203Z" fill="black"/>
+                                        </svg>                                        
+                                         Bread</p>
+                                <p style="font-size: 14px; font-weight: 400; margin-left: 90px;">67 Pcs</p>
+                                <p style="font-size: 14px; font-weight: 400;">14.7% <img
+                                        src="assets/img/arrow3.png" alt=""></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="col-md-4">
+                        <div class="card shadow p-4" style="height: 41.5rem;">
+                            <!-- Content for Column 3 -->
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <h6 class="m-0 text-center" style="font-size: small;">Expiring Product Status
+                                </h6>
+                                <div class="chart-pie py-2 pb-2">
+                                    <canvas id="myPieChart"></canvas>
+                                </div>
+
+
+                                <div class="mt-5 text-start small ">
+
+                                    <!-- 1st Row -->
+                                    <div class="row pt-5 mb-5">
+
+                                        <!-- Column 1 -->
+                                        <div class="col-md-6">
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-square-fill"
+                                                    style="font-size: 25px; color: #FBFF22; margin-right: 10px;"></i>
+                                                <div class="text-start">
+                                                    <h6 class="mt-1 mb-0"
+                                                        style="white-space: nowrap; font-size: 12px; font-weight: 500;">
+                                                        Approaching Expiry</h6>
+                                                    <p class="text-dark "
+                                                        style="margin: 0%; font-size: 12px; font-weight: 400;">
+                                                        12%</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column 2 -->
+                                        <div class="col-md-6">
+                                            <div class="d-flex" style="margin-left: 20px;">
+                                                <i class="bi bi-square-fill"
+                                                    style="font-size: 25px; color: #ff0000; margin-right: 10px;"></i>
+                                                <div class="text-start">
+                                                    <h6 class="mt-1 mb-0"
+                                                        style="white-space: nowrap; font-size: 12px; font-weight: 500;">
+                                                        Expired</h6>
+                                                    <p class="text-dark "
+                                                        style="margin: 0%; font-size: 12px; font-weight: 400;">
+                                                        4%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- 2nd Row -->
+                                    <div class="row">
+
+                                        <!-- Column 3 -->
+                                        <div class="col-md-6">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <i class="bi bi-square-fill mr-2"
+                                                        style="font-size:25px; color:#FF8A00;"></i>
+                                                    <div class="text-start">
+                                                        <h6 class="mt-1 mb-0"" style=" white-space: nowrap;
+                                                            font-size: 12px; font-weight: 500;">Urgently Expiry
+                                                            <br>Attention</h6>
+                                                        <p class="text-dark "
+                                                            style="margin: 0%; font-size: 12px; font-weight: 400;">
+                                                            13%</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Column 4 -->
+                                        <div class="col-md-6">
+                                            <div class="d-flex" style="margin-left: 20px;">
+                                                <i class="bi bi-square-fill"
+                                                    style="font-size: 25px; color: #06C270; margin-right: 10px;"></i>
+                                                <div class="text-start">
+                                                    <h6 class="mt-1 mb-0"
+                                                        style="white-space: nowrap; font-size: 12px; font-weight: 500;">
+                                                        Safe Product</h6>
+                                                    <p class="text-dark m-0"
+                                                        style="font-size: 12px; font-weight: 400;">70%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3rd Row... -->
+                    <!-- Column 1 -->
+                    
+                    <div class="col-md-4 mb-4">
+                        
+                        <div class="card shadow" style="height: 30rem;">
+                            <!-- Content for Column 1 -->
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <h6 class="m-0 font-weight-bold"
+                                            style="font-size: 16px; font-weight: 400;">Sales / Expenses</h6>
+                                        <p id='datetime1' class="text-dark" style="font-size: 11px; font-weight: 400;"></p>
+                                    </div>
+
+                                    <div class="btn-group">
+                                        <div class="dropdown">
+                                            <button class="btn border px-4 shadow-sm dropdown-toggle"
+                                                type="button" id="statusDropdown1" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false"
+                                                style="white-space: nowrap;font-size: small;">Today
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown2">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="updateDropdownText('Weekly', 'statusDropdown2')">Weekly</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="updateDropdownText('Monthly', 'statusDropdown2')">Monthly</a>
+                                                    <a class="dropdown-item" href="#"
+                                                    onclick="updateDropdownText('3-months', 'statusDropdown2')">3-months</a>
+                                                    <a class="dropdown-item" href="#"
+                                                    onclick="updateDropdownText('6-months', 'statusDropdown2')">6-months</a>
+                                                    <a class="dropdown-item" href="#"
+                                                    onclick="updateDropdownText('Yearly', 'statusDropdown2')">Yearly</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="doughnut py-0 pb-0">
+                                <canvas id="myDoughnutChart" style="width: 150px;"></canvas>
+                            </div>
+                            <div style="width: 80%; margin: auto; margin-bottom: 10px;">
+                                <div class="d-flex justify-content-between mt32">
+                                    <p style="font-size: 14px; font-weight: 400;"><span><i
+                                                class="bi bi-circle-fill" style="color: #006AFF;"></i></span>
+                                        Total Sales</p>
+                                    <p style="font-size: 14px; font-weight: 400;">54% <i class="bi bi-arrow-up"
+                                            style="color:#52C93F;"></i></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <p style="font-size: 14px; font-weight: 400;"><span><i
+                                                class="bi bi-circle-fill" style="color:#52C93F;"></i></span>
+                                        Total Expenses</p>
+                                    <p style="font-size: 14px; font-weight: 400;">20% <i class="bi bi-arrow-up"
+                                            style="color:#52C93F;"></i></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-5 pb-5">
+                                    <p style="font-size: 14px; font-weight: 400;"><span><i
+                                                class="bi bi-circle-fill" style="color: #FF2727;"></i></span>
+                                        Total Expired Goods</p>
+                                    <p style="font-size: 14px; font-weight: 400;">25% <i class="bi bi-arrow-up"
+                                            style="color:#FF2727;"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Column 2 -->
+<div class="col-md-8 mb-4">
+ <!-- Transparent Cover -->
+ <div class="transparent-cover">
+    <button class="btn blue-cta-btn upgrade-btn" onclick="upgradePlan()">Upgrade Plan</button>
+    <p style="color: #000;">Click here to access these features</p>
+</div>
+<div class="card shadow p-4" style="height: 30rem;">
+    <!-- Content for Column 2 -->
+    <div class="card-body">
+        <!-- DataTales Example -->
+        <div class="card border-0">
+            <div class="card-body">
+                <div class="container pb-1">
+                    <div class="row">
+                        <!-- Left Column -->
+                        <div class="col text-left">
+                            Supplier's Overview
+                        </div>
+                
+                        <!-- Right Column -->
+                        <div class="col text-right">
+                            <i class="fa-regular fa-sliders"></i>
+                            Filter
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive ">                        
+                    <table class="table table-bordered-0" id="dataTable" width="100%" cellspacing="0">
+                        <thead class="rounded-4" style="background-color: #52A0ED33;">
+
+                            <tr>
+                                <th>No.</th>
+                                <th>Supplier's Name</th>
+                                <th>Product</th>
+                                <th>Contact</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                       
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle mr-2">
+                                            <img src="./assets/img/tb-Image.png" alt="" srcset="" style="height: 2rem;">
+                                        </div>
+                                        <div>
+                                            <p class="mb-0">Kalid Duale</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Beverage</td>
+                                <td>+234 841 456 ***</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-primary" type="button" style="font-size:10px">
+                                            Details
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle mr-2">
+                                            <img src="./assets/img/tb-Image.png" alt="" srcset="" style="height: 2rem;">
+                                        </div>
+                                        <div>
+                                            <p class="mb-0">Halda Joseph</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Beverages</td>
+                                <td>+234 841 456 ***</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-primary" type="button" style="font-size:10px">
+                                            Details
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle mr-2">
+                                            <img src="./assets/img/tb-Image.png" alt="" srcset="" style="height: 2rem;">
+                                        </div>
+                                        <div>
+                                            <p class="mb-0">Ugonma A.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Beverages</td>
+                                <td>+234 841 456 ***</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-primary" type="button" style="font-size:10px">
+                                            Details
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr><tr>
+                                <td>04</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle mr-2">
+                                            <img src="./assets/img/tb-Image.png" alt="" srcset="" style="height: 2rem;">
+                                        </div>
+                                        <div>
+                                            <p class="mb-0">Tolutope U.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Beverages</td>
+                                <td>+234 841 456 ***</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-primary" type="button" style="font-size:10px">
+                                            Details
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-circle mr-2">
+                                            <img src="./assets/img/tb-Image.png" alt="" srcset="" style="height: 2rem;">
+                                        </div>
+                                        <div>
+                                            <p class="mb-0">Ishola N.</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Beverages</td>
+                                <td>+234 841 456 ***</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-primary" type="button" style="font-size:10px">
+                                            Details
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            
+                          
+                        </tbody>
+                    </table>              
+                </div>
+            </div>
+            
+
+    </div>
+    </div>
+
+    
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+</div>
+                          </div>
+    <!-- End of Page Wrapper -->
+   
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="assets/script/chart-area-demo.js"></script>
+    <script src="assets/script/chart-pie-demo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    <script>
+        // Dropdown for the status button
+        function updateDropdownText(text, dropdownId) {
+        $('#' + dropdownId).text(text);
+    }
+
+        // Data for the chart
+        var data = {
+        //   labels: ['Blue', 'green', 'red'],
+          datasets: [{
+            data: [54, 20, 25,],
+            backgroundColor: ['#006AFF', '#52C93F', '#FF2727']
+          }]
+        };
+    
+        // Options for the chart
+        var options = {
+          cutout: '70%', // Adjust the cutout percentage for the doughnut effect
+          responsive: true,
+          maintainAspectRatio: false
+        };
+    
+        // Get the context of the canvas element we want to select
+        var ctx = document.getElementById('myDoughnutChart').getContext('2d');
+    
+        // Create the doughnut chart
+        var myDoughnutChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: data,
+          options: options
+        });
+
+          // Handle upgrade plan action
+          function upgradePlan() {
+           
+        }
+
+// create a function to update the date and time
+function updateDateTime() {
+    // create a new `Date` object
+    const now = new Date();
+
+    // get the current date and time as a string
+    const currentDateTime = now.toLocaleString();
+
+    // update the `textContent` property of the `span` elements with the ids of `datetime1` and `datetime2`
+    document.querySelectorAll('#datetime1, #datetime2').forEach(element => {
+        element.textContent = currentDateTime;
+    });
+}
+
+// call the `updateDateTime` function every second
+setInterval(updateDateTime, 1000);
+
+      </script>
+    
+ 
+
+</body>
+
+</html>

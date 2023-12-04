@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helpdesk</title>
+    <link rel="stylesheet" href="assets/css/helpdesk.css">
+    <!--bootstrap-->
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!--font style-->
+    <!-- google font cdn --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">   
+</head>
+<body>
+    <!-- Header -->
+    <header class="container-fluid position-fixed w-100 ">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container" style="gap: 700px;"> 
+                <a class="navbar-brand  fs-6 ms-3" href="#"><img src="assets/img/stocki logo.png" alt=""></a>            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="gap: 20px;">
+                    <div>
+                        <div class="d-flex gap-2">
+                           <button class="btn text-primary"><span> <a><i class="bi bi-search text-primary"></i></a></span>  Submit a Request </button>
+                        </div>                
+                    </div>
+                    <a href="./login.html" class="btn btn-outline-col me-3 " style="white-space: nowrap;font-size: 12px;">Sign In</a>
+                </div>  
+            </div>
+        </nav>
+  </header> 
+    <section class="container top" style="background-color: #ff5722;">
+        <div class="container-hero" style="padding-left:18%;">
+            <div class="hero-title text-white" style="width:718px; height:178px;">
+                <h1 class="text-center">How can we help?</h1>
+                <div class="find-anything d-flex flex-row" style="gap:3%">
+                    <input type="text" class="form-control" placeholder=" Find anything" style="width:550px; height:60px;">
+                    <button class="btn black-cta-btn me-md-2" type="button" >Search</button>
+                </div>                   
+            </div>    
+        </div>
+        <div class="whitewave">
+            <img src="../assets/img/whitewaves.png" style="margin-top: 140px;">
+        </div>
+    </section>    
+    <section class="">        
+        <div class="cards row row-cols-1 row-cols-md-4 justify-content-center gap-5" style=" height:300px">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title py-5 text-center">Getting Started</h5>                  
+                      <p class="card-text text-center">Get the basics on Stocki best practice adding and updating
+                        items, setting up inventory and more.</p>                  
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title py-5 text-center">Training Resources</h5>                  
+                    <p class="card-text text-center ">How to make Subscription changes and manage and update your
+                        account settings.</p>                  
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title py-5 text-center">FAQs</h5>                  
+                    <p class="card-text text-center">Commonly asked questions including plan information accessing 
+                        Stocki and upcoming features.</p>                  
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <section class="main-bg d-flex">
+            <div class="contact-left" style="width: 60%; height: 100%;">
+              <div class="mb-3 text-center">
+                <h1 class="text-white mt-5 pt-5 mb-5 pb-3" style="font-weight: bold;">Contact Us</h1>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Fullname"
+                 style="color: #C7C9D9; width: 544px; height: 60px; margin: auto">
+              </div>
+          
+              <div class="mb-3">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email" 
+                style="color: #C7C9D9; width: 544px; height: 60px; margin: auto">
+              </div>
+          
+              <div class="mb-3">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Message"
+                 style="color: #C7C9D9; width: 544px; height: 150px; margin: auto"></textarea>
+              </div>
+          
+              <div class="mb-3 d-flex justify-content-center align-items-center text-white y-2  ">
+                <button type="button" class="btn orange-cta-btn text-white " style="width: 150px; white-space: nowrap;">
+                  send message
+                  </button>
+                </div>
+            </div>          
+            <div class="contact-right sec-bg-col" style="width: 40%; height: 100%;">
+              <div class="mt-5 pt-5">
+              <div class="mt-5 pt-5">
+              <div class="contact-right-content text-center text-white" >
+              <div class="contact-right-content text-center text-white" >
+              <h6 style="font-size: 22px;"><span class="pe-3"><i class="bi bi-telephone-fill"></i></span> Phone Number</h6>
+              <p class="ps-4" style="font-size: 16px; font-weight: 300;">+234 555 903 4223</p>
+          
+              <h6 style="font-size: 22px; "><span class="pe-3 mt-5"><i class="bi bi-envelope-fill"></i></span> Email Address</h6>
+              <p class="" style="font-size: 16px; font-weight: 300; margin-left: 35px;">stocki@gmail.com</p>
+          
+              <h6 class="" style="font-size: 22px; margin-right: 60px;"><span class="pe-3 mt-5"><i class="bi bi-geo-alt-fill"></i></span> Location</h6>
+              <p class="address" style="font-size: 16px; font-weight: lighter; padding-left: 150px; white-space: nowrap;">12, Babatunde Ajose Road, Eti Osa</p>
+            </div>
+            <div class="ps-1  contact-icons d-flex  justify-content-center gap-3 text-center text-white"  style="font-size: 26px; " >
+              <i class="bi bi-instagram contact-icon" ></i>
+              <i class="bi bi-twitter-x contact-icon"></i>
+              <i class="bi bi-whatsapp contact-icon"></i>
+              <i class="bi bi-facebook contact-icon"></i>
+              <i class="bi bi-linkedin contact-icon"></i>
+            </div>          
+        </div>
+        <!-- contact section copy-->
+    </section>
+    <section class="container">
+        <div class="foot-text" style="width:100%; height:178px; color:#ff5722; padding-top:150px;">
+            <h1>Cant find what you are looking for?</h1>
+            <h4 class="py-3">Let us help you!</h4>
+            <div class="pt-3 btn">                
+                <a href="./login.html" class="btn btn-outline-col" style="white-space: nowrap;font-size: 12px;">Submit a Request</a>
+            </div>                   
+        </div>         
+    </section>
+    <footer>
+        <div>            
+            <img src="../assets/img/waves.png" style="width:100%; margin-top: 220px;">
+        </div>
+        <div class="Container-foot d-flex flex-row" style="gap:40%; background-color: #ff5722;">
+            <div class="col ">
+                <p class="footer-contact text-white text-center w-100">&copy; Stocki Support</p>
+            </div>
+            <div class="contact-icons col d-flex  gap-3 text-center text-white sec-text-col" >
+                <i class="bi bi-instagram "></i>
+                <i class="bi bi-twitter-x "></i>
+                <i class="bi bi-whatsapp "></i>
+                <i class="bi bi-facebook  "></i>
+                <i class="bi bi-linkedin "></i>
+            </div> 
+        </div>
+
+    </footer>
+    
+</body>
+</html>

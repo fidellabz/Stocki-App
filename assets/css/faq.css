@@ -1,0 +1,34 @@
+.b{
+    background-color: #0074E4;
+}
+.a{
+    color: #FF5722;
+}
+.btn-outline-a{
+    color: #FF5722;
+}
+.c{
+    color: #333333;
+}
+select{
+    border: 1px solid  #0063F7 !important ;
+}
+option{
+    width: 50% !important;
+}
+.w{
+    width: auto !important;
+}
+
+
+@media only screen and  (max-width: 500px) {
+.s{
+    flex-direction: column;
+    align-items: center;
+}
+.p{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+}

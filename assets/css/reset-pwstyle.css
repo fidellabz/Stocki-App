@@ -1,0 +1,54 @@
+#reset-forgotpw{
+    background: linear-gradient(to bottom,#BBD8F7, #FE754A); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15% 15% ;
+    height: 100vh;
+}
+.box{
+    background-color: white;
+    width: 900px;
+    height: 520px;
+    border-radius: 20px;
+}
+.inner-box{
+    padding: 10% ;
+}
+h2{
+    font-family: 'Poppins', sans-serif !important;
+}
+p{
+    color: #b5b3b3;
+}
+#password{
+    color: #b5b3b3;
+}
+form{
+    font-size: Thin 100 Italic;
+}
+.password-container{
+    position: relative;
+}
+  .fa-eye{
+    position: absolute;
+    top: 28%;
+    right: 4%;
+    cursor: pointer;
+    color: lightgray;
+  }
+@media only screen and  (max-width: 415px) {
+    #reset-forgotpw{
+        padding: 8% 15% ;
+    }
+    .box{
+        background-color: white;
+        width: auto;
+        height: 84%;
+        border-radius: 20px;
+    }
+    .inner-box{
+        padding: 10% 5%;
+        margin-top: 50px;
+    }
+}

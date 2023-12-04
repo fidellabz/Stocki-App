@@ -1,0 +1,28 @@
+
+#reset-section{
+    background: linear-gradient(to bottom,#BBD8F7, #FE754A);
+    width:100vh;
+    height: 100vh;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+}
+.btn{
+    width: 600px;
+    height: 40px;
+}
+.logo{
+    padding: 100px 0 20px 0;
+}
+
+form{
+    font-size: Thin 100 Italic;
+}
+.box{
+    background-color: white;
+    width:900px;
+    height: 588px;
+    margin: 300px 400px 300px 200px;
+    border-radius: 20px;
+}
