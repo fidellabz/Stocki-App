@@ -569,8 +569,8 @@ button {
 
   #upscale:before {
     content: "";
-    margin-top: 90vh;
-    margin-bottom: -30vh;
+    margin-top: 60vh;
+    margin-bottom: -10vh;
     top: 1600px;
     bottom: -1800px;
   }
@@ -676,13 +676,16 @@ button {
 
   .app-img {
     flex-direction: column;
-    /* width:50%; */
-    align-items: center
+    width:80%;
+    align-items: center;
+    margin:0;
+    padding:0
   }
 
   .app-img img {
      width:10rem !important;
      margin-top: 10px;
+
   }
 
   .google-pay-app img {
@@ -712,7 +715,7 @@ button {
     height: 10px;
   }
 
-  .testimonial-tittle {
+  .testimonial-title {
     font-size: 10px !important;
   }
 
@@ -725,6 +728,12 @@ button {
     width: 80% !important;
     margin: auto !important;
   }
+
+  .card-body {
+    margin-top: 40px;
+    width: 80% !important;
+    margin: auto !important;
+  }  
 
   .top-large-card {
     margin-top: 40px;
@@ -747,17 +756,30 @@ button {
   }
 
   .top-sm-card {
-    height: auto !important;
+    height: 180px !important;
     top: -10% !important;
-    left: 0% !important;
-    width: 180px !important;
-  }
+    left: 6% !important;
+    width: 40% !important;
+     }
+
+     .card-body p{
+      font-size: 8px !important;
+      white-space: wrap;
+      text-align: left;
+     }
+
+     .card-body h5{
+      /* font-size: 12px !important; */
+      white-space: wrap;
+      text-align: left;
+      margin-bottom: 0;
+     }
 
   .sm-card {
     height: auto !important;
-    top: -20% !important;
-    left: 0% !important;
-    width: 180px !important;
+    top: -10% !important;
+    left: 6% !important;
+    width: 40% !important;
   }
 
   .card-img-top {
