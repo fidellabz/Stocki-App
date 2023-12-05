@@ -10,21 +10,53 @@
     <meta name="author" content="">
     <title>Kodecamp-Dashboard</title>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
 <!-- fontawesome cdn  -->
 <link rel="stylesheet" href="https://cdnjs cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="assets/css/logout.css" rel="stylesheet">
+    <link href="assets/css/dashboard1.css" rel="stylesheet">
+
+    <!-- bootstrap icon cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+<!-- fontawesome cdn  -->
+<link rel="stylesheet" href="https://cdnjs cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="assets/css/dashboard1.css" rel="stylesheet">
 
     <!-- bootstrap icon cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <!-- Custom styles for this template-->
+    <link href="assets/css/logout.css" rel="stylesheet">
+
 
 </head>
 
@@ -50,21 +82,31 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active mt-2">
-                <a class="nav-link" href="" style="color: #0074E4;">
+                <a class="nav-link" href="/dashboard.html" style="color: #0074E4;">
                     <span><img src="assets/img/Dashboard.png" alt=""></span>
                     <span class="pt-2" style="font-size: 16px; font-weight: 700;">Dashboard</span></a>
             </li>
 
+          
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item mt-2">
+                <a class="nav-link collapsed" href="/users.html" 
+                    aria-expanded="true" aria-controls="collapseTwo" style="color: #1b1b1b;">
+                    <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                    <span style="font-size: 16px; font-weight: 400;">Users</span>
+                </a>
+                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded" style="color: #1b1b1b;">
+                        <h6 class="collapse-header">User Profile</h6>
+                        <a class="collapse-item" href="">Admin</a>
+                        <a class="collapse-item" href="">Client</a>
+                    </div>
+                </div> -->
+            </li>
+
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a href="/users.html" class="nav-link" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities" style="color: #1b1b1b;">
-                    <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                    <span style="font-size: 16px; font-weight: 400;">User</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="/coming-soon.html" class="nav-link" data-target="#collapseUtilities"
+                <a href="/coming-soon.html" class="nav-link" href="#" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities" style="color: #1b1b1b;">
                     <span><i class="bi bi-clock" style="color: #1b1b1b; font-size: 18px;"></i></span>
                     <span style="font-size: 16px; font-weight: 400;">Notification</span>
@@ -241,30 +283,33 @@
                             <i class="bi bi-sliders2 mr-2 text-gray-400"></i>
                             Preferences
                         </a>
-                        <a class="dropdown-item" href="/pricingpg.html">
+                        <a class="dropdown-item" href="pricingpg.html">
                             <i class="bi bi-credit-card mr-2 text-gray-400"></i>
                             Plan & Billings
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2" style="color:red"></i>
                             Logout
                         </a>
                     </div>
                 </div>
-
-                </ul>
             </nav>
             <!-- End of Topbar -->
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-            <main class="bg-white text-center" style="margin:0; height:140vh ;">
-                <h1 style="font-size: 40px; font-weight: 400; margin-top:200px;">Are you sure you want <br> to logout?</h1>
-
-                <button class="btn btn-outline-col-cancle  mt-3" style="white-space: nowrap; width: 150px; margin-right: 5px;">Cancel</button>
-                <button class="btn red-cta-btn mt-3" style="white-space: nowrap; width: 150px; margin-left: 5px;">Logout</button>
-               
+            <main class="bg-white text-center" style="margin: 0; height:140vh;">
+                <div class="pt-5 mt-5">
+                    <svg width="131" height="130" viewBox="0 0 131 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="65.5" cy="65" r="65" fill="#EBEBF0"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M103.336 92.9729L67.212 25.7238C66.9727 25.278 66.5085 25 66.0034 25C65.4984 25 65.0341 25.278 64.7948 25.7238L28.6638 92.9729C28.4349 93.3993 28.4466 93.9149 28.6945 94.3304C28.9425 94.746 29.3901 95.0003 29.8732 95H102.135C102.617 94.9973 103.062 94.7418 103.308 94.3268C103.554 93.9117 103.564 93.3979 103.336 92.9729ZM69.4325 86.7329H62.5703V79.8555H69.4325V86.7329ZM63.2559 75.7431H68.7456L69.7749 48.2334H62.2266L63.2559 75.7431Z" fill="#FF1313" fill-opacity="0.8"/>
+                    </svg>
+                </div>
+                <h1 style="font-size: 48px; font-weight: 400;">Not Available</h1>
+                <h1 style="font-size: 30px; font-weight: 400;">
+                    This feature is currently not Available. 
+                    <br>We will be back shortly.</h1>
                 </main>
                 <!-- End of Topbar -->
                 
@@ -296,31 +341,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 
     <script>
-        // Data for the chart
-        var data = {
-        //   labels: ['Blue', 'green', 'red'],
-          datasets: [{
-            data: [54, 20, 25,],
-            backgroundColor: ['#006AFF', '#52C93F', '#FF2727']
-          }]
-        };
-    
-        // Options for the chart
-        var options = {
-          cutout: '70%', // Adjust the cutout percentage for the doughnut effect
-          responsive: true,
-          maintainAspectRatio: false
-        };
-    
-        // Get the context of the canvas element we want to select
-        var ctx = document.getElementById('myDoughnutChart').getContext('2d');
-    
-        // Create the doughnut chart
-        var myDoughnutChart = new Chart(ctx, {
-          type: 'doughnut',
-          data: data,
-          options: options
-        });
+// create a function to update the date and time
+function updateDateTime() {
+    // create a new `Date` object
+    const now = new Date();
+
+    // get the current date and time as a string
+    const currentDateTime = now.toLocaleString();
+
+    // update the `textContent` property of the `span` elements with the ids of `datetime1` and `datetime2`
+    document.querySelectorAll('#datetime1, #datetime2').forEach(element => {
+        element.textContent = currentDateTime;
+    });
+}
+
+// call the `updateDateTime` function every second
+setInterval(updateDateTime, 1000);
+
+      </script>
       </script>
     
  

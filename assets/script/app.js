@@ -66,3 +66,5 @@ function toggleColor(activeClass) {
 		monthElement.classList.add("active");
 	}
 }
+
+
