@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .signup-form {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border-radius: 8px;
+      z-index: 1;
+    }
+
+    .flash-icon {
+      color: #28a745;
+      font-size: 36px;
+    }
+
+    .modal-content {
+      margin-top: 20px;
+    }
+
+    .close-btn {
+      cursor: pointer;
+      font-size: 18px;
+      color: #6c757d;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="signup-form">
+  <h2>Signup</h2>
+     <form id="signupForm">
+        <label for="username">Company Name:</label>
+        <input type="text" id="companyName" name="companyName" placeholder="Company Name">
+ 
+        <label for="username">Category:</label>
+        <input type="text" id="category" name="category" required>
+
+        <label for="email">Company Email:</label>
+        <input type="email" id="email" name="email" required>
+
+                <label for="username">Company Reg N0:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+    <label for="username">First Name:</label>
+    <input type="text" id="firstname" name="firstname" required>
+
+    <label for="username">Last Name:</label>
+    <input type="text" id="lastname" name="lastname" required>
+
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="password">Confirm Password:</label>
+    <input type="password" id="password2" name="password2" required>
+
+    <button type="button" onclick="registerUser()">Signup</button>
+  </form>
+</div>
+
+<div id="signupModal" class="modal">
+  <div class="flash-icon">&#10004;</div>
+  <div class="modal-content">
+    <p>Signup successful!</p>
+    <div class="close-btn" onclick="closeModal()">Close</div>
+  </div>
+</div>
+
+<script>
+  function registerUser() {
+    const form = document.getElementById('signupForm');
+    const companyName = form.elements.companyName.value;
+    const companyCategory = form.elements.category.value;
+    const companyEmail = form.elements.email.value;
+    const companyNumber = form.elements.phone.value;
+    const firstName = form.elements.firstname.value;
+    const lastName = form.elements.lastname.value;
+    const password = form.elements.password.value;
+    const password2 = form.elements.password2.value;
+
+    const apiUrl = 'https://bg-group2-backend.onrender.com/v1/auth/register';
+
+    // Prepare the request payload
+    const payload = {
+      companyName: companyName,
+      companyCategory: companyCategory,
+      companyEmail: companyEmail,
+      companyNumber: companyNumber,
+        firstName: firstName,
+        lastName: lastName,
+        password: password,
+        password2: password2
+    };
+
+    // Make a POST request to the API
+    fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Handle the API response here
+      console.log(data);
+
+      // If signup is successful, display the modal
+      if (data.success) {
+        alert("Sign Up Successful!")
+        openModal();
+      }
+    })
+    .catch(error => {
+      // Handle errors here
+      console.error('Error:', error);
+    });
+  }
+  
+  // Function to close the modal
+  function closeModal() {
+    var modal = document.getElementById('signupModal');
+    modal.style.display = 'none';
+  }
+
+  // Function to display the modal
+  function openModal() {
+    var modal = document.getElementById('signupModal');
+    modal.style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
