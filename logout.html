@@ -262,8 +262,8 @@
             <main class="bg-white text-center" style="margin:0; height:140vh ;">
                 <h1 style="font-size: 40px; font-weight: 400; margin-top:200px;">Are you sure you want <br> to logout?</h1>
 
-                <button class="btn btn-outline-col-cancle  mt-3" style="white-space: nowrap; width: 150px; margin-right: 5px;">Cancel</button>
-                <button id="btnlogout" class="btn red-cta-btn mt-3" style="white-space: nowrap; width: 150px; margin-left: 5px;">Logout</button>
+                <button id="cancel" class="btn btn-outline-col-cancle  mt-3" style="white-space: nowrap; width: 150px; margin-right: 5px;">Cancel</button>
+                <button id="logout" class="btn red-cta-btn mt-3" style="white-space: nowrap; width: 150px; margin-left: 5px;">Logout</button>
                
                 </main>
                 <!-- End of Topbar -->
@@ -279,21 +279,12 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="assets/script/chart-area-demo.js"></script>
-    <script src="assets/script/chart-pie-demo.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
-
-    <script>
-        const logout = document.getElementById('btnlogout');
+     <script>
+        const logout = document.getElementById('logout');
         
               function btnLogout(){
             window.location.href="index.html"        
@@ -303,10 +294,7 @@ logout.addEventListener('click', btnLogout);
 
 </script>
 
-<script>
-      </script>
-    
- 
+
 
 </body>
 

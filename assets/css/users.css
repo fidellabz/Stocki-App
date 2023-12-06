@@ -7,15 +7,7 @@
   width: 100%;
 }
 
-.add-user {
-  padding: 1rem 2rem 1rem 2rem;
-  background-color: #0074E4;
-  outline: none;
-  border-style: none;
-  color: white;
-  border-radius: 10px;
-  font-weight: 700;
-}
+
 form {
   gap: 20px;
 }
@@ -73,6 +65,21 @@ input {
 
 .sec-text-col{
     color: #FF5722 !important;
+}
+
+.blue-cta-btn{
+  font-size: 16px;
+  background-color: #0074E4!important; 
+  color: #fff !important;
+  border: none !important;
+  cursor: pointer;
+  transition: background-color 1s ease-in-out !important;
+  padding: 12px 20px 12px 20px !important;
+  border-radius: 10px;
+}
+
+.blue-cta-btn:hover{
+  background-color: #003c77 !important;
 }
 
 .screen-mode {

@@ -1,171 +1,263 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: poppins sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
-    background-color: #fff !important;
-    position: fixed !important;
-    top: 0;
-    width: 100%;
-    z-index: 100 !important;
-  }
-  
+  background-color: #fff !important;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 100 !important;
+}
+
 .navbar.nav{
-    column-gap: 40px !important;
-  }
+  column-gap: 40px !important;
+}
 
 .btn-outline-col {
-    font-size: 12px;
-    border: 1px solid #FF5722 !important;
-    color: #FF5722 !important;
-    transition: background-color 1.5s ease-in-out !important;
-    padding: 12px 22px 12px 22px !important;
-    padding: 12px 22px 12px 22px !important;
-  }
+  font-size: 12px;
+  border: 1px solid #FF5722 !important;
+  color: #FF5722 !important;
+  transition: background-color 1.5s ease-in-out !important;
+  padding: 12px 22px 12px 22px !important;
+  padding: 12px 22px 12px 22px !important;
+}
 
-  .btn-outline-col:hover {
-    background-color: #852d12 !important;
-    color: #fff !important;
-    transform: scale(1.0);
-    transform: scale(1.0);
-  
-  }
-  
-  
-  /*hero title*/
+.btn-outline-col:hover {
+  background-color: #852d12 !important;
+  color: #fff !important;
+  transform: scale(1.0);
+  transform: scale(1.0);
+
+}
+
+
+/*hero title*/
 .black-cta-btn {
-    background-color: #000 !important;
-    color: #fff !important;
-    transition: background-color 1s ease-in-out !important;
-    padding: 12px 20px 12px 20px !important;
-    width:120px; 
-    height:52px; 
-    border-radius: 10px;
-  }
+  background-color: #000 !important;
+  color: #fff !important;
+  transition: background-color 1s ease-in-out !important;
+  padding: 12px 20px 12px 20px !important;
+  width:120px; 
+  height:52px; 
+  border-radius: 10px;
+}
 
 .top{
-    width: 100%;
-    height: 600px;
-    padding-top: 200px;
-    background-color: #FF5722 !important;
-    justify-content: center;
+  width: 100%;
+  height: 600px;
+  padding-top: 200px;
+  background-color: #FF5722 !important;
+  justify-content: center;
 } 
 
 /*cards section*/
 .cards{     
-    position: relative;
-    top:-150px;
-    z-index: 1;
+  position: relative;
+  top:-150px;
+  z-index: 1;
 }
 
 
 .card{
-    height: 300px !important;
-    background-color: #e0e0e0;
-    box-shadow: 5px 5px 10px rgba(0,0, 0, 0.3)
+  height: 300px !important;
+  background-color: #e0e0e0;
+  box-shadow: 5px 5px 10px rgba(0,0, 0, 0.3)
 }
 
 .card h5{
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 21.6px;
+font-weight: 600;
+font-size: 24px;
+line-height: 21.6px;
 }
 
 .card p{
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 25px;
+font-weight: 400;
+font-size: 16px;
+line-height: 25px;
 }
 
 
 /*contact us page */
 .main-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/img/contact-img.jpeg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 120vh;
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/img/contact-img.jpeg');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+height: 120vh;
 }
 
 .contact-icon:hover {
-  border: 1px solid #fff !important;
-  border-radius: 100%;
-  padding: auto !important;
-  padding-left: 5px !important;
-  padding-right: 5px !important;
+border: 1px solid #fff !important;
+border-radius: 100%;
+padding: auto !important;
+padding-left: 5px !important;
+padding-right: 5px !important;
 }
 .contact-icon:hover{
-  border: 1px solid #fff !important;
-  border-radius: 100%;
-  padding: auto !important;
-  padding-left: 5px !important;
-  padding-right: 5px !important;
+border: 1px solid #fff !important;
+border-radius: 100%;
+padding: auto !important;
+padding-left: 5px !important;
+padding-right: 5px !important;
 }
 .contact-icon:hover{
-  border: 1px solid #fff !important;
-  border-radius: 100%;
-  padding: auto !important;
-  padding-left: 5px !important;
-  padding-right: 5px !important;
+border: 1px solid #fff !important;
+border-radius: 100%;
+padding: auto !important;
+padding-left: 5px !important;
+padding-right: 5px !important;
 }
 
 #contact-us-section h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0em;
-  text-align: center;
-  color: rgba(27, 27, 27, 1);
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+letter-spacing: 0em;
+text-align: center;
+color: rgba(27, 27, 27, 1);
 }
 
 .sec-bg-col {
-  background-color: #FF5722 !important;
+background-color: #FF5722 !important;
 }
 
 .btn-outline-col {
-  border: 1px solid #FF5722 !important;
-  color: #FF5722 !important;
+border: 1px solid #FF5722 !important;
+color: #FF5722 !important;
 }
 
 .orange-cta-btn {
-  background-color: #FF5722 !important;
-  color: #fff !important;
-  transition: background-color 1s ease-in-out !important;
-  padding: 12px 20px 12px 20px !important;
+background-color: #FF5722 !important;
+color: #fff !important;
+transition: background-color 1s ease-in-out !important;
+padding: 12px 20px 12px 20px !important;
 }
 
 .orange-cta-btn:hover {
-  background-color: #852d12 !important;
+background-color: #852d12 !important;
 }
 
 .contact-left,
-    .contact-right {
-        width: 50%;
-        height: 100%;
-    }
+  .contact-right {
+      width: 50%;
+      height: 100%;
+  }
 
 /*footer*/
 footer{
-  height: 265.19px;
+height: 265.19px;
+width: 100%;
+}
+
+.foot-text h1{
+font-family: lato sans-serif !important; 
+font-weight: 400;
+font-style: 50px;
+line-height: 60px;
+text-align: center;
+}
+
+.foot-text h4{
+font-family: lato, sans-serif !important;
+font-weight: 400;
+font-size: 30px;
+line-height: 36px;
+text-align: center;
+}
+
+.foot-text .btn {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+}
+
+
+
+@media (max-width: 767px) {
+  .top{
+      width: 100%;
+      height: 50%;
+  }
+  
+  .cards{
+      margin-top: 180px !important;
+      padding-left: 10px !important;
+      height:auto;  
+      width: auto !important;
+      display: grid;
+      align-items: center;
+  }
+  .card{
+      height:250px !important;
+      width: auto !important;
+  }
+
+  .card h5{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 21.6px;
+
+  }
+
+  .form-control{
+      width:250px !important;
+      height: 40px !important;
+  }
+
+  .container-hero{
+    padding-left: 10px !important;
+  }
+
+  .hero-title{
+      padding-top: 5px !important;
+      width:300px;
+      padding-left: 0 !important;
+  }
+
+  .hero-title h1{
+      width: 300px !important;
+  }
+
+  .whitewave{
+    height: 0;
+  }
+
+  .main-bg{
+    margin-top: 430px;
+    width: 100% !important;
+  }
+
+  .contact-left,
+  .contact-right {
+    width:50% !important;
+  }
+  
+  .contact-right{
+    margin-left: 15px;
+  }
+
+  .find-anything{
+    gap:6px !important;
+  }
+
+  .black-cta-btn{
+    height: 42px;
+  }
+footer{
   width: 100%;
 }
 
 .foot-text h1{
-  font-family: lato sans-serif !important; 
-  font-weight: 400;
-  font-style: 50px;
-  line-height: 60px;
-  text-align: center;
+  font-size: 26px !important;
 }
 
-.foot-text h4{
-  font-family: lato, sans-serif !important;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
+.foot-text h4 {
+  font-size: 20px !important;
 }
 
 .foot-text .btn {
@@ -175,103 +267,11 @@ footer{
   text-align: center;
 
 }
+.container-foot {
+  gap:6% !important;
+}
 
-
-
-@media (max-width: 767px) {
-    .top{
-        width: 100%;
-        height: 50%;
-    }
-    
-    .cards{
-        margin-top: 180px !important;
-        padding-left: 10px !important;
-        height:auto;  
-        width: auto !important;
-        display: grid;
-        align-items: center;
-    }
-    .card{
-        height:250px !important;
-        width: auto !important;
-    }
-
-    .card h5{
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 21.6px;
-
-    }
-
-    .form-control{
-        width:250px !important;
-        height: 40px !important;
-    }
-
-    .container-hero{
-      padding-left: 10px !important;
-    }
-
-    .hero-title{
-        padding-top: 5px !important;
-        width:300px;
-        padding-left: 0 !important;
-    }
-
-    .hero-title h1{
-        width: 300px !important;
-    }
-
-    .whitewave{
-      height: 0;
-    }
-
-    .main-bg{
-      margin-top: 430px;
-      width: 100% !important;
-    }
-
-    .contact-left,
-    .contact-right {
-      width:50% !important;
-    }
-    
-    .contact-right{
-      margin-left: 15px;
-    }
-
-    .find-anything{
-      gap:6px !important;
-    }
-
-    .black-cta-btn{
-      height: 42px;
-    }
-  footer{
-    width: 100%;
-  }
-
-  .foot-text h1{
-    font-size: 26px !important;
-  }
-
-  .foot-text h4 {
-    font-size: 20px !important;
-  }
-
-  .foot-text .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  
-  }
-  .container-foot {
-    gap:6% !important;
-  }
-
-  .foot-text .btn{
-    margin-top: -5px !important;
-  }
+.foot-text .btn{
+  margin-top: -5px !important;
+}
 }
