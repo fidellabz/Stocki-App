@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Kodecamp-Dashboard</title>
+    <title>Stocki | Dashboard</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -56,8 +56,10 @@
 
     <!-- Custom styles for this template-->
     <link href="assets/css/logout.css" rel="stylesheet">
-
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    
+    <script src="assets/script/stocki-api.js"></script>
 </head>
 
 <body id="page-top" >
@@ -222,12 +224,11 @@
         <!-- Main Content -->
         <div id="content">
 
-            <!-- Topbar -->
+             <!-- Topbar -->
             <nav
                 class="m-3 py-5 navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm rounded">
                 <div style="width:70rem">
-                    <h3 class="pt-4" style="font-size: 16px;font-weight:bold;">Dashboard - Kodecamp
-                        SuperMarket</h3>
+                    <h3 class="pt-4" style="font-size: 16px;font-weight:bold;">Dashboard - <span id="companyName"></span></h3>
                     <p class="pb-3" style="font-size: 12px; font-weight: 400px;" id="datetime2"></p>
                 </div>
                 <!-- Topbar Search -->
@@ -260,7 +261,8 @@
                 <div class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">   
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee <br> Admin</span>
+                        <span id="userName" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                        <!-- <span id="userName" class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee <br> Admin</span> -->
                         <img class="img-profile rounded-circle mr-2" src="assets/img/Douglas.png">
                         <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.563 6.46634L8.56302 10.4663C8.42969 10.5997 8.29635 10.6663 8.09635 10.6663C7.89635 10.6663 7.76302 10.5997 7.62969 10.4663L3.62969 6.46634C3.36302 6.19967 3.36302 5.79967 3.62969 5.53301C3.89635 5.26634 4.29635 5.26634 4.56302 5.53301L8.09635 9.06634L11.6297 5.53301C11.8964 5.26634 12.2964 5.26634 12.563 5.53301C12.8297 5.79967 12.8297 6.19967 12.563 6.46634Z" fill="black"/>
@@ -288,7 +290,7 @@
                             Plan & Billings
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <a id="logout" class="dropdown-item logout" href="#" data-toggle="modal" data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2" style="color:red"></i>
                             Logout
                         </a>
@@ -358,7 +360,6 @@ function updateDateTime() {
 // call the `updateDateTime` function every second
 setInterval(updateDateTime, 1000);
 
-      </script>
       </script>
     
  

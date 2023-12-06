@@ -181,12 +181,12 @@ function displayUserInfo(userInfo) {
 
   const firstName = userInfo.userInfo.firstName;
   const companyName = userInfo.userInfo.companyName;
-  const companyEmail = userInfo.userInfo.companyEmail;
+  const lastName = userInfo.userInfo.lastName;
 
   // Log the values to the console for debugging
-  console.log('First NAme:', firstName);
-  console.log('Company Name:', companyName);
-  console.log('Company Email:', companyEmail);
+  console.log('First Name:', firstName);
+  console.log('Last Name:', lastName);
+  console.log('Company Email:', companyName);
 
 
   // Find the HTML element by its ID and update its content
@@ -195,7 +195,7 @@ function displayUserInfo(userInfo) {
 
 
   if (userNameElement && companyNameElement) {
-      userNameElement.innerHTML = `${firstName} ${companyEmail}`;
+      userNameElement.innerHTML = `${firstName} ${lastName}<br> Admin`;
       companyNameElement.innerHTML = `${companyName}`;
   }
 }
@@ -238,7 +238,3 @@ function updateDateTime() {
   });
 }
 
-
-
-// call the `updateDateTime` function every second
-setInterval(updateDateTime, 1000);
