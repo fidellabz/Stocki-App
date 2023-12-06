@@ -4,155 +4,727 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stocki | Pricing</title>
-    <link rel="stylesheet" href="assets/css/helpdesk.css">
-    <!--bootstrap-->
-    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <!--font style-->
-    <!-- google font cdn --> 
+    <!-- google font cdn-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">   
+    <!--CSS Styling pricingpg-->
+    <link rel="stylesheet" href="assets/css/pricingpg.css">
+    <!--Bootstrap cdn-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="container-fluid position-fixed w-100 ">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container" style="gap: 700px;"> 
-                <a class="navbar-brand  fs-6 ms-3" href="/index.html"><img src="assets/img/stocki logo.png" alt=""></a>            
-                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="gap: 20px;">
-                    <div>
-                        <div class="d-flex gap-2">
-                            <a class="nav-link" href="./submit.html"><button class="btn text-primary"><span> <a><i class="bi bi-search text-primary"></i></a></span>  Submit a Request </button></a>
-                        </div>                
-                    </div>
-                    <a href="./login.html" class="btn btn-outline-col me-3 " style="white-space: nowrap;font-size: 12px;">Sign In</a>
-                </div>  
-            </div>
-        </nav>
-  </header> 
-    <section class=" top w-100" style="background-color: #ff5722; ">
-        <div class="container-hero" style="padding-left:18%;">
-            <div class="hero-title text-white" style="width:718px; height:178px;">
-                <h1 class="text-center">How can we help?</h1>
-                <div class="find-anything d-flex flex-row" style="gap:3%">
-                    <input type="text" class="form-control" placeholder=" Find anything" style="width:550px; height:60px;">
-                    <button class="btn black-cta-btn me-md-2" type="button" >Search</button>
-                </div>                   
-            </div>    
-        </div>
-        <div class="whitewave">
-            <img src="../assets/img/whitewaves.png" style="margin-top: 140px;">
-        </div>
-    </section>    
-    <section class="">        
-        <div class="cards row row-cols-1 row-cols-md-4 justify-content-center gap-5" style=" height:300px">
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title py-5 text-center">Getting Started</h5>                  
-                      <p class="card-text text-center">Get the basics on Stocki best practice adding and updating
-                        items, setting up inventory and more.</p>                  
-                    </div>
-                  </div>
-            </div>
-            <div class="col">
-                <div class="card" >
-                  <div class="card-body">
-                    <h5 class="card-title py-5 text-center">Training Resources</h5>                  
-                    <p class="card-text text-center ">How to make Subscription changes and manage and update your
-                        account settings.</p>                  
-                  </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" >
-                  <div class="card-body">
-                    <h5 class="card-title py-5 text-center">FAQs</h5>                  
-                    <p class="card-text text-center">Commonly asked questions including plan information accessing 
-                        Stocki and upcoming features.</p>                  
-                  </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <section class="main-bg d-flex">
-            <div class="contact-left" style="width: 60%; height: 100%;">
-              <div class="mb-3 text-center">
-                <h1 class="text-white mt-5 pt-5 mb-5 pb-3" style="font-weight: bold;">Contact Us</h1>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Fullname"
-                 style="color: #C7C9D9; width: 544px; height: 60px; margin: auto">
-              </div>
-          
-              <div class="mb-3">
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email" 
-                style="color: #C7C9D9; width: 544px; height: 60px; margin: auto">
-              </div>
-          
-              <div class="mb-3">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Message"
-                 style="color: #C7C9D9; width: 544px; height: 150px; margin: auto"></textarea>
-              </div>
-          
-              <div class="mb-3 d-flex justify-content-center align-items-center text-white y-2  ">
-                <button type="button" class="btn orange-cta-btn text-white " style="width: 150px; white-space: nowrap;">
-                  send message
-                  </button>
-                </div>
-            </div>          
-            <div class="contact-right sec-bg-col" style="width: 40%; height: 100%;">
-              <div class="mt-5 pt-5">
-              <div class="mt-5 pt-5">
-              <div class="contact-right-content text-center text-white" >
-              <div class="contact-right-content text-center text-white" >
-              <h6 style="font-size: 22px;"><span class="pe-3"><i class="bi bi-telephone-fill"></i></span> Phone Number</h6>
-              <p class="ps-4" style="font-size: 16px; font-weight: 300;">+234 555 903 4223</p>
-          
-              <h6 style="font-size: 22px; "><span class="pe-3 mt-5"><i class="bi bi-envelope-fill"></i></span> Email Address</h6>
-              <p class="" style="font-size: 16px; font-weight: 300; margin-left: 35px;">stocki@gmail.com</p>
-          
-              <h6 class="" style="font-size: 22px; margin-right: 60px;"><span class="pe-3 mt-5"><i class="bi bi-geo-alt-fill"></i></span> Location</h6>
-              <p class="address" style="font-size: 16px; font-weight: lighter; padding-left: 150px; white-space: nowrap;">12, Babatunde Ajose Road, Eti Osa</p>
-            </div>
-            <div class="ps-1  contact-icons d-flex  justify-content-center gap-3 text-center text-white"  style="font-size: 26px; " >
-              <i class="bi bi-instagram contact-icon" ></i>
-              <i class="bi bi-twitter-x contact-icon"></i>
-              <i class="bi bi-whatsapp contact-icon"></i>
-              <i class="bi bi-facebook contact-icon"></i>
-              <i class="bi bi-linkedin contact-icon"></i>
-            </div>          
-        </div>
-        <!-- contact section copy-->
-    </section>
-    <section class="container">
-        <div class="foot-text" style="width:100%; height:178px; color:#ff5722; padding-top:150px;">
-            <h1>Cant find what you are looking for?</h1>
-            <h4 class="py-3">Let us help you!</h4>
-            <div class="pt-3 btn">                
-                <a href="./login.html" class="btn btn-outline-col" style="white-space: nowrap;font-size: 12px;">Submit a Request</a>
-            </div>                   
-        </div>         
-    </section>
-    <footer>
-        <div>            
-            <img src="../assets/img/waves.png" style="width:100%; margin-top: 220px;">
-        </div>
-        <div class="Container-foot d-flex flex-row" style="gap:40%; background-color: #ff5722;">
-            <div class="col ">
-                <p class="footer-contact text-white text-center w-100">&copy; Stocki Support</p>
-            </div>
-            <div class="contact-icons col d-flex  gap-3 text-center text-white sec-text-col" >
-                <i class="bi bi-instagram "></i>
-                <i class="bi bi-twitter-x "></i>
-                <i class="bi bi-whatsapp "></i>
-                <i class="bi bi-facebook  "></i>
-                <i class="bi bi-linkedin "></i>
-            </div> 
-        </div>
+  <header class="container-fluid position-fixed w-100 shadow-sm ">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container"> 
+            <a class="navbar-brand  fs-6 ms-3" href="/index.html"><img src="assets/img/stocki logo.png" alt=""></a>
+            <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fs-4 navbar-toggle"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ulli" style="margin: auto;">
+                    <li class="nav-item fs-6">
+                        <a class="nav-link active" aria-current="page" href="/feature-page.html" >Features</a>
+                    </li>
+                    <li class="nav-item fs-6" >
+                        <a class="nav-link active"  aria-current="page" href="/pricingpg.html">Pricing</a>
+                    </li>
+                    <li class="nav-item fs-6">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item fs-6">
+                      <a class="nav-link" href="/helpdesk.html">Help desk</a>
+                  </li>
+                  <li class="nav-item fs-6">
+                    <a class="nav-link" href="/blog.html">Blog</a>
+                </li>
 
-    </footer>
-    
+                  <li class="nav-item fs-6">
+                    <a class="nav-link" href="/faq.html">FAQ</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-col me-4 " style="white-space: nowrap; font-size: 12px;">sign in</button>
+        <button type="button" class="btn blue-cta-btn me-5 text-white" style="white-space: nowrap; font-size: 12px;">Start a free trial</button>
+    </nav>
+  </header> 
+
+
+  <section class="title text-center mt-5 pt-5" style="margin-top: 50px;">
+    <h1 class="py-3" style="font-weight: 700; font-size: 64px; line-height: 83.2px;">Start Your 14 Days Free Trial Plan Today.</h1>
+    <p class="" style="font-weight: 400; font-size: 18px; line-height: 27px;">Transform how your business does inventory with our powerful, easy-to-use <br>
+    solutions. Find the right stocki plan for you.</p>
+    </section>
+
+    <!-- subscrition -->
+    <section id="Subscription" class="py-5 bg-light">
+      <div class="container mx-auto ">
+          <div class="subscription-card">
+            <h1 class="pt-4 fs-1"
+            style="font-family: 'Poppins', sans-serif; font-size: 50px; padding-left:20%;padding-right: 20%;">Different plans, all <br><span> affordable.</span></h1>
+
+              <div class="switch-container fw-bold" style="margin-left: 30%;margin-right: 30%;">
+                  <label class="form-check-label switch-label mc" for="subscriptionSwitch">Monthly</label>
+                  <div class="form-check form-switch mx-auto">
+                      <input class="form-check-input switch" type="checkbox" id="subscriptionSwitch">
+                  </div>
+                  <label class="form-check-label switch-label yc" for="subscriptionSwitch">Yearly</label>
+              </div>
+          </div>
+
+          <div class="container mt-5">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                      <div class="card monthly-card shadow">
+                          <div class="card-body p-5 text-center" style="margin-top:9px;">
+                              <p class="fw-bold" style="font-size:20px">FREE</p>
+                              <p style="font-size: 14px;">Best for personal use and small scale businesses</p>
+                              <h1>0</h1>
+                              <p style="font-size: 14px;">NGN/mo.</p>
+                              <ul class="list-group text-start list-unstyled ps-4" style="font-size: 14px;">
+                                  <li class="pb-2"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>100 items</li>
+                                  <li><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>1 user license</li>
+                              </ul>
+                              <div style='margin-top:70px;margin-bottom:-5px;font-size:12px;'>
+                                  <a href="#" class="btn orange-cta-btn mt-3 " style="width: 150px; white-space: nowrap;">Sign Up</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="col">
+              <div class="card monthly-card shadow" style="border: 1px solid #ff4107;">
+                  <div class="card-header py-1 text-white" style="background: #ff4107;">Most Popular</div>
+                  <div class="card-body px-5 py-1 text-center" style="margin-top:20px;">
+                      <p class="fw-bold" style="font-size:20px">STANDARD</p>
+                      <p style="font-size: 14px;">Best for small scale businesses and teams</p>
+                                  <h1>0</h1>
+                                  <p style="font-size: 14px;">NGN/mo.</p>
+                                  <ul class="list-group text-start list-unstyled ps-4" style="font-size: 14px;">
+                                      <li class="pb-2"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>2000 items</li>
+                                      <li class="pb-2"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>5 User license</li>
+                                      <li><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>QR Code generation</li>
+                                  </ul>
+                                  <div style='margin-bottom:38px;font-size:12px;margin-top:59px'>
+                                      <a href="#" class="btn orange-cta-btn " style="width: 150px; white-space: nowrap;">Get Started</a>
+                                  </div>
+              </div>
+              </div>
+          </div>
+
+                  <div class="col">
+              <div class="card monthly-card shadow">
+                  <div class="card-body p-5 text-center" style="margin-top:-6px;">
+                      <div class="py-3">
+                      <p class="fw-bold" style="font-size:20px">PREMIUM</p>
+                      <p style="font-size: 14px;">Best for small scale businesses and multiple teams</p>
+                                  <h1>0</h1>
+                                  <p style="font-size: 14px;">NGN/mo.</p>
+                                  <ul class="list-group text-start list-unstyled ps-4" style="font-size: 14px;">
+                                      <li class="pb-2"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>800 items</li>
+                                      <li class="pb-2"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>20 User licenses</li>
+                                      <li class="pb-2"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>QR Code generation</li>
+                                      <li style="white-space: nowrap;"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>Invoice and receipt generation</li>
+                                  </ul>
+                                  <div style="margin-bottom: -22px; margin-top: 30px; ">
+                                      <a href="#" class="btn orange-cta-btn" style="width: 150px; white-space: nowrap;">Get Started</a>
+                                  </div>
+                              </div>
+              </div>
+          </div>
+              </div>
+
+              </div>
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+
+                      <div class="card yearly-card d-none shadow">
+                          <div class="card-body p-5 text-center" style="margin-top:9px">
+                              <p class="fw-bold" style="font-size:20px">FREE</p>
+                              <p style="font-size: 14px;">Best for personal use and small scale businesses</p>
+                              <h1>0</h1>
+                              <p style="font-size: 14px;">NGN/mo.</p>
+                              <ul class="list-group text-start list-unstyled ps-4" style="font-size: 14px;">
+                                  <li class="pb-3"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>100 items</li>
+                                  <li><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>1 user license</li>
+                              </ul>
+                              <div style='margin-top:50px;margin-bottom:-5px;font-size:12px;'>
+                                  <a href="#" class="btn blue-cta-btn mt-3" style="width: 150px; white-space: nowrap;">Sign Up</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col">
+                      <div class="card yearly-card d-none shadow">
+                          <div class="card-header py-1 bg-primary text-white">Most Popular</div>
+                  <div class="card-body px-5 py-1 text-center" style="margin-top:20px;">
+                      <p class="fw-bold" style="font-size:20px">STANDARD</p>
+                              <p style="font-size: 14px;">Best for small scale businesses and teams</p>
+                              <h1>0</h1>
+                              <p style="font-size: 14px;">NGN/mo.</p>
+                              <ul class="list-group text-start list-unstyled ps-4" style="font-size: 14px;">
+                                  <li class="pb-3"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>2000 items</li>
+                                  <li class="pb-3"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>5 User license</li>
+                                  <li><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>QR Code generation</li>
+                              </ul>
+                              <div style='margin-bottom:38px;font-size:12px;margin-top:29px'>
+                                  <a href="#" class="btn blue-cta-btn " style="width: 150px; white-space: nowrap;">Get Started</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col">
+                      <div class="card yearly-card d-none shadow">
+                          <div class="card-body p-5 text-center" style="margin-top:-6px;">
+                              <div class="py-3">
+                                  <p class="fw-bold" style="font-size:20px">PREMIUM</p>
+                              <p style="font-size: 14px;">Best for small scale businesses and multiple teams</p>
+                              <h1>0</h1>
+                              <p style="font-size: 14px;">NGN/mo.</p>
+                              <ul class="list-group text-start list-unstyled ps-4" style="font-size: 14px;">
+                                  <li class="pb-2"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>800 items</li>
+                                  <li class="pb-2"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>20 User licenses</li>
+                                  <li class="pb-2"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>QR Code generation</li>
+                                  <li style="white-space: nowrap;"><i class="bi bi-check-circle-fill" style="color: #0074E4;"></i>Invoice and receipt generation</li>
+                              </ul>
+                              <div style="margin-bottom: -22px;">
+                                  <a href="#" class="btn blue-cta-btn mt-3" style="width: 150px; white-space: nowrap;">Get Started</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+  </section>
+              </div>
+          </div>
+      </div>
+      </div>
+  </section>
+
+    <section class="compare-plans">
+      <div class="container">
+        <h2 class="sec-heading text-center">Compare Plans</h2>
+        <div class="d-flex flex-column flex-md-row container-header" style="background-color: #F2F2F5; width:100%; gap: 284px;">
+          <div class="logo">
+            <img src="../bg-group2-frontend/assets/img/stocki logo.png" alt="logo">
+          </div>
+          <div class="d-flex flex-md-row box-cards">
+            <div class="col-3">
+              <div class="card-body" style="width:120px; height: 120px" >
+                <h5 class="ps-3">Free</h5>
+                <p>$0 USD/mo</p>
+                <button type="button" class="btn pri-bg-col me-5 py-2 text-white" style="white-space: nowrap; font-size: 12px;">Get Started</button>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card-body"style="width:130px; height: 119px">
+                <h5>Standard</h5>
+                <p>$25USD/mo</p>
+                <button type="button" class="btn pri-bg-col me-5 py-2 text-white" style="white-space: nowrap; font-size: 12px;">Get Started</button>              
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card-body" style="width:130px; height: 119px">
+                <h5>Premuim</h5>
+                <p>$50USD/mo</p>
+                <button type="button" class="btn pri-bg-col me-5 py-2 text-white" style="white-space: nowrap; font-size: 12px;">Get Started</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <table class="table table-striped">
+          <thead class="thead" >
+            <tr>
+              <th scope="col" class="text-white"style="background-color: #FF5722;">ORGANIZE</th>
+              <th scope="col" style="background-color: #FF5722;"  ></th>
+              <th scope="col" style="background-color: #FF5722;"  ></th>
+              <th scope="col" style="background-color: #FF5722;"  ></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="">
+                <p class="body-row">Items
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td class="td" >100</td>
+              <td>2000</td>
+              <td>10000</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p> User Licenses 
+                  <span><i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td>1</td>
+              <td>2</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Inventory Import
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Item Photo
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Inventory List
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr>
+              <th scope="col" class="text-white" style="background-color: #FF5722;">CUSTOMIZE</th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+              <th scope="col" style="background-color: #FF5722;" ></th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <p>Custom Fields
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td>1</td>
+              <td>10</td>
+              <td>25</td>
+            </tr>            
+            <tr>
+              <th scope="row">
+                <p>Custom Folders
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Custom Tags
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Customizable User Access
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr>
+              <th scope="col" class="text-white"style="background-color: #FF5722;">MANAGE</th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <p>Bar Code Scanning
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Item Check-in/Check-out
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>           
+          </tbody>
+          <thead>
+            <tr>
+              <th scope="col" class="text-white"style="background-color: #FF5722;">TRACK AND UPDATE</th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <p>Low Stock Alerts
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>In-app Alerts
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Email Alerts
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr>
+              <th scope="col" class="text-white" style="background-color: #FF5722;" >REPORT</th>
+              <th scope="col" style="background-color: #FF5722;" ></th>
+              <th scope="col" style="background-color: #FF5722;" ></th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <p>Activity History Reports
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Inventory Summary Reports
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>User Activity Summary Reports
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-x-lg"></i></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Low Stock Reports
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Quantity Changed by Item Reports
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Custom Reports
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Reports Subscriptions
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Activity History
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td>1 month</td>
+              <td>1 year</td>
+              <td>3 years</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Transaction Reports
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td>1 month</td>
+              <td>1 year</td>
+              <td>3 years</td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr>
+              <th scope="col" class="text-white" style="background-color: #FF5722;" >SUPPORT</th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+              <th scope="col" style="background-color: #FF5722;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <p>Email Support
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Schedule Phone Support
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-x-lg"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <p>Help Center Resources
+                  <span> <i class="bi bi-question-circle"></i></span>
+                </p>
+              </th>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+              <td><i class="bi bi-check2"></i></td>
+            </tr>
+          </tbody> 
+        </table>
+      </div>
+    </section>
+
+    <footer class=" footer-bg "  style="background-color:#F2F2F5 ;" >
+      <div class="pushdown" style="height: 15vh;"></div>
+      <div class="container-fluid ">
+          <div class="stock-image text-center pb-3 mb-4 ">
+              <img src="./assets/img/stocki logo.png" alt="">
+          </div>
+          <div class="row gy-2">
+              <div class="col-lg-12">
+                  <div class="row gy-4 ">
+                      <div class="col-md-2">
+                          <div class="footer-istock" style="padding-left: 30px;">
+                              <p style="font-weight: bold;">Services</p>
+                              <ul class="">
+                                  <li class="py-2">
+                                      <a href="./index.html">inventory</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">sales</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">Management</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">Analytics</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">Cost Tracking</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="footer-istock">
+                              <p style="font-weight: bold;">About Us</p>
+                              <ul>
+                                  <li class="py-2">
+                                      <a href="#">Customers</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">Testimonials</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">Licenses</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">Terms of service</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">Privacy Policy</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="footer-istock">
+                              <p style="font-weight: bold;">Help & Support</p>
+                              <ul>
+                                  <li class="py-2">
+                                      <a href="#">Getting Started</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">User Training</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">Help Desk</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">FAQs</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#">Contact Us</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="footer-istock">
+                              <p style="font-weight: bold;">Resources</p>
+                              <ul>
+                                  <li class="py-2">
+                                      <a href="#" class="#">Blogs</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#" class="#">Events</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#" class="#">Webinars</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#" class="#">Pricing</a>
+                                  </li>
+                                  <li class="py-2">
+                                      <a href="#" class="#">Trademarks</a>
+                                  </li>
+                                  
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="footer-istock ">
+                              <p style="font-weight: bold;">Follow Us</p>
+                              <div class="  contact-icons d-flex  gap-3 text-center sec-text-col" >
+                                <i class="bi bi-instagram " style="color:#FF5722 ;"></i>
+                                <i class="bi bi-twitter-x " style="color: #FF5722;"></i>
+                                <i class="bi bi-whatsapp " style="color: #FF5722;"></i>
+                                <i class="bi bi-facebook  " style="color:#FF5722 ;"></i>
+                                <i class="bi bi-linkedin " style="color:#FF5722 ;"></i>
+                            </div>       
+  
+                                  <a class="" href=""><p>Subscribe to our news</p></a> 
+                                  <input type="email" class="form-control w-100" id="validationCustom01" onsubmit="return validateForm()" placeholder="Enter email address" required>
+                                  
+  
+                              </div>
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+  
+      </div> 
+      <div class="app-google text-start mb-5">
+        <a class=" " href="#"><img src="assets/img/Apple store.png" alt="" style=" padding-left: 30px;"></a>
+        <a class=" " href="#"><img src="assets/img/Google play.png" alt="" style="width:150px; padding-left: 10px;"></a>
+      </div>
+      </div> 
+      <div class="Container-foot">
+        <div class="foot">
+            <p class="footer-contact text-white text-center w-100">&copy;2021 Stocki All Right Reserved</p>
+        </div>
+  </footer>
+  
+  
+  
+
+     <!-- javascript cdn -->   
+    <script src="assets/script/app.js"></script>
+    <!-- fontawsoms -->
+    <script src="https://kit.fontawesome.com/5f1b830399.js" crossorigin="anonymous"></script>
+
+     <!-- Bootstap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+      const switchElement = document.getElementById('subscriptionSwitch');
+      const monthlyCards = document.querySelectorAll('.monthly-card');
+      const yearlyCards = document.querySelectorAll('.yearly-card');
+
+      switchElement.addEventListener('change', function () {
+          if (switchElement.checked) {
+              // Yearly plan selected
+              monthlyCards.forEach(card => card.classList.add('d-none'));
+              yearlyCards.forEach(card => card.classList.remove('d-none'));
+          } else {
+              // Monthly plan selected
+              monthlyCards.forEach(card => card.classList.remove('d-none'));
+              yearlyCards.forEach(card => card.classList.add('d-none'));
+          }
+      });
+  </script>
 </body>
 </html>
