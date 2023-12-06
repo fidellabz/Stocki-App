@@ -411,10 +411,6 @@ button {
   font-weight: 500;
 }
 
-Add this CSS to your stylesheet
-
- /* Footer Styling */
- 
  /* Footer Styling */
  footer {
   background-color: #F2F2F5;
@@ -467,9 +463,6 @@ Add this CSS to your stylesheet
 
 /* Responsive Styling */
 
-
-
-
 @media (max-width: 767px) {
 
   /* Hero Section */
@@ -480,6 +473,7 @@ Add this CSS to your stylesheet
 
   .hero-content h1 {
     font-size: 18px;
+
   }
 
   .hero-content p {
@@ -535,6 +529,7 @@ Add this CSS to your stylesheet
     margin-bottom: -1.5rem;
   }
 
+
   .card-body h5 {
     font-size: 14px;
     text-align: center;
@@ -567,14 +562,17 @@ Add this CSS to your stylesheet
   }
 
   .upscale .py-5 {
-    padding-top: 0 !important;
+    padding-top: 0;
     margin-top: 0;
 
   }
 
   #upscale:before {
-    margin-top: 232vh;
-    margin-bottom: -180vh;
+    content: "";
+    margin-top: 60vh;
+    margin-bottom: -10vh;
+    top: 1600px;
+    bottom: -1800px;
   }
 
   .upscale-container {
@@ -615,6 +613,10 @@ Add this CSS to your stylesheet
     padding-top: 0;
   }
 
+  #subscription .py-5{
+    padding-top: 1rem !important;
+  }
+
   #subscription ul li{
     font-size: 14px;
   }
@@ -626,7 +628,7 @@ Add this CSS to your stylesheet
     flex-direction: column;
     font-size: 30px !important;
     white-space: nowrap;
-    margin-top: 250px !important;
+    margin-top: -36px !important;
   }
 
   .card {
@@ -674,10 +676,21 @@ Add this CSS to your stylesheet
 
   .app-img {
     flex-direction: column;
+    width:80%;
+    align-items: center;
+    margin:0;
+    padding:0
   }
 
-  .google-pay-app {
+  .app-img img {
+     width:10rem !important;
+     margin-top: 10px;
+
+  }
+
+  .google-pay-app img {
     margin-left: 45px;
+    width:50%;
   }
 
   /* Section 6 */
@@ -702,7 +715,7 @@ Add this CSS to your stylesheet
     height: 10px;
   }
 
-  .testimonial-tittle {
+  .testimonial-title {
     font-size: 10px !important;
   }
 
@@ -715,6 +728,12 @@ Add this CSS to your stylesheet
     width: 80% !important;
     margin: auto !important;
   }
+
+  .card-body {
+    margin-top: 40px;
+    width: 80% !important;
+    margin: auto !important;
+  }  
 
   .top-large-card {
     margin-top: 40px;
@@ -737,17 +756,30 @@ Add this CSS to your stylesheet
   }
 
   .top-sm-card {
-    height: auto !important;
+    height: 180px !important;
     top: -10% !important;
-    left: 0% !important;
-    width: 180px !important;
-  }
+    left: 6% !important;
+    width: 40% !important;
+     }
+
+     .card-body p{
+      font-size: 8px !important;
+      white-space: wrap;
+      text-align: left;
+     }
+
+     .card-body h5{
+      /* font-size: 12px !important; */
+      white-space: wrap;
+      text-align: left;
+      margin-bottom: 0;
+     }
 
   .sm-card {
     height: auto !important;
-    top: -20% !important;
-    left: 0% !important;
-    width: 180px !important;
+    top: -10% !important;
+    left: 6% !important;
+    width: 40% !important;
   }
 
   .card-img-top {
@@ -759,6 +791,7 @@ Add this CSS to your stylesheet
   /* section 7 */
   .main-bg {
     height: 150vh !important;
+    margin-top: 30px;
     flex-direction: column;
   }
 
@@ -770,6 +803,10 @@ Add this CSS to your stylesheet
   .contact-right-content {
     margin-top: -150px !important;
     width: 70% !important;
+  }
+
+  .contact-right-content h6{
+ font-size:18px !important;
   }
 
   .contact-right-content .address {
@@ -797,10 +834,6 @@ Add this CSS to your stylesheet
     margin: 0 4px !important;
   }
 
-}
-
-/* footer styling */
-@media (max-width: 767px) {
   .footer-istock {
     text-align: center;
   }
@@ -821,32 +854,3 @@ Add this CSS to your stylesheet
     margin: 10px;
   }
 }
-
-/* Feature Page */
-  /* Media Query for Tablets and Smaller Screens */
-  @media (max-width: 768px) {
-    .display-5.smart {
-      font-size: 48px;
-    }
-    .stocki {
-      font-size: 16px;
-    }
-    .btn-s {
-      flex-direction: column;
-      align-items: center;
-    }
-    .btn {
-      width: 100%;
-      margin-top: 10px;
-    }
-   }
-
-  /* Media Query for Phones and Smaller Screens */
-  @media (max-width: 576px) {
-    .display-5.smart {
-      font-size: 36px;
-    }
-    .stocki {
-      font-size: 14px;
-    }
-  }

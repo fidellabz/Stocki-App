@@ -165,11 +165,11 @@
           </li>
 
           <!-- Nav Item - Charts -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
               <a class="nav-link" href="logout.html" style="color: #ff0000;">
                   <span><i class="bi bi-box-arrow-in-right" style="color: #ff0000; font-size: 18px;"></i></span>
                   <span style="font-size: 16px; font-weight: 400;">Logout</span></a>
-          </li>
+          </li> -->
         </ul>
         <!-- End of Sidebar -->
 
@@ -246,10 +246,10 @@
                             Plan & Billings
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
+                        <!-- <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2" style="color:red"></i>
                             Logout
-                        </a>
+                        </a> -->
                     </div>
                 </div>
 
@@ -263,13 +263,10 @@
                 <h1 style="font-size: 40px; font-weight: 400; margin-top:200px;">Are you sure you want <br> to logout?</h1>
 
                 <button class="btn btn-outline-col-cancle  mt-3" style="white-space: nowrap; width: 150px; margin-right: 5px;">Cancel</button>
-                <button class="btn red-cta-btn mt-3" style="white-space: nowrap; width: 150px; margin-left: 5px;">Logout</button>
+                <button id="btnlogout" class="btn red-cta-btn mt-3" style="white-space: nowrap; width: 150px; margin-left: 5px;">Logout</button>
                
                 </main>
                 <!-- End of Topbar -->
-                
-
-                <!-- Begin Page Content -->
                 
     <!-- End of Page Wrapper -->
 
@@ -296,31 +293,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 
     <script>
-        // Data for the chart
-        var data = {
-        //   labels: ['Blue', 'green', 'red'],
-          datasets: [{
-            data: [54, 20, 25,],
-            backgroundColor: ['#006AFF', '#52C93F', '#FF2727']
-          }]
-        };
-    
-        // Options for the chart
-        var options = {
-          cutout: '70%', // Adjust the cutout percentage for the doughnut effect
-          responsive: true,
-          maintainAspectRatio: false
-        };
-    
-        // Get the context of the canvas element we want to select
-        var ctx = document.getElementById('myDoughnutChart').getContext('2d');
-    
-        // Create the doughnut chart
-        var myDoughnutChart = new Chart(ctx, {
-          type: 'doughnut',
-          data: data,
-          options: options
-        });
+        const logout = document.getElementById('btnlogout');
+        
+              function btnLogout(){
+            window.location.href="index.html"        
+        }
+
+logout.addEventListener('click', btnLogout);
+
+</script>
+
+<script>
       </script>
     
  
