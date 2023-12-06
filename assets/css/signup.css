@@ -42,7 +42,7 @@ font-weight: 700;
   margin: 0 50px;
 }
 
-.signup-form input, select {
+.signup-form input {
   border: none;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -50,6 +50,14 @@ font-weight: 700;
   /* box-shadow: 0px 1px 2px #959595; */
   width: 416px;
   height: 45px;
+  margin: auto;
+  color: #c7c9d9 !important;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.signup-form select {
+  border: none;
   margin: auto;
   color: #c7c9d9 !important;
   font-size: 12px;
@@ -79,6 +87,13 @@ font-weight: 700;
   width: 400px;
 }
 
+.spinner-border {
+  display: none;
+}
+
+.loading-text {
+  display: none;
+} 
     /* btn effect */
 .signup-form button:hover{
 background-color: #003c77 !important;

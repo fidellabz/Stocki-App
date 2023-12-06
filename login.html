@@ -7,20 +7,26 @@
     <title>Stocki | Login</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet"
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+
+        <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
         integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets//css//login.css">
+    
 
 </head>
 
 <body>
-
     <div class="login-container" style="background-color: #fff;">
         <div class="row">
             <!-- First Column: Login Form -->
@@ -28,14 +34,14 @@
                 <div class="login-form text-center shadow" style="background-color:#FAFAFC;">
                     <h2 class="mb-2 fw-bold">Welcome back!</h2>
                     <p class="fs-6 pb-4">Sign in to access your inventory</p>
-                    <form action="#" onsubmit="login(event)">
+                    <!-- <form action="#" onsubmit="login(event)"> -->
+                        <form id="loginForm">
                         <div class="mb-3">
-                            <input type="email" id="email" class="form-control py-3" placeholder=" email" required>
+                            <input type="text" id="companyName" class="form-control py-3" placeholder="Company Name" required>
                         </div>
                         <div class="mb-3">
                             <div class="input-group">
-                                <input type="password" class="form-control py-3 border border-end-0" id="password"
-                                    placeholder="Enter your password" required>
+                                <input type="password" class="form-control py-3 border border-end-0" id="password" placeholder="Password" required>
                                 <button class="btn border border-start-0" type="button" id="togglePassword">
                                     <i class="bi bi-eye-slash"></i>
                                 </button>
@@ -45,7 +51,12 @@
                             <a href="./forgotpw.html" class="text-decoration-none" style="font-size:15px; font-weight:400;">Forgot Password?</a>
                         </div>
                         <div class="mt-4 button-container">
-                            <button id="signIn" value="Sign In" class="btn btn-b btn-login py-2">Login</button>
+                            <button type="button" onclick="loginUser()" id="loginButton" class="btn btn-b btn-login py-2">
+                                <span>Login</span>
+                                <div class="spinner-border text-white d-none" id="loadingSpinner" role="status">
+                                  <span class="sr-only">Loading...</span>
+                                </div>
+                              </button>            
                         </div>
 
                     </form>
@@ -73,17 +84,11 @@
                                     fill="#1976D2" />
                             </svg>
                             <span class="ps-2">Sign in with Google</span></a>
-                        <!-- <button class="btn btn-b btn-social btn-outline-dark py-2 text-center" href="#">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.1521 6.896C11.2041 6.896 9.73711 5.818 8.19211 5.856C6.15211 5.883 4.28211 7.039 3.23111 8.87C1.11411 12.545 2.68511 17.973 4.75011 20.96C5.76311 22.414 6.95811 24.05 8.54211 23.999C10.0621 23.934 10.6321 23.012 12.4771 23.012C14.3081 23.012 14.8271 23.999 16.4371 23.96C18.0741 23.934 19.1131 22.48 20.1131 21.012C21.2691 19.324 21.7491 17.687 21.7751 17.597C21.7361 17.584 18.5931 16.376 18.5551 12.74C18.5291 9.7 21.0351 8.246 21.1521 8.181C19.7231 6.091 17.5291 5.857 16.7621 5.805C14.7621 5.649 13.0871 6.896 12.1521 6.896ZM15.5301 3.83C16.3731 2.818 16.9301 1.403 16.7751 0C15.5681 0.052 14.1131 0.805 13.2431 1.818C12.4631 2.714 11.7891 4.156 11.9701 5.532C13.3081 5.636 14.6851 4.844 15.5291 3.831"
-                                    fill="black" />
-                            </svg>
-                            <span class="ps-2">Sign in with Apple</span></button> -->
+                        
                         <div class="text-black text-center pt-3" style="font-size:small">
                             <p class="">Do you have a stocki account? <a href="./signup.html"
-                                    style="color:#fd7e14;text-decoration: none; font-weight: bold;">SignUp now</a></p>
+                                style="color:#fd7e14;text-decoration:none; font-weight:bold;">SignUp now</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -95,25 +100,53 @@
                     <img src="./assets/img/login-img.png" alt="Logo" class="img-fluid">
                 </div>
             </div>
-
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> <!-- Include jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-       <script>
-        // Toggle password visibility
-        document.getElementById('togglePassword').addEventListener('click', function () {
-            var passwordInput = document.getElementById('password');
-            var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-        });
-    </script>
-    <script src="./assets/script/login.js" type="module"></script>
+    <!-- Login Successful Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center" style="padding-top: 30px; padding-bottom: 30px;">
+                <!-- Centered image -->
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img src="/assets/img/accept-icon.png" alt="" srcset="" style="width: 50px; height: 50px;">
+                </div>
+                <h2 class="modal-title text-center">Login Successful!</h2>
+                <div class="modal-body">
+                    <!-- <p>Your account has been created successfully.</p> -->
+                    <a href="/dashboard.html" class="btn btn-primary px-auto">Click here to access the Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  
+  <!-- Error Modal -->
+  <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center" style="padding-top: 30px; padding-bottom: 30px;">
+            <!-- Centered image -->
+            <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="/assets/img/decline-icon.png" alt="" srcset="" style="width:50px;height:50px;">
+            </div>
+        <h5 class="modal-title">Error</h5>
+        <div class="modal-body">
+          <p>An error occurred during Login. Please try again.</p>
+          <a href="/login.html" class="btn btn-primary px-auto">Try Again</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="./assets/script/stocki-api.js"></script>
+<script>
+// Toggle password visibility
+document.getElementById('togglePassword').addEventListener('click', function () {
+  var passwordInput = document.getElementById('password');
+  var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+  passwordInput.setAttribute('type', type);
+});
+</script>
 
 </body>
 
