@@ -1,0 +1,375 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* header */
+    header {
+        background-color: #fff !important;
+        position: fixed !important;
+        top: 0;
+        width:100% ;
+        z-index: 100 !important;
+    }
+    
+    .navbar-nav {
+        column-gap: 60px !important;
+        display: none;
+    }
+
+    .navbar-nav li a {
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #000 !important;
+        text-decoration: none !important;
+        list-style: none !important;
+    }
+
+    .btn-outline-col{
+        border: 1px solid #FF5722 !important;
+        color: #FF5722 !important;
+    }
+
+    /* btn effect */
+
+    .btn-outline-col{
+        border: 1px solid #FF5722 !important;
+        color: #FF5722 !important;
+        transition: background-color 1.5s ease-in-out !important;
+        padding: 12px 20px 12px 20px !important;
+    }
+    .sign-in {
+        padding-right: 100px; 
+    }
+
+    .nav-con {
+            margin-left: -150px;
+    }
+
+    main{
+            margin-top: 50px; 
+    }
+
+    /* header-end */
+
+    .request {
+        background-color: #FAFAFC;
+    }
+
+    .request h1 {
+        color: #0063F7;
+        padding-top: 110px;
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 60px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .send {
+        padding-bottom: 18%;
+        padding-top: 12px;
+    }
+
+    .image {
+        justify-content: flex-end;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+    }
+
+
+    .form-s{
+        width: 790px;
+        height: 60px;
+        border-radius: 6px;
+        border: 1px solid #959595;
+        border-radius: 6px;
+        box-shadow: 0px 1px 4px 0px #00000026;
+    }
+
+    .form-group label {
+
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        letter-spacing: 2%;
+    }
+
+    .form-group select  {
+        /* Hide the hyphen and dropdown arrow */
+        appearance: none;
+        color: transparent;
+        padding-left: 10px;
+        padding-right: 30px;
+        background-image: url('path/to/transparent.png'); 
+        background-repeat: no-repeat;
+        padding: 15px;
+        
+    }
+
+
+    .form-group select option.first {   
+        color: transparent;
+        padding: 15px;
+    }
+
+
+    .form-group {
+        color: #959595;
+    }
+
+    .form-group p {
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #959595;
+    }
+
+    .text-col{
+        color: #1B1B1B;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        text-align: left;
+    }
+
+    .des {
+        height: 143px !important;
+        width: 790px;
+        border-radius: 6px;
+        border: 1px solid #959595;
+        border-radius: 6px;
+        box-shadow: 0px 1px 4px 0px #00000026;
+
+    }
+
+    .blue-cta-btn{
+        font-size: 16px;
+        background-color: #0074E4!important; 
+        color: #fff !important;
+        border: none !important;
+        cursor: pointer;
+        transition: background-color 1s ease-in-out !important;
+        padding: 12px 20px 12px 20px !important;
+    }
+
+    .file-input-container {
+        position: relative;
+    }
+
+    textarea {
+        padding: 40px;
+        font-size: 17px;
+        position: relative;
+    }
+
+    textarea::placeholder {
+        content: "+ Add file or drop file here";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    textarea.add-file::placeholder {
+        content: "+ Add file";
+        color: #0063F7;
+    }
+
+    textarea.dropped::placeholder {
+        content: "or drop file here";
+        color: #C7C9D9;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    /* footer */
+
+    .blue {
+        height: 10vh;
+        background-color: #0074E4;
+    }
+
+    .istoc {
+        gap: 60%;
+    }
+
+    .support img {
+        margin-right: 20px; 
+        width: 24px;
+        height: 24px;
+    }
+
+    .stocki-support {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .support {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .stocki-su {
+        font-size: 20px;
+        color: #FFFFFF;
+    }
+/* end-footer */
+
+  
+@media screen and (max-width: 768px) {
+    
+    .nav-con {
+        margin-left: -10px;
+    }
+
+    .navbar-toggler {
+        display: block;
+        color:  #FFA88C;
+        border: none;
+        width: 11.67px;
+        height: 8.85px;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .image-container {
+        content: url(../img/submit_images/stocki-image.png);
+        width: 55px;
+        height: 17px;
+        top: 18px;
+        left: 16px;
+    }
+
+    .sign {
+        display: none;
+    }
+    /* end-header */
+
+    .form-group input {
+        width: 308px;
+        height: 50px;
+        border-radius: 6px;
+    }
+
+    .group {
+        width: 308px;
+    }
+    .form-group label {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .form-group p {
+        font-size: 12px;
+    }
+
+    .form-group select {
+        width: 308px;
+        height: 50px;
+        border-radius: 6px; 
+    }
+    .request h1 {
+        font-size: 24px;
+        text-align: center;
+        padding-top: 100px;
+        line-height: 10px;
+    }
+
+    .send {
+        margin-bottom: 150px;
+        left: 25px;
+        width: 10px;
+        height: 5px;
+    }
+    
+    .form-group select {
+          /* Show the hyphen and dropdown arrow */
+        -webkit-appearance: menulist-button;
+        appearance: menulist-button;
+        color: initial;
+        padding-left: initial;
+        padding-right: initial;
+        background-image: initial;
+        background-repeat: initial;
+        padding: initial;
+    } 
+      
+    .form-group select option.first {   
+  /* Show the hyphen */
+    color: initial;
+    }
+
+    .des {
+        border-radius: 4px;
+    }
+        
+    .blue-cta-btn {
+        font-size: 10px;
+        height: 35px;
+    }
+
+    /* footer */
+
+    .wave {
+        display: none;
+    }
+
+    .istoc {
+        gap: 123px;
+    }
+    
+    
+    .blue {
+        height: 16vh;
+    }
+
+    .support img {
+        margin-right: 10px; 
+        width: 20px;
+        height: 20px;
+        gap: 8px;
+    }
+    
+    .stocki-support {
+        font-size: 12px;
+        /* margin-top: 25px; */
+        padding-top: 30px;
+        padding-left: 10px;
+    }
+
+    
+    .support {
+        padding-top: 25px;
+        /* margin-top: 25px; */
+    }
+    
+    .stocki-su {
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+}
+
+  

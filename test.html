@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-- Adding Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+ 
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      /* margin: 20px; */
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 170vh;
+      background-color: #f4f4f4;
+    }
+
+    .signup-form {
+      background-color: #fff;
+      /* margin: -60px; */
+      padding: 60px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border-radius: 8px;
+      z-index: 1;
+    }
+
+    .flash-icon {
+      color: #28a745;
+      font-size: 36px;
+    }
+
+    .modal-content {
+      margin-top: 20px;
+    }
+
+    .close-btn {
+      cursor: pointer;
+      font-size: 18px;
+      color: #6c757d;
+      margin-top: 10px;
+    }
+    /* .spinner-border {
+      display: none;
+    }
+
+    .loading-text {
+      display: none;
+    } */
+  </style>
+</head>
+<body>
+
+<div class="signup-form pt-5 mt-5">
+  <h2>Signup</h2>
+     <form id="signupForm">
+        <label for="username">Company Name:</label>
+        <input type="text" id="companyName" name="companyName" placeholder="Company Name">
+ 
+        <label for="username">Category:</label>
+        <input type="text" id="category" name="category" required>
+
+        <label for="email">Company Email:</label>
+        <input type="email" id="email" name="email" required>
+
+                <label for="username">Company Reg N0:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+    <label for="username">First Name:</label>
+    <input type="text" id="firstname" name="firstname" required>
+
+    <label for="username">Last Name:</label>
+    <input type="text" id="lastname" name="lastname" required>
+
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="password">Confirm Password:</label>
+    <input type="password" id="password2" name="password2" required>
+
+    <button type="button" onclick="registerUser()" id="signupButton">
+      Signup
+      <div class="spinner-border text-primary mt-2 d-none" id="loadingSpinner" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </button>
+  </form>
+</div>
+
+<!-- Signup Successful Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <img src="/img/accept-icon.png" alt="" srcset="" class="img-fluid">
+      <h2 class="modal-title text-center">Signup Successful!</h2>
+      <div class="modal-body">
+        <p>Your account has been created successfully.</p>
+        <a href="/login.html" class="btn btn-primary px-auto">Click here to Login</a>
+        <button type="button" class="btn btn-secondary" onclick="closeModal('signupModal')">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <img src="/img/decline-icon.png" alt="" srcset="" class="img-fluid">
+      <h5 class="modal-title">Error</h5>
+      <div class="modal-body">
+        <p>An error occurred during signup. Please try again.</p>
+        <button type="button" class="btn btn-secondary" onclick="closeModal('errorModal')">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Function to close the modal
+  function closeModal(modalId) {
+    $('#' + modalId).modal('hide');
+  }
+
+  // Function to display the modal
+  function openModal(modalId) {
+    $('#' + modalId).modal('show');
+  }
+
+  function registerUser() {
+    const form = document.getElementById('signupForm');
+    const companyName = form.elements.companyName.value;
+    const companyCategory = form.elements.category.value;
+    const companyEmail = form.elements.email.value;
+    const companyNumber = form.elements.phone.value;
+    const firstName = form.elements.firstname.value;
+    const lastName = form.elements.lastname.value;
+    const password = form.elements.password.value;
+    const password2 = form.elements.password2.value;
+
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    const signupButton = document.getElementById('signupButton');
+
+    if (companyName && companyCategory && companyEmail && companyNumber && firstName && lastName && password && password2) {
+      // Show loading spinner
+      loadingSpinner.classList.remove('d-none');
+      signupButton.setAttribute('disabled', 'true');
+
+      const apiUrl = 'https://bg-group2-backend.onrender.com/v1/auth/register';
+
+      // Prepare the request payload
+      const payload = {
+        companyName: companyName,
+        companyCategory: companyCategory,
+        companyEmail: companyEmail,
+        companyNumber: companyNumber,
+        firstName: firstName,
+        lastName: lastName,
+        password: password,
+        password2: password2
+      };
+
+      // Make a POST request to the API
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the API response here
+        console.log(data);
+
+        // Hide loading spinner
+        loadingSpinner.classList.add('d-none');
+        signupButton.removeAttribute('disabled');
+
+        // If signup is successful, display the modal
+        if (data.newUser && data.newUser._id) {
+          alert("Signup successful");
+          openModal('signupModal');
+        } else {
+          // Display error modal
+          openModal('errorModal');
+        }
+      })
+      .catch(error => {
+        // Handle errors here
+        console.error('Error:', error);
+
+        // Hide loading spinner
+        loadingSpinner.classList.add('d-none');
+        signupButton.removeAttribute('disabled');
+
+        // Display error modal
+        openModal('errorModal');
+      });
+    }
+  }
+</script>
+
+</body>
+</html>
