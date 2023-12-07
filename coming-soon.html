@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Stocki | Dashboard</title>
+    <title>Dashboard | coming soon</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -29,37 +29,13 @@
 
     <!-- Custom styles for this template-->
     <link href="assets/css/dashboard1.css" rel="stylesheet">
-
-    <!-- bootstrap icon cdn -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-<!-- fontawesome cdn  -->
-<link rel="stylesheet" href="https://cdnjs cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="assets/css/dashboard1.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/users.css">
 
     <!-- bootstrap icon cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
-    <!-- Custom styles for this template-->
-    <link href="assets/css/logout.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    
     <script src="assets/script/stocki-api.js"></script>
+    
 </head>
 
 <body id="page-top" >
@@ -71,7 +47,7 @@
         <ul class="navbar-nav  sidebar sidebar-dark accordion shadow" id="accordionSidebar" style="background-color: #FAFAFC;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon rotate-n-15">
                 </div>
                 <div class="sidebar-brand-text text-start " style="margin-right: 80px;">
@@ -92,7 +68,7 @@
           
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item mt-2">
-                <a class="nav-link collapsed" href="/users.html" 
+                <a class="nav-link collapsed" href="/users.html"
                     aria-expanded="true" aria-controls="collapseTwo" style="color: #1b1b1b;">
                     <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
                     <span style="font-size: 16px; font-weight: 400;">Users</span>
@@ -210,10 +186,10 @@
 
           <!-- Nav Item - Charts -->
           <li class="nav-item">
-              <a class="nav-link" href="logout.html" style="color: #ff0000;">
-                  <span><i class="bi bi-box-arrow-in-right" style="color: #ff0000; font-size: 18px;"></i></span>
-                  <span style="font-size: 16px; font-weight: 400;">Logout</span></a>
-          </li>
+            <a class="nav-link" href="/logout.html" style="color: #ff0000;">
+                <span><i class="bi bi-box-arrow-in-right" style="color: #ff0000; font-size: 18px;"></i></span>
+                <span id="logout" class="logout" style="font-size: 16px; font-weight: 400;">Logout</span></a>
+        </li>
         </ul>
         <!-- End of Sidebar -->
 
@@ -224,7 +200,7 @@
         <!-- Main Content -->
         <div id="content">
 
-             <!-- Topbar -->
+            <!-- Topbar -->
             <nav
                 class="m-3 py-5 navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm rounded">
                 <div style="width:70rem">
@@ -290,7 +266,7 @@
                             Plan & Billings
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a id="logout" class="dropdown-item logout" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <a id="logout" class="dropdown-item logout" href="logout.html" data-toggle="modal" data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2" style="color:red"></i>
                             Logout
                         </a>
@@ -343,25 +319,67 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 
     <script>
-// create a function to update the date and time
-function updateDateTime() {
-    // create a new `Date` object
-    const now = new Date();
-
-    // get the current date and time as a string
-    const currentDateTime = now.toLocaleString();
-
-    // update the `textContent` property of the `span` elements with the ids of `datetime1` and `datetime2`
-    document.querySelectorAll('#datetime1, #datetime2').forEach(element => {
-        element.textContent = currentDateTime;
-    });
-}
-
-// call the `updateDateTime` function every second
-setInterval(updateDateTime, 1000);
-
-      </script>
     
+        const logoutElements = document.querySelectorAll('#logout');
+    
+        function btnLogout() {
+            window.location.href = "index.html";
+        }
+    
+        logoutElements.forEach(element => {
+            element.addEventListener('click', btnLogout);
+        });
+    
+        // Get Current date
+        // date
+        function updateDateTime() {
+            const now = new Date();
+    
+            // Get the current date and time as a string with long date format
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true,
+            };
+            const currentDateTime = now.toLocaleDateString(undefined, options);
+            document.querySelectorAll('#datetime1, #datetime2').forEach(element => {
+                element.textContent = currentDateTime;
+            });
+        }
+        updateDateTime();
+    
+    
+        function getTimeOfDay() {
+            const now = new Date();
+            const currentHour = now.getHours();
+    
+            let timeOfDay;
+    
+            if (currentHour >= 5 && currentHour < 12) {
+                timeOfDay = 'Morning';
+            } else if (currentHour >= 12 && currentHour < 18) {
+                timeOfDay = 'Afternoon';
+            } else {
+                timeOfDay = 'Evening';
+            }
+    
+            // Assuming you want to select an element with ID 'salute' and set its content
+            const saluteElement = document.querySelector('#salute');
+    
+            // Check if the element exists before trying to manipulate it
+            if (saluteElement) {
+                saluteElement.textContent = `Good ${timeOfDay}!`;
+            }
+        }
+        getTimeOfDay()
+    
+    
+    </script>
  
 
 </body>

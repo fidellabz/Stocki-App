@@ -21,6 +21,10 @@
   color: #FF5722 !important;
 }
 
+.navbar-toggler{
+  width:auto !important;
+
+}
 .btn-outline-col {
   border: 1px solid #FF5722 !important;
   color: #FF5722 !important;
@@ -472,7 +476,7 @@ button {
   }
 
   .hero-content h1 {
-    font-size: 18px;
+    font-size: 30px;
 
   }
 
@@ -524,7 +528,7 @@ button {
   }
 
   .feature-content h1 {
-    font-size: 20px;
+    font-size: 30px;
     margin-top: -1.5rem;
     margin-bottom: -1.5rem;
   }
@@ -569,7 +573,7 @@ button {
 
   #upscale:before {
     content: "";
-    margin-top: 60vh;
+    margin-top: 92vh;
     margin-bottom: -10vh;
     top: 1600px;
     bottom: -1800px;
@@ -800,9 +804,16 @@ button {
     height: 60vh !important;
   }
 
+  #contact-us-section{
+    height: 75vh !important;
+
+  }
+
   .contact-right-content {
     margin-top: -150px !important;
     width: 70% !important;
+    padding-right: 5px;
+    padding-left: 5px;
   }
 
   .contact-right-content h6{
@@ -820,9 +831,17 @@ button {
     margin-right: -135px !important;
   }
 
-  .contact-icons .contact-icon {
-    justify-content: start;
-    align-items: start;
+  .contact-icons {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-btn{
+    left: 100px !important;
+  }
+
+  .h2-lst-sec{
+    font-size: 30px !important;
   }
 
   /* section8 */
@@ -853,4 +872,10 @@ button {
   .google {
     margin: 10px;
   }
+  .btn-contact.button{
+    align-items: left !important;
+    justify-content: left !important;
+  }
+  
+
 }

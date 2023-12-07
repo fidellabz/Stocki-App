@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Kodecamp-Dashboard</title>
+    <title>Dashboard | logout</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -38,7 +38,7 @@
         <ul class="navbar-nav  sidebar sidebar-dark accordion shadow" id="accordionSidebar" style="background-color: #FAFAFC;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon rotate-n-15">
                 </div>
                 <div class="sidebar-brand-text text-start " style="margin-right: 80px;">
@@ -51,7 +51,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active mt-2">
-                <a class="nav-link" href="/index.html" style="color: #0074E4;">
+                <a class="nav-link" href="/dashboard.html" style="color: #0074E4;">
                     <span><img src="assets/img/Dashboard.png" alt=""></span>
                     <span class="pt-2" style="font-size: 16px; font-weight: 700;">Dashboard</span></a>
             </li>
@@ -282,17 +282,65 @@
 
 
     <!-- Page level custom scripts -->
-     <script>
-     const logoutElements = document.querySelectorAll('#logout');
+<script>
+    
+    const logoutElements = document.querySelectorAll('#logout');
 
-function btnLogout() {
- window.location.href = "index.html";
-}
+    function btnLogout() {
+        window.location.href = "index.html";
+    }
 
-logoutElements.forEach(element => {
-element.addEventListener('click', btnLogout);
-});
+    logoutElements.forEach(element => {
+        element.addEventListener('click', btnLogout);
+    });
 
+    // Get Current date
+    // date
+    function updateDateTime() {
+        const now = new Date();
+
+        // Get the current date and time as a string with long date format
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: true,
+        };
+        const currentDateTime = now.toLocaleDateString(undefined, options);
+        document.querySelectorAll('#datetime1, #datetime2').forEach(element => {
+            element.textContent = currentDateTime;
+        });
+    }
+    updateDateTime();
+
+
+    function getTimeOfDay() {
+        const now = new Date();
+        const currentHour = now.getHours();
+
+        let timeOfDay;
+
+        if (currentHour >= 5 && currentHour < 12) {
+            timeOfDay = 'Morning';
+        } else if (currentHour >= 12 && currentHour < 18) {
+            timeOfDay = 'Afternoon';
+        } else {
+            timeOfDay = 'Evening';
+        }
+
+        // Assuming you want to select an element with ID 'salute' and set its content
+        const saluteElement = document.querySelector('#salute');
+
+        // Check if the element exists before trying to manipulate it
+        if (saluteElement) {
+            saluteElement.textContent = `Good ${timeOfDay}!`;
+        }
+    }
+    getTimeOfDay()
 
 
 </script>

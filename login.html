@@ -10,19 +10,19 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
 
-        <link rel="stylesheet" 
+    <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
         integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets//css//login.css">
-    
+
 
 </head>
 
@@ -35,40 +35,44 @@
                     <h2 class="mb-2 fw-bold">Welcome back!</h2>
                     <p class="fs-6 pb-4">Sign in to access your inventory</p>
                     <!-- <form action="#" onsubmit="login(event)"> -->
-                        <form id="loginForm">
+                    <form id="loginForm">
                         <div class="mb-3">
-                            <input type="email" id="companyEmail" class="form-control py-3" placeholder="Company Email" required>
+                            <input type="email" id="companyEmail" class="form-control py-3 ps-4" placeholder="Company Email"
+                                required>
                         </div>
                         <div class="mb-3">
                             <div class="input-group">
-                                <input type="password" class="form-control py-3 border border-end-0" id="password" placeholder="Password" required>
-                                <button class="btn border border-start-0" type="button" id="togglePassword">
+                                <input type="password" class="form-control py-3 ps-4" id="password" placeholder="Password"
+                                    required>
+                                <!-- <button class="btn border border-start-0" type="button" id="togglePassword">
                                     <i class="bi bi-eye-slash"></i>
-                                </button>
+                                </button> -->
                             </div>
                         </div>
                         <div class="mb-3 text-end">
-                            <a href="./forgotpw.html" class="text-decoration-none" style="font-size:15px; font-weight:400;">Forgot Password?</a>
+                            <a href="./forgotpw.html" class="text-decoration-none"
+                                style="font-size:15px; font-weight:400;">Forgot Password?</a>
                         </div>
-                        <div class="mt-4 button-container">
-                            <button type="button" onclick="loginUser()" id="loginButton" class="btn btn-b btn-login py-2">
-                                <span>Login</span>
-                                <div class="spinner-border text-white d-none" id="loadingSpinner" role="status">
-                                  <span class="sr-only">Loading...</span>
+                        <div class="pt-4">
+                            <div class="input-group justify-content-center">
+                                <!-- <div class="mt-4 button-container"> -->
+                                <button type="button" onclick="loginUser()" id="loginButton"
+                                    class="btn btn-b btn-login py-2 rounded-2">
+                                    <span>Login</span>
+                                    <div class="spinner-border text-white d-none" id="loadingSpinner" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </button>
+
+                                <div class="or-divider button-container py-4 mx-auto">
+                                    <hr><span style="font-size:small">OR</span>
+                                    <hr>
                                 </div>
-                              </button>            
-                        </div>
 
-                    </form>
-
-                    <div class="or-divider button-container py-4">
-                        <hr><span style="font-size:small">OR</span>
-                        <hr>
-                    </div>
-
-                    <div class="social-login button-container">
-                        <a class="btn btn-b btn-social btn-outline-dark py-2 mb-3 text-center" href="#">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                <button type="button"
+                                        class="btn btn-b btn-login bg-white text-black btn-outline-dark py-2 text-center rounded-2"
+                                        href="#">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
@@ -83,70 +87,81 @@
                                     d="M21.8055 10.0415H21V10H12V14H17.6515C17.2571 15.1082 16.5467 16.0766 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
                                     fill="#1976D2" />
                             </svg>
-                            <span class="ps-2">Sign in with Google</span></a>
-                        
-                        <div class="text-black text-center pt-3" style="font-size:small">
-                            <p class="">Do you have a stocki account? <a href="./signup.html"
-                                style="color:#fd7e14;text-decoration:none; font-weight:bold;">SignUp now</a>
-                            </p>
+                                        <span class="ps-2">Sign in with Google</span>
+                                    </button>
+
+                                    <div class="text-black text-center pt-3" style="font-size:small">
+                                        <p class="pt-3">Do you have a stocki account? <a href="./signup.html"
+                                                style="color:#fd7e14;text-decoration:none; font-weight:bold;">SignUp
+                                                now</a>
+                                        </p>
+                                    </div>
+
+                            </div>
+                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Column: Image -->
+                        <div class="col-md-6 d-flex align-items-center justify-content-center" style="width: 500px; ">
+                            <div class="image-container text-center mx-auto" style="margin-left: 100px;">
+                                <img src="./assets/img/login-img.png" alt="Logo" class="img-fluid">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Second Column: Image -->
-            <div class="col-md-6 d-flex align-items-center justify-content-center" style="width: 500px; ">
-                <div class="image-container text-center" style="margin-left: 100px;">
-                    <img src="./assets/img/login-img.png" alt="Logo" class="img-fluid">
+                <!-- Login Successful Modal -->
+                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content text-center" style="padding-top: 30px; padding-bottom: 30px;">
+                            <!-- Centered image -->
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="/assets/img/accept-icon.png" alt="" srcset=""
+                                    style="width: 50px; height: 50px;">
+                            </div>
+                            <h2 class="modal-title text-center">Login Successful!</h2>
+                            <div class="modal-body">
+                                <!-- <p>Your account has been created successfully.</p> -->
+                                <a href="/dashboard.html" class="btn btn-primary px-auto">Click here to access the
+                                    Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Login Successful Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content text-center" style="padding-top: 30px; padding-bottom: 30px;">
-                <!-- Centered image -->
-                <div style="display: flex; justify-content: center; align-items: center;">
-                    <img src="/assets/img/accept-icon.png" alt="" srcset="" style="width: 50px; height: 50px;">
-                </div>
-                <h2 class="modal-title text-center">Login Successful!</h2>
-                <div class="modal-body">
-                    <!-- <p>Your account has been created successfully.</p> -->
-                    <a href="/dashboard.html" class="btn btn-primary px-auto">Click here to access the Dashboard</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-  
-  <!-- Error Modal -->
-  <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content text-center" style="padding-top: 30px; padding-bottom: 30px;">
-            <!-- Centered image -->
-            <div style="display: flex; justify-content: center; align-items: center;">
-        <img src="/assets/img/decline-icon.png" alt="" srcset="" style="width:50px;height:50px;">
-            </div>
-        <h5 class="modal-title">Error</h5>
-        <div class="modal-body">
-          <p>An error occurred during Login. Please try again.</p>
-          <a href="/login.html" class="btn btn-primary px-auto">Try Again</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
-<script src="./assets/script/stocki-api.js"></script>
-<script>
-// Toggle password visibility
-document.getElementById('togglePassword').addEventListener('click', function () {
-  var passwordInput = document.getElementById('password');
-  var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-  passwordInput.setAttribute('type', type);
-});
-</script>
+                <!-- Error Modal -->
+                <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content text-center" style="padding-top: 30px; padding-bottom: 30px;">
+                            <!-- Centered image -->
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <img src="/assets/img/decline-icon.png" alt="" srcset=""
+                                    style="width:50px;height:50px;">
+                            </div>
+                            <h5 class="modal-title">Error</h5>
+                            <div class="modal-body">
+                                <p>An error occurred during Login. Please try again.</p>
+                                <a href="/login.html" class="btn btn-primary px-auto">Try Again</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script src="./assets/script/stocki-api.js"></script>
+                <script>
+                    // Toggle password visibility
+                    document.getElementById('togglePassword').addEventListener('click', function () {
+                        var passwordInput = document.getElementById('password');
+                        var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                        passwordInput.setAttribute('type', type);
+                    });
+                </script>
 
 </body>
 

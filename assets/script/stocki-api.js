@@ -1,4 +1,6 @@
 
+ 
+
 // SignUp Script
   function registerUser() {
     const form = document.getElementById('signupForm');
@@ -213,28 +215,4 @@ window.onload = function () {
       console.error('Token not found. User not logged in.');
   }
 };
-
-function updateDateTime() {
-  // Create a new `Date` object
-  const now = new Date();
-
-  // Get the current date and time as a string with long date format
-  const options = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    hour12: true, // Set to false for 24-hour format
-  };
-
-  const currentDateTime = now.toLocaleDateString(undefined, options);
-
-  // Update the `textContent` property of the `span` elements with the ids of `datetime1` and `datetime2`
-  document.querySelectorAll('#datetime1, #datetime2').forEach(element => {
-    element.textContent = currentDateTime;
-  });
-}
 

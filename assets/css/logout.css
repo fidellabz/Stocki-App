@@ -1,4 +1,14 @@
-
+/*!
+ * Start Bootstrap - SB Admin 2 v4.1.4 (https://startbootstrap.com/theme/sb-admin-2)
+ * Copyright 2013-2021 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin-2/blob/master/LICENSE)
+ */
+/*!
+ * Bootstrap v4.6.0 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
  :root {
     --blue: #4e73df;
     --indigo: #6610f2;
@@ -88,6 +98,16 @@
     background-color: #852d12 !important;
   }
 
+  .upgradeplan{
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('/assets/img/upgrade-plan.png');
+    height: 60vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+   
+    
+  }
+
 *,
 ::after,
 ::before {
@@ -99,6 +119,20 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block
+    
 }
 
 nav{
@@ -126,6 +160,38 @@ hr {
     box-sizing: content-box;
     height: 0;
     overflow: visible
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+abbr[data-original-title],
+abbr[title] {
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+    cursor: help;
+    border-bottom: 0;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit
 }
 
 dl,

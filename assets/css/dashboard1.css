@@ -651,6 +651,10 @@ pre code {
     .container-sm {
         max-width: 540px
     }
+
+    .greetings-img{
+        display:none
+    }
 }
 
 @media (min-width:768px) {
@@ -659,6 +663,10 @@ pre code {
     .container-md,
     .container-sm {
         max-width: 720px
+    }
+
+    #greetings{
+        display:none
     }
 }
 
@@ -12162,6 +12170,69 @@ hr{
     .chart-area {
         height: 20rem
     }
+}
+
+
+/* Media query to hide the graph card on screens with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+    .topbar{
+        padding: 5px;
+    }
+
+    .graph.card {
+        display: none;
+    }
+
+    .greetings{
+        display: none !important;
+    }
+    
+    .greetings .btn{
+        max-width: 100%   
+    }
+
+    .card.overview .bread-section {
+        display: none !important;
+    }
+
+    /*  */
+    .pstatus .pie-div{
+        padding:-10px !important;
+        margin: -10px !important;
+    }
+
+    .pstatus .pie-div .col1{
+          padding-left: -5px;
+    }
+    .pstatus .pie-div .col2{
+        padding-left: -10px !important;
+    }
+
+    .col3{
+        height: auto !important;
+    }
+
+    .sales{
+        margin-top: 10px;
+    }
+    
+    .sales .doughnut canvas{
+        margin: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .under-doughnut{
+        padding-top: 20px !important;
+    }
+
+    .exp-goods{
+        padding-bottom: 0 !important
+    }
+
+    .datatable, .transparent-cover{
+        display:none;
+    }
+    
 }
 
 .chart-bar {
