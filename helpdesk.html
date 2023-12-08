@@ -17,10 +17,11 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="container-fluid position-fixed w-100 ">
+    <header class="container-fluid position-fixed">
         <nav class="navbar navbar-expand-lg">
-            <div class="container" style="gap: 850px;"> 
-                <a class="navbar-brand  fs-6 ms-3" href="./index.html"><img src="assets/img/stocki logo.png" alt=""></a>            
+            <div class="container d-flex justify-content-between" > 
+                <a class="navbar-brand  fs-6 ms-3" href="./index.html"><img src="assets/img/stocki logo.png" alt=""></a>    
+                <div>    
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="gap: 20px;">
                     <div>
                         <div class="d-flex gap-2">
@@ -30,6 +31,7 @@
                     <a href="./login.html" class="btn btn-outline-col me-3 " style="white-space: nowrap;font-size: 12px;">Sign In</a>
                 </div>  
             </div>
+        </div>    
         </nav>
   </header> 
     <section class="container top" style="background-color: #ff5722;max-width: 100% !important;">
@@ -58,7 +60,7 @@
                   </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;font-family: poppins sans-serif;">
+                <div class="card"  style="width:18rem;">
                   <div class="card-body">
                     <h5 class="card-title py-5 text-center" style="font-family: poppins sans-serif;">Training Resources</h5>                  
                     <p class="card-text text-center " style="font-family: poppins sans-serif;">How to make Subscription changes and manage and update your
@@ -66,11 +68,11 @@
                   </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;font-family: poppins sans-serif;">
-                  <div class="card-body" style="font-family: poppins sans-serif;">
-                    <h5 class="card-title py-5 text-center" style="font-family: poppins sans-serif;">FAQs</h5>                  
-                    <p class="card-text text-center" style="font-family: poppins sans-serif;">Commonly asked questions including plan information accessing 
+            <div class="col"  style="width:18rem;">
+                <div class="card" >
+                  <div class="card-body">
+                    <h5 class="card-title py-5 text-center">FAQs</h5>                  
+                    <p class="card-text text-center">Commonly asked questions including plan information accessing 
                         Stocki and upcoming features.</p>                  
                   </div>
                 </div>
@@ -79,7 +81,7 @@
     </section>
     <section>
         <section class="main-bg d-flex">
-            <div class="contact-left" style="width: 60%; height: 100%;">
+            <div class="contact-left" style="width:50%; height: 100%;">
               <div class="mb-3 text-center">
                 <h1 class="text-white mt-5 pt-5 mb-5 pb-3" style="font-weight: bold;">Contact Us</h1>
                 <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Fullname"
@@ -130,16 +132,10 @@
         <div class="foot-text" style="width:100%; height:178px; color:#ff5722; padding-top:150px;">
             <h1>Cant find what you are looking for?</h1>
             <h4 class="py-3">Let us help you!</h4>
-            <!--
-                <div>
-                    <a href="./submit.html"><button class="btn btn-outline-col" Style="">Submit a Request</button></a>
-                </div>
-            -->
-            <div class="d-flex justify-content-center">
-                <a href="./submit.html" class="btn btn-outline-col" style="white-space: nowrap;font-size: 12px;">Submit a Request</a>
-            </div>
-             
-                              
+
+            <div class="pt-3" >  
+                <a href="submit.html" class="btn btn-outline-col" role="button" data-bs-toggle="button" style="white-space: nowrap;font-size: 12px; width: 150px; margin: auto;">Submit a Request</a>              
+            </div>                   
         </div>         
     </section>
     <footer>

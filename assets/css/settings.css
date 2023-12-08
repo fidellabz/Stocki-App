@@ -96,6 +96,11 @@
     
   }
 
+  .setings-content:hover {
+  color: #0074E4 !important;
+  }
+
+
 *,
 ::after,
 ::before {

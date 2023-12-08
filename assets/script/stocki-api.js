@@ -252,41 +252,6 @@ function getItemsWithToken() {
     });
 }
 
-// function updateTableWithData(data) {
-//   const tableBody = document.querySelector('#dataTable tbody');
-//   tableBody.innerHTML = '';
-
-//   const items = data.getAllProducts.docs;
-
-//   items.forEach(item => {
-//     const row = document.createElement('tr');
-//     row.innerHTML = `
-//       <td>
-//         <div class="d-flex align-items-center">
-//           <div class="rounded-circle mr-3">
-//             <img src="./assets/img/tb-Image.png" alt="" srcset="">
-//           </div>
-//           <div>
-//             <p class="mb-0">${item.productDetails}</p>
-//             <p class="mb-0">${item.category}</p>
-//           </div>
-//         </div>
-//       </td>
-//       <td>${item.category}</td>
-//       <td>${item.price}</td>
-//       <td>${item.stock}</td>
-//       <td>${item.sold}</td>
-//       <td>${item.sku}</td>
-//       <td>${item.status}</td>
-//       <td class="text-center">
-//         <!-- Your action dropdown rendering logic here -->
-//       </td>
-//     `;
-
-//     tableBody.appendChild(row);
-//   });
-// }
-
 function updateTableWithData(data) {
   const tableBody = document.querySelector('#dataTable tbody');
   tableBody.innerHTML = '';
@@ -333,6 +298,65 @@ function updateTableWithData(data) {
     tableBody.appendChild(row);
   });
 }
+getItemsWithToken();
+
+function addProduct() {
+  const apiUrl = "https://bg-group2-backend.onrender.com/v1/products"; // Replace with your actual API endpoint
+  const token = localStorage.getItem('token'); // Retrieve the token from local storage
+
+  if (!token) {
+    // Handle the case where the token is not available
+    console.error('Token not available');
+    return;
+  }
+
+  const productDetails = document.getElementById('productDetails').value;
+const category = document.getElementById('category').value;
+const price = parseFloat(document.getElementById('price').value);
+const stock = parseInt(document.getElementById('stock').value);
+const quantitySold = parseInt(document.getElementById('quantitySold').value);
+const sku = document.getElementById('sku').value;
+const status = document.getElementById('status').value;
 
 
-getItemsWithToken()
+  const payload = {
+    productDetails,
+    category,
+    price,
+    stock,
+    quantitySold,
+    sku,
+    status
+  };
+
+  // Adding a product
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`,
+    },
+    body: JSON.stringify(payload),
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Product added successfully:', data);
+      // You can handle the response as needed
+
+      if (data._id) {
+        openModal('addProductModal');
+      } else {
+        openModal('errorProductModal');
+      }
+    })
+    .catch(error => {
+      console.error('Error adding product:', error);
+      // Handle the error
+    });
+}
+
+// Call the function when adding a product
+addProduct();
+
+
+  

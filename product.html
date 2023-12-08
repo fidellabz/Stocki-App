@@ -287,17 +287,75 @@
                                 <a class="btn btn-login py-2" href="./draft.html" style="color: #ff0000; font-size: 16px;border-color: #ff0000;">Show Draft</a>
                             </div>
                             <div class="col-sm-2">
-                                <a class="btn btn-login btn-primary py-2 border" href="" style="font-size: 16px;"><i class="bi bi-plus"></i> Add Product</a>
+                                <a class="btn btn-login btn-primary text-white py-2 border" data-toggle="modal" data-target="#exampleModalCenter" style="font-size: 16px;">
+                                    <i class="bi bi-plus"></i> Add Product</a>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Add Product</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+
+        <div class="modal-body">
+            <form id="addProductForm">
+                <div class="form-group">
+                  <label for="productDetails">Product Details:</label>
+                  <input type="text" class="form-control" id="productDetails" placeholder="Enter product details" required>
+                </div>
+            
+                <div class="form-group">
+                  <label for="category">Category:</label>
+                  <input type="text" class="form-control" id="category" placeholder="Enter category" required>
+                </div>
+            
+                <div class="form-group">
+                  <label for="price">Price:</label>
+                  <input type="number" class="form-control" id="price" placeholder="Enter price" required>
+                </div>
+            
+                <div class="form-group">
+                  <label for="stock">Stock:</label>
+                  <input type="number" class="form-control" id="stock" placeholder="Enter stock" required>
+                </div>
+            
+                <div class="form-group">
+                  <label for="quantitySold">Quantity Sold:</label>
+                  <input type="number" class="form-control" id="quantitySold" placeholder="Enter quantity sold" required>
+                </div>
+            
+                <div class="form-group">
+                  <label for="sku">SKU:</label>
+                  <input type="text" class="form-control" id="sku" placeholder="Enter SKU" required>
+                </div>
+            
+                <div class="form-group">
+                  <label for="status">Status:</label>
+                  <input type="text" class="form-control" id="status" placeholder="Enter status" required>
+                </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Add Product</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
                             </div>
                         </div>
                         
                         
-                        <!-- DataTales Example -->
+                        <!-- DataTables Example -->
                         <div class="card mb-4 border-0">
                             <div class="card-body">
                                 <div class="table-responsive ">
                                     <table class="table table-bordered-0" id="dataTable" width="100%" cellspacing="0">
-                                        <thead class="rounded-4" style="background-color: #52A0ED33;">
+                                        <thead class="rounded-4" style="background-color: #e5e9ee33;">
                                             <tr>
                                                 <th>Product Details</th>
                                                 <th>Category</th>
@@ -363,7 +421,39 @@
                 </main>
 
         </div>
-    
+ <!-- Add Product Successful Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center" style="padding-top: 30px; padding-bottom: 30px;">
+          <!-- Centered image -->
+          <div style="display: flex; justify-content: center; align-items: center;">
+              <img src="/assets/img/accept-icon.png" alt="" srcset="" style="width: 50px; height: 50px;">
+          </div>
+        <h2 class="modal-title text-center">Product Added Successful!</h2>
+        <div class="modal-body">
+            <button type="button" class="btn btn-secondary" onclick="closeModal('errorModal')">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Error Modal -->
+  <div class="modal fade" id="errorProductModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center" style="padding-top: 30px; padding-bottom: 30px;">
+          <!-- Centered image -->
+          <div style="display: flex; justify-content: center; align-items: center;">
+        <img src="/assets/img/decline-icon.png" alt="" srcset="" style="width:50px;height:50px;">
+        </div>
+        <h5 class="modal-title">Error</h5>
+        <div class="modal-body">
+          <p>An error occurred Product not added. Please try again.</p>
+          <button type="button" class="btn btn-secondary" onclick="closeModal('errorModal')">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
    
     <script>
         // Dropdown for the status button
@@ -518,33 +608,6 @@ $(document).ready(function () {
         });
     }
     updateDateTime();
-
-
-    function getTimeOfDay() {
-        const now = new Date();
-        const currentHour = now.getHours();
-
-        let timeOfDay;
-
-        if (currentHour >= 5 && currentHour < 12) {
-            timeOfDay = 'Morning';
-        } else if (currentHour >= 12 && currentHour < 18) {
-            timeOfDay = 'Afternoon';
-        } else {
-            timeOfDay = 'Evening';
-        }
-
-        // Assuming you want to select an element with ID 'salute' and set its content
-        const saluteElement = document.querySelector('#salute');
-
-        // Check if the element exists before trying to manipulate it
-        if (saluteElement) {
-            saluteElement.textContent = `Good ${timeOfDay}!`;
-        }
-    }
-    getTimeOfDay()
-
-
 </script>
 
 </body>
