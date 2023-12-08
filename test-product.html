@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Add Product</title>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2 class="mb-4">Add Product</h2>
+  <form>
+    <div class="form-group">
+      <label for="productDetails">Product Details:</label>
+      <input type="text" class="form-control" id="productDetails" placeholder="Enter product details" value="Isola Youghurt" required>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <input type="text" class="form-control" id="category" placeholder="Enter category" value="Food" required>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" class="form-control" id="price" placeholder="Enter price" value="900" required>
+    </div>
+
+    <div class="form-group">
+      <label for="stock">Stock:</label>
+      <input type="number" class="form-control" id="stock" placeholder="Enter stock" value="500" required>
+    </div>
+
+    <div class="form-group">
+      <label for="quantitySold">Quantity Sold:</label>
+      <input type="number" class="form-control" id="quantitySold" placeholder="Enter quantity sold" value="15" required>
+    </div>
+
+    <div class="form-group">
+      <label for="sku">SKU:</label>
+      <input type="text" class="form-control" id="sku" placeholder="Enter SKU" value="DR3450" required>
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status:</label>
+      <input type="text" class="form-control" id="status" placeholder="Enter status" value="Good" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Product</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- <script src="assets/script/stocki-api.js"></script> -->
+
+<script>
+    function addProduct() {
+      const apiUrl = 'https://bg-group2-backend.onrender.com/v1/products';
+      const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTcwNDNkYTQ4ZWU4N2NhOTE1ZjE4YzEiLCJjb21wYW55RW1haWwiOiJiYWExYmJha2VyeUBtYWlsLmNvbSIsImNvbXBhbnlDYXRlZ29yeSI6InN1cGVybWFya2V0cyIsImNvbXBhbnlOdW1iZXIiOiJCMTAwIiwiZmlyc3ROYW1lIjoiQXkiLCJsYXN0TmFtZSI6IiBPbGEiLCJpYXQiOjE3MDIwMjcyNjUsImV4cCI6MTcwMjAzMDg2NX0.SfPenofxqqRn_E1-tVLk_TFcLVPXHR-E-t7A6qipk24'; // Replace with your actual token
+  
+      const productDetails = document.getElementById('productDetails').value;
+      const category = document.getElementById('category').value;
+      const price = parseFloat(document.getElementById('price').value);
+      const stock = parseInt(document.getElementById('stock').value);
+      const quantitySold = parseInt(document.getElementById('quantitySold').value);
+      const sku = document.getElementById('sku').value;
+      const status = document.getElementById('status').value;
+  
+      const payload = {
+        productDetails,
+        category,
+        price,
+        stock,
+        quantitySold,
+        sku,
+        status
+      };
+  
+      fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify(payload),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Product added successfully:', data);
+        // You can handle the response as needed
+      })
+      .catch(error => {
+        console.error('Error adding product:', error);
+        // Handle the error
+      });
+    }
+    addProduct()
+  </script>
+</body>
+</html>

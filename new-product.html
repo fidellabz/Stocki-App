@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Kodecamp-Dashboard</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- fontawesome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="assets/css/dashboard1.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/product.css">
+  <!-- bootstrap icon cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Button used to open the contact form - fixed at the bottom of the page */
+    .open-button {
+      background-color: #555;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      center: 23px;
+      right: 28px;
+      width: 280px;
+    }
+
+    /* The popup form - hidden by default */
+    .form-popup {
+      display: none;
+      position: fixed;
+
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+
+    /* Full-width input fields */
+    .form-container input[type=text],
+    .form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus,
+    .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover,
+    .open-button:hover {
+      opacity: 1;
+    }
+  </style>
+
+</head>
+
+<body id="page-top">
+
+     <!-- Page Wrapper -->
+     <div id="wrapper">
+
+      <!-- Sidebar -->
+      <ul class="navbar-nav  sidebar sidebar-dark accordion shadow" id="accordionSidebar" style="background-color: #FAFAFC;">
+
+          <!-- Sidebar - Brand -->
+          <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+              <div class="sidebar-brand-icon rotate-n-15">
+              </div>
+              <div class="sidebar-brand-text text-start " style="margin-right: 80px;">
+                  <img src="assets/img/logo word.png" alt="">
+              </div>
+          </a>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider my-0 mt-4">
+
+          <!-- Nav Item - Dashboard -->
+          <li class="nav-item active mt-2">
+              <a class="nav-link" href="" style="color: #0074E4;">
+                  <span><img src="assets/img/Dashboard.png" alt=""></span>
+                  <span class="pt-2" style="font-size: 16px; font-weight: 700;">Dashboard</span></a>
+          </li>
+
+        
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item mt-2">
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                  aria-expanded="true" aria-controls="collapseTwo" style="color: #1b1b1b;">
+                  <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                  <span style="font-size: 16px; font-weight: 400;">Users</span>
+              </a>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                  <div class="bg-white py-2 collapse-inner rounded" style="color: #1b1b1b;">
+                      <h6 class="collapse-header">User Profile</h6>
+                      <a class="collapse-item" href="">Admin</a>
+                      <a class="collapse-item" href="">Client</a>
+                  </div>
+              </div>
+          </li>
+
+          <!-- Nav Item - Utilities Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link" href="#" data-target="#collapseUtilities"
+                  aria-expanded="true" aria-controls="collapseUtilities" style="color: #1b1b1b;">
+                  <span><i class="bi bi-clock" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                  <span style="font-size: 16px; font-weight: 400;">Notification</span>
+              </a>
+          </li>
+
+          <li class="nav-item ">
+              <a class="nav-link collapsed" href="#" data-target="#collapseUtilities"
+                  aria-expanded="true" aria-controls="collapseUtilities" style="color: #1b1b1b;">
+                  <span><i class="bi bi-calendar-week" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                  <span class="" style="font-size: 16px; font-weight: 400;">Report</span>
+              </a>
+          </li>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider mt-2">
+
+          <!-- Heading -->
+          <div class="sidebar-heading mt-2" style="color: #b2b2b2;">
+             Inventory
+          </div>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+              <a class="nav-link collapsed" data-target="#collapsePages"
+                  aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
+                <span><i class="bi bi-kanban" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                  <span style="font-size: 16px; font-weight: 400;">Product</span>
+              </a>
+          </li>
+
+          <!-- Nav Item - Charts -->
+          <li class="nav-item">
+              <a class="nav-link" style="color: #1b1b1b;">
+                <span><i class="bi bi-graph-up" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                  <span style="font-size: 16px; font-weight: 400;">Stock Level</span></a>
+          </li>
+
+          <!-- Nav Item - Tables -->
+          <li class="nav-item">
+              <a class="nav-link" style="color: #1b1b1b;">
+                  <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                  <span style="font-size: 16px; font-weight: 400;">Supplier</span></a>
+          </li>
+
+           <!-- Nav Item - Tables -->
+           <li class="nav-item">
+              <a class="nav-link" style="color: #1b1b1b;">
+                  <span><i class="bi bi-hourglass" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                  <span style="font-size: 16px; font-weight: 400;">Expiring Date</span></a>
+          </li>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider d-none d-md-block mt-2"></hr>
+
+             <!-- Heading -->
+          <div class="sidebar-heading mt-2" style="color: #b2b2b2;">
+              Finance
+           </div>
+
+           <!-- Nav Item - Pages Collapse Menu -->
+           <li class="nav-item">
+               <a class="nav-link collapsed" data-target="#collapsePages"
+                   aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
+                   <span><i class="bi bi-coin" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                   <span style="font-size: 16px; font-weight: 400;">Sales Tracking</span>
+               </a>
+            
+           </li>
+
+           <!-- Nav Item - Charts -->
+           <li class="nav-item">
+               <a class="nav-link" style="color: #1b1b1b;">
+                   <span><i class="bi bi-credit-card" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                   <span style="font-size: 16px; font-weight: 400;">Expenses</span></a>
+           </li>
+
+           <!-- Nav Item - Tables -->
+           <li class="nav-item">
+               <a class="nav-link" style="color: #1b1b1b;">
+                   <span><i class="bi bi-bar-chart-line" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                   <span style="font-size: 16px; font-weight: 400;">Profit Analysis</span></a>
+           </li>
+
+           
+            <!-- Divider -->
+          <hr class="sidebar-divider d-none d-md-block mt-2">
+
+       
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item mt-2">
+            <a class="nav-link collapsed" data-target="#collapsePages"
+                aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
+                <span><i class="bi bi-gear" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                <span style="font-size: 16px; font-weight: 400;">Settings</span>
+            </a>
+        </li>
+
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="logout.html" style="color: #ff0000;">
+                <span><i class="bi bi-box-arrow-in-right" style="color: #ff0000; font-size: 18px;"></i></span>
+                <span style="font-size: 16px; font-weight: 400;">Logout</span></a>
+        </li>
+      </ul>
+      <!-- End of Sidebar -->
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+  <main class="bg-white" style="margin: 0;">
+      <!-- Main Content -->
+      <div id="content">
+
+          <!-- Topbar -->
+          <nav
+              class="m-3 py-4 navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm rounded">
+              <div style="width:80rem">
+                  <h3 class="pt-4" id="supermarketName" style="font-size: 16px; font-weight: 400px;">Dashboard - Kodecamp
+                      SuperMarket</h3>
+                  <p class="pb-3" style="font-size: 12px; font-weight: 400px;">02:30 PM . 19 Nov, 2023</p>
+              </div>
+              <!-- Topbar Search -->
+              <form class=" d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 navbar-search"
+                  style="width:80rem">
+                  <div class="input-group">
+                      <input type="text" class="form-control bg-light border-0 small" placeholder="Search..."
+                          aria-label="Search" aria-describedby="basic-addon2">
+                  </div>
+              </form>
+
+              <div class=" d-flex " style="margin-right: 10px;">
+                  <div style="margin-left: 20px;">
+                      <img src="assets/img/iconamoon_scanner-light.png" alt="">
+                  </div>
+
+                  <div style="margin-left: 20px;">
+                      <img src="assets/img/Notifications.png" alt="">
+                  </div>
+              </div>
+
+              <div class="d-flex mr-3">
+                  <img src="assets/img/Button Dark Mode.png" alt="">
+              </div>
+              <!-- Topbar Navbar -->
+
+
+
+              <!-- Nav Item - User Information -->
+              <div class="nav-item dropdown no-arrow">
+                  <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="merchantName"><br> View
+                          profile</span>
+                      <img class="img-profile rounded-circle" src="assets/img/Douglas.png">
+                  </a>
+                  <!-- Dropdown - User Information -->
+                  <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                      aria-labelledby="userDropdown">
+                      <a class="dropdown-item" href="#">
+                          <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                          Profile
+                      </a>
+                      <a class="dropdown-item" href="#">
+                          <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                          Settings
+                      </a>
+                      <a class="dropdown-item" href="#">
+                          <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                          Activity Log
+                      </a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#" data-toggle="modal" id="signOut">
+                          <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                          Logout
+                      </a>
+                  </div>
+              </div>
+
+              </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid bg-white">
+
+            <!-- Table Content Row -->
+            <div class="container-fluid ">
+
+    <!-- Begin Page Content -->
+    <div class=" w-100 ">
+      <div id="new-product" class="container d-flex p-3">
+        <div class="col-8">
+          <div id="left-side" class="py-5">
+            <div class="pb-3">
+              <a href="#"><i class="bi bi-arrow-left-circle"></i></a>
+            </div>
+            <div class="py-3">General information</div>
+            <form class="">
+
+              <div class="form-group">
+                <label for="inputAddress">Product name</label>
+                <input type="text" class="form-control w-75" id="inputName" placeholder="Product name">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-7">
+                  <label for="inputCity">Brand</label>
+                  <input type="text" class="form-control" id="inputCity" placeholder="Brand Product">
+                </div>
+                <div class="form-group col-md-4 mx-3 product-width">
+                  <label for="inputState" class="w-100">Product categories<i class="bi bi-plus-circle text-primary ms-2 " data-target="#addCategory" data-toggle="modal"></i></label>
+                  <select id="inputState" class="form-control w-100">
+                    <option selected>select</option>
+                    <option>...</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="form-group col-8">
+                  <label for="exampleFormControlTextarea1">
+                    <div class="">Product Descriptions <span class="text-muted mx-4">0/300</span></div>
+                  </label>
+                  <textarea class="form-control w-100" id="exampleFormControlTextarea1" rows="3" placeholder="Write description"></textarea>
+                </div>
+                <div class="p-1 w-25 text-muted  col-4 pt-4">Do not exceed 300 characters when inserting description</div>
+              </div>
+            </form>
+            <div class="py-3">
+              Pricing
+            </div>
+            <form>
+              <div class="row">
+                <div class="col">
+                  <label for="exampleFormControlTextarea1">
+                    <div class="">Price</div>
+                  </label>
+                  <input type="text" class="form-control" placeholder="custom field">
+                </div>
+                <div class="col">
+                  <label for="exampleFormControlTextarea1">
+                    <div class="">Sell</div>
+                  </label>
+                  <input type="text" class="form-control" placeholder="custom field">
+                </div>
+              </div>
+            </form>
+            <div>
+              <div class="py-5">Inventory</div>
+              <form>
+                <div class="row">
+                  <div class="col mt-5">
+                    <div class="mt-5"> <label for="exampleFormControlTextarea1">
+                        <div class="">SKU</div>
+                      </label>
+                      <input type="text" class="form-control" placeholder="Auto generated">
+                    </div>
+                  </div>
+                  <div class="col mb-5">
+                    <label for="exampleFormControlTextarea1">
+                      <div class="">Alert quantity <i class="bi bi-question-circle"></i></div>
+                    </label>
+                    <input type="text" class="form-control" placeholder="custom field">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-5 me-5">
+          <div id="right-side" class=" py-5 w-100">
+            <div class="py-3">Product image</div>
+            <div class="py-3">
+              <div class="image-upload-bg p-5 text-center rounded text-muted ">
+                <div class="py-3"> <img src="/assets/img/Vector-img.png" alt="" class="py-3"></div>
+                <input type="file" id="file" />
+                <label for="file">Click to upload file <span class="text-disable">or drag and drop</span></label>
+              </div>
+            </div>
+
+
+            <!-- buttons -->
+            <div class="my-3 text-center">
+              <button type="button" class="btn btn-outline-dark btn-font-size">Replace image</button>
+              <button type="button" class="btn btn-col text-white btn-font-size">Remove image</button>
+            </div>
+
+            <!-- paragraph -->
+            <div>
+              <p class="text-muted">Set product thumbnail image only. *png, *jpg and *jpeg image files are accepted.</p>
+            </div>
+            <div>
+              <h5 class="py-3">Expiry Status</h5>
+            </div>
+
+            <form>
+              <div class="form-row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="inputAddress">Validity (in months)</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="22 months">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress2">Expires on</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="DD/MM/YYYY">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="inputAddress">Start date</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="22 months">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress2">Alert date</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="DD/MM/YYYY">
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="my-4">
+              <button type="button" class="btn btn-outline-dark btnfont">Save as draft</button></button>
+              <button type="button" class="btn btn-col text-white mx-1 btnfont" data-target="#deleteModal" data-toggle="modal">Discard</button>
+              <button type="button" class="btn btn-primary btnfont">Save product</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- pop-up  -->
+    <!--     <button type="button" class="btn btn-danger" data-target="#deleteModal" data-toggle="modal">Delete Item</button> -->
+
+    <!-- Modal delete -->
+    <div class="modal fade rounded-4" id="addCategory">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="m-3">
+            <img src="assets/img/Featured icon2.png" alt="">
+          </div>
+          <div class="modal-header">
+
+            <div>
+              <h4 class="modal-title" id="exampleModalLabel">Add new category</h4>
+            </div>
+
+          </div>
+          <div class="modal-body">
+
+            <div class="form-group">
+
+              <input type="text" class="form-control w-75" id="inputAddress" placeholder="Custom field">
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center align-center">
+            <button type="button" class="btn btn-outline-dark px-5 " value="Reset Button">Cancel</button>
+            <button type="button" class="btn btn-primary px-3" data-target="#SuccessfullyAdded" data-toggle="modal">Add new category</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add new category  -->
+    <div class="modal fade rounded-4" id="deleteModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="m-3">
+            <img src="assets/img/Featured icon.png" alt="">
+          </div>
+          <div class="modal-header">
+
+            <div>
+              <h4 class="modal-title" id="exampleModalLabel">Delete product details</h4>
+            </div>
+
+          </div>
+          <div class="modal-body">
+
+            <p class="text-muted">Are you sure you want to discard the product? <br>This option cannot be undone</p>
+            <p></p>
+          </div>
+          <div class="modal-footer justify-content-center align-center">
+            <button type="button" class="btn btn-outline-dark px-3 " id="close-modal">No, keep it</button>
+            <button type="button" class="btn btn-danger px-3">Yes, delete!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade rounded-4" id="SuccessfullyAdded">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content py-5">
+          <div class="text-center">
+            <img src="assets/img/success-24 1.png" alt="">
+          </div>
+          <div class="modal-header">
+
+            <div>
+              <h4 class="modal-title" id="exampleModalLabel">New category added successfully</h4>
+            </div>
+
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer justify-content-center align-center">
+            <button type="button" class="btn btn-outline-primary px-5 " id="close-modal">Back</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="assets/script/chart-area-demo.js"></script>
+    <script src="assets/script/chart-pie-demo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    <script>
+      // Dropdown for the status button
+      function updateDropdownText(text, dropdownId) {
+        $('#' + dropdownId).text(text);
+      }
+
+      // Data for the chart
+      var data = {
+        //   labels: ['Blue', 'green', 'red'],
+        datasets: [{
+          data: [54, 20, 25, ],
+          backgroundColor: ['#006AFF', '#52C93F', '#FF2727']
+          }]
+      };
+
+      // Options for the chart
+      var options = {
+        cutout: '70%', // Adjust the cutout percentage for the doughnut effect
+        responsive: true,
+        maintainAspectRatio: false
+      };
+
+      // Get the context of the canvas element we want to select
+      var ctx = document.getElementById('myDoughnutChart').getContext('2d');
+
+      // Create the doughnut chart
+      var myDoughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data,
+        options: options
+      });
+    </script>
+
+    <!-- Pagination Script -->
+    <script>
+      $.fn.pageMe = function(opts) {
+        var $this = this,
+          defaults = {
+            perPage: 7,
+            showPrevNext: false,
+            hidePageNumbers: false
+          },
+          settings = $.extend(defaults, opts);
+
+        var listElement = $this;
+        var perPage = settings.perPage;
+        var children = listElement.children();
+        var pager = $('.pager');
+
+        if (typeof settings.childSelector != "undefined") {
+          children = listElement.find(settings.childSelector);
+        }
+
+        if (typeof settings.pagerSelector != "undefined") {
+          pager = $(settings.pagerSelector);
+        }
+
+        var numItems = children.size();
+        var numPages = Math.ceil(numItems / perPage);
+
+        pager.data("curr", 0);
+
+        if (settings.showPrevNext) {
+          $('<li><a href="#" class="prev_link">«</a></li>').appendTo(pager);
+        }
+
+        var curr = 0;
+        while (numPages > curr && (settings.hidePageNumbers == false)) {
+          $('<li><a href="#" class="page_link">' + (curr + 1) + '</a></li>').appendTo(pager);
+          curr++;
+        }
+
+        if (settings.showPrevNext) {
+          $('<li><a href="#" class="next_link">»</a></li>').appendTo(pager);
+        }
+
+        pager.find('.page_link:first').addClass('active');
+        pager.find('.prev_link').hide();
+        if (numPages <= 1) {
+          pager.find('.next_link').hide();
+        }
+        pager.children().eq(1).addClass("active");
+
+        children.hide();
+        children.slice(0, perPage).show();
+
+        pager.find('li .page_link').click(function() {
+          var clickedPage = $(this).html().valueOf() - 1;
+          goTo(clickedPage, perPage);
+          return false;
+        });
+        pager.find('li .prev_link').click(function() {
+          previous();
+          return false;
+        });
+        pager.find('li .next_link').click(function() {
+          next();
+          return false;
+        });
+
+        function previous() {
+          var goToPage = parseInt(pager.data("curr")) - 1;
+          goTo(goToPage);
+        }
+
+        function next() {
+          goToPage = parseInt(pager.data("curr")) + 1;
+          goTo(goToPage);
+        }
+
+        function goTo(page) {
+          var startAt = page * perPage,
+            endOn = startAt + perPage;
+
+          children.css('display', 'none').slice(startAt, endOn).show();
+
+          if (page >= 1) {
+            pager.find('.prev_link').show();
+          }
+          else {
+            pager.find('.prev_link').hide();
+          }
+
+          if (page < (numPages - 1)) {
+            pager.find('.next_link').show();
+          }
+          else {
+            pager.find('.next_link').hide();
+          }
+
+          pager.data("curr", page);
+          pager.children().removeClass("active");
+          pager.children().eq(page + 1).addClass("active");
+
+        }
+      };
+
+      $(document).ready(function() {
+
+        $('#myTable').pageMe({ pagerSelector: '#myPager', showPrevNext: true, hidePageNumbers: false, perPage: 4 });
+
+      });
+    </script>
+
+
+</body>
+
+</html>

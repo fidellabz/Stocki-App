@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>istock</title>
+        <!-- Bootstrap CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+            crossorigin="anonymous">
+            <!--font awesome script-->
+            <script src="https://kit.fontawesome.com/b947a64090.js" crossorigin="anonymous"></script>
+            
+            <!-- styles -->
+            <link rel="stylesheet" href="assets/css/submit.css">
+            <!-- google-font -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <!-- header -->
+    <header class="container-fluid position-fixed w-100 shadow-sm">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container"> 
+                <div class="nav-con">
+                    <a class="navbar-brand  fs-6 ms-3" href="#"><img class="image-container" src="./assets/img/stocki logo.png" alt=""></a>
+                </div>
+                
+                <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars fs-4 navbar-toggle"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ulli" style="margin: auto;">
+                        <li class="nav-item fs-6">
+                            <a class="nav-link active" aria-current="page" href="#" >Features</a>
+                        </li>
+                        <li class="nav-item fs-6" >
+                            <a class="nav-link active"  aria-current="page" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item fs-6">
+                            <a class="nav-link" href="about.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item fs-6">
+                            <a class="nav-link" href="contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item fs-6">
+                          <a class="nav-link" href="contact.html">FAQ</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sign-in">
+                <button type="button" class="btn btn-outline-col me-4 py-2 sign" style="white-space: nowrap; font-size: 12px;">sign in</button>
+            </div>
+        </nav>
+    </header> 
+    
+    <!-- request form -->
+    <div class="request bg">
+        <div class="container w-75">
+            <div class="">
+                <h1 class="">Submit a request</h1>
+            </div>
+            <div class="submit">
+                <form action="" class="group">
+                    <div class="form-group">
+                        <label for="email" class="my-3 pe-5 text-col email pt-5">Your email address</label>
+                        <input type="email" class=" form-s w-100" placeholder="" name="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="my-3 text-col">Subject</label>
+                        <input type="text" class="form-s w-100 subject" placeholder="" name="subject" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="description" class="my-3 text-col description">Description</label>
+                      <textarea class="w-100 des" placeholder="" name="description" rows="10" id="description" required></textarea>
+                      <p class="please">Please enter the details of your request. A member of our support staff will respond as 
+                        soon as possible.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="plan type" class="my-3 text-col plan-type">Plan type</label>
+                        <select type="" class="form-s w-100" placeholder="" name="plan type" id="plan type" required>
+                            <option value="option-first" class="first">-</option>
+                            <option value="option">Option 1</option>
+                            <option value="option">Option 2</option>
+                            <option value="option">Option 3</option>
+                        </select>
+                        <p>Please enter your Sortly Plan type</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="priority" class="my-3 text-col priority">Priority</label>
+                        <select type="text" class="form-s w-100" placeholder="" name="priority" id="priority" required>
+                            <option value="priority" class="first">-</option>
+                            <option value="priority">Priority </option>
+                            <option value="priority">Priority 2</option>
+                            <option value="priority">Priority 3</option>
+                        </select>
+                        <p>Request priority</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="attachments" class="my-3 text-col">Attachments</label>
+                        <div class="file-input-container">
+                            <textarea name="attachments" rows="5" id="attachments" class="w-100 des add-file" placeholder="+ Add file  or drop file here" cols="30" rows="10"></textarea> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="send">
+                <button class="btn Message  blue-cta-btn mt-2" type="submit" style="width: 150px; white-space: nowrap;">Send Message</button>
+            </div>   
+        </div>
+    </div>   
+    <!-- footer -->
+    <footer class="footer" >
+        <div class="">
+                <div class="wave">
+                    <img src="assets/img/submit_images/waves.png"  class="image" alt="">
+                </div>
+                <div class="blue" style="background-color: #0074E4;">
+                    <div class="bluue">
+                        <div class="d-flex justify-content-center istoc">
+                            <div class="stocki-support">
+                                <span class="stocki-su">&copy Stocki support</span>
+                            </div>
+                            <div class="support">  
+                                <img src="assets/img/submit_images/instagram.png" alt="" class="insta">
+                                <img src="assets/img/submit_images/twitter.png" alt="" class="twit">
+                                <img src="assets/img/submit_images/whatapp.png" alt="" class="what">
+                                <img src="assets/img/submit_images/facebook.png" alt="" class="face">
+                                <img src="assets/img/submit_images/linkedln.png" alt="" class="link">  
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>    
+        </div>     
+    </footer>
+        
+
+
+  <!-- bootstrap-script -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+    crossorigin="anonymous">
+  </script>
+
+  <script src="app.js"></script>
+
+</body>

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Kodecamp-Dashboard</title>
+    <title>Stocki | Dashboard</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -33,6 +33,8 @@
     <!-- bootstrap icon cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
+    <script src="assets/script/stocki-api.js"></script>
+    
 </head>
 
 <body id="page-top" >
@@ -44,7 +46,7 @@
         <ul class="navbar-nav  sidebar sidebar-dark accordion shadow" id="accordionSidebar" style="background-color: #FAFAFC;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon rotate-n-15">
                 </div>
                 <div class="sidebar-brand-text text-start " style="margin-right: 80px;">
@@ -65,7 +67,7 @@
           
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item mt-2">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                <a class="nav-link collapsed" href="/users.html"
                     aria-expanded="true" aria-controls="collapseTwo" style="color: #1b1b1b;">
                     <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
                     <span style="font-size: 16px; font-weight: 400;">Users</span>
@@ -174,7 +176,7 @@
 
           <!-- Nav Item - Pages Collapse Menu -->
           <li class="nav-item mt-2">
-              <a class="nav-link collapsed" data-target="#collapsePages"
+              <a href="/settings.html" class="nav-link collapsed" data-target="#collapsePages"
                   aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
                   <span><i class="bi bi-gear" style="color: #1b1b1b; font-size: 18px;"></i></span>
                   <span style="font-size: 16px; font-weight: 400;">Settings</span>
@@ -185,7 +187,7 @@
           <li class="nav-item">
               <a class="nav-link" href="logout.html" style="color: #ff0000;">
                   <span><i class="bi bi-box-arrow-in-right" style="color: #ff0000; font-size: 18px;"></i></span>
-                  <span style="font-size: 16px; font-weight: 400;">Logout</span></a>
+                  <span id="logout" class="logout" style="font-size: 16px; font-weight: 400;">Logout</span></a>
           </li>
         </ul>
         <!-- End of Sidebar -->
@@ -201,8 +203,7 @@
             <nav
                 class="m-3 py-5 navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm rounded">
                 <div style="width:70rem">
-                    <h3 class="pt-4" style="font-size: 16px;font-weight:bold;">Dashboard - Kodecamp
-                        SuperMarket</h3>
+                    <h3 class="pt-4" style="font-size: 16px;font-weight:bold;">Dashboard - <span id="companyName"></span></h3>
                     <p class="pb-3" style="font-size: 12px; font-weight: 400px;" id="datetime2"></p>
                 </div>
                 <!-- Topbar Search -->
@@ -215,18 +216,18 @@
                 </form>
 
                 <div class=" d-flex ml-5" style="margin-right: 10px;">
-                    <div style="margin-left: 20px;">
+                    <!-- <div style="margin-left: 20px;">
                         <img src="assets/img/iconamoon_scanner-light.png" alt="">
-                    </div>
+                    </div> -->
 
                     <div style="margin-left: 20px;">
                         <img src="assets/img/Notifications.png" alt="">
                     </div>
                 </div>
 
-                <div class="d-flex ml-5 mr-5">
+                <!-- <div class="d-flex ml-5 mr-5">
                     <img src="assets/img/Button Dark Mode.png" alt="">
-                </div>
+                </div> -->
                 <!-- Topbar Navbar -->
 
 
@@ -235,7 +236,8 @@
                 <div class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">   
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee <br> Admin</span>
+                        <span id="userName" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                        <!-- <span id="userName" class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee <br> Admin</span> -->
                         <img class="img-profile rounded-circle mr-2" src="assets/img/Douglas.png">
                         <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.563 6.46634L8.56302 10.4663C8.42969 10.5997 8.29635 10.6663 8.09635 10.6663C7.89635 10.6663 7.76302 10.5997 7.62969 10.4663L3.62969 6.46634C3.36302 6.19967 3.36302 5.79967 3.62969 5.53301C3.89635 5.26634 4.29635 5.26634 4.56302 5.53301L8.09635 9.06634L11.6297 5.53301C11.8964 5.26634 12.2964 5.26634 12.563 5.53301C12.8297 5.79967 12.8297 6.19967 12.563 6.46634Z" fill="black"/>
@@ -250,7 +252,7 @@
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                         aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="/settings.html">
                                 <i class="bi bi-gear mr-2 text-gray-40"></i>
                             Settings
                         </a>
@@ -258,19 +260,17 @@
                             <i class="bi bi-sliders2 mr-2 text-gray-400"></i>
                             Preferences
                         </a>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="pricingpg.html">
                             <i class="bi bi-credit-card mr-2 text-gray-400"></i>
                             Plan & Billings
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <a id="logout" class="dropdown-item logout" href="logout.html" data-toggle="modal" data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2" style="color:red"></i>
                             Logout
                         </a>
                     </div>
                 </div>
-
-                </ul>
             </nav>
             <!-- End of Topbar -->
 
@@ -286,9 +286,7 @@
                             <!-- Content for Column 1 -->
                             <div class="card-body">
                                 <div class="">
-                                    <h6 style="font-size: 16px; font-weight: 400;">Good Afternoon<i
-                                            class="bi bi-cloud-sun"
-                                            style="color: #FBFF22; font-weight: bolder;"></i>Kodecamp</h6>
+                                    <h6 style="font-size: 16px; font-weight: 400;" id="salute"></h6>
                                 </div>
 
                                 <div class="d-flex">
@@ -299,16 +297,16 @@
                                             style=" font-size: 11px; font-weight: 400; border-radius:8px; white-space: nowrap;">View
                                             Report</button>
                                     </div>
-                                    <div>
-                                        <img src="assets/img/Greetings.png" alt="">
+                                    <div class="greetings">
+                                        <img src="assets/img/Greetings.png" alt="" >
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Additional Column underneath -->
-                        <div class="card mt-4 shadow"
-                            style="height:26rem;width:58rem;max-width: auto;">
+                        <div class="graph card mt-4 shadow"
+                            style="height:26rem;width:44rem;max-width: auto;">
 
                             <!-- Content for Additional Column 1 -->
                             <div class="card-body">
@@ -332,13 +330,13 @@
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="statusDropdown">
                                                 <a class="dropdown-item" href="#"
-                                                    onclick="updateDropdownText('Daily', 'statusDropdown1')">Daily</a>
+                                                    onclick="updateDropdownText('Daily', 'statusDropdown2')">Daily</a>
                                                 <a class="dropdown-item" href="#"
-                                                    onclick="updateDropdownText('Weekly', 'statusDropdown1')">Weekly</a>
+                                                    onclick="updateDropdownText('Weekly', 'statusDropdown2')">Weekly</a>
                                                 <a class="dropdown-item" href="#"
-                                                    onclick="updateDropdownText('Monthly', 'statusDropdown1')">Monthly</a>
+                                                    onclick="updateDropdownText('Monthly', 'statusDropdown2')">Monthly</a>
                                                 <a class="dropdown-item" href="#"
-                                                    onclick="updateDropdownText('Yearly', 'statusDropdown1')">Yearly</a>
+                                                    onclick="updateDropdownText('Yearly', 'statusDropdown2')">Yearly</a>
                                             </div>
                                         </div>
                                     </div>
@@ -354,7 +352,7 @@
 
                     <!-- Column 2 -->
                     <div class="col-md-4 mb-4">
-                        <div class="card shadow p-4" style="height: 14rem;">
+                        <div class="card overview shadow p-4" style="height: 14rem;">
                             <!-- Content for Column 2 -->
                             <div class="mt-2 d-flex justify-content-between">
                                 <!-- ... your card 2 content ... -->
@@ -397,7 +395,7 @@
                                         src="assets/img/Arrow-4.png" alt=""></p>
                             </div>
 
-                            <div class="d-flex justify-content-between mt-2">
+                            <div class="d-flex bread-section justify-content-between mt-2">
                                 <p style="font-size: 14px; font-weight: 400;">
                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6.9987 0.333008C10.6654 0.333008 13.6654 2.57301 13.6654 5.33301C13.6654 6.45967 13.172 7.49967 12.332 8.33301V13.6663H1.66536V8.33301C0.825365 7.49967 0.332031 6.45967 0.332031 5.33301C0.332031 2.57301 3.33203 0.333008 6.9987 0.333008ZM10.9987 7.75967C11.8254 7.11301 12.332 6.25967 12.332 5.33301C12.332 3.30634 9.94536 1.66634 6.9987 1.66634C4.05203 1.66634 1.66536 3.30634 1.66536 5.33301C1.66536 6.25967 2.17203 7.11301 2.9987 7.75967V12.333H10.9987V7.75967ZM4.33203 10.9997V8.33301H6.9987V10.9997H4.33203Z" fill="black"/>
@@ -412,24 +410,23 @@
 
                     <!-- Column 3 -->
                     <div class="col-md-4">
-                        <div class="card shadow p-4" style="height: 41.5rem;">
+                        <div class="card shadow p-4 col3" style="height: 41.5rem;">
                             <!-- Content for Column 3 -->
                             <!-- Card Body -->
-                            <div class="card-body">
+                            <div class="pstatus card-body">
                                 <h6 class="m-0 text-center" style="font-size: small;">Expiring Product Status
                                 </h6>
                                 <div class="chart-pie py-2 pb-2">
                                     <canvas id="myPieChart"></canvas>
                                 </div>
 
-
-                                <div class="mt-5 text-start small ">
+                                <div class="mt-5 pie-div text-start small ">
 
                                     <!-- 1st Row -->
                                     <div class="row pt-5 mb-5">
 
                                         <!-- Column 1 -->
-                                        <div class="col-md-6">
+                                        <div class="col1 col-md-6">
                                             <div class="d-flex align-items-center">
                                                 <i class="bi bi-square-fill"
                                                     style="font-size: 25px; color: #FBFF22; margin-right: 10px;"></i>
@@ -446,7 +443,7 @@
                                         </div>
 
                                         <!-- Column 2 -->
-                                        <div class="col-md-6">
+                                        <div class="col2 col-md-6">
                                             <div class="d-flex" style="margin-left: 20px;">
                                                 <i class="bi bi-square-fill"
                                                     style="font-size: 25px; color: #ff0000; margin-right: 10px;"></i>
@@ -467,7 +464,7 @@
                                     <div class="row">
 
                                         <!-- Column 3 -->
-                                        <div class="col-md-6">
+                                        <div class="col1 col-md-6">
                                             <div class="d-flex justify-content-between">
                                                 <div class="d-flex">
                                                     <i class="bi bi-square-fill mr-2"
@@ -485,7 +482,7 @@
                                         </div>
 
                                         <!-- Column 4 -->
-                                        <div class="col-md-6">
+                                        <div class="col2 col-md-6">
                                             <div class="d-flex" style="margin-left: 20px;">
                                                 <i class="bi bi-square-fill"
                                                     style="font-size: 25px; color: #06C270; margin-right: 10px;"></i>
@@ -510,7 +507,7 @@
                     <!-- 3rd Row... -->
                     <!-- Column 1 -->
                     
-                    <div class="col-md-4 mb-4">
+                    <div class="col-md-4 mb-4 sales">
                         
                         <div class="card shadow" style="height: 30rem;">
                             <!-- Content for Column 1 -->
@@ -529,17 +526,17 @@
                                                 aria-haspopup="true" aria-expanded="false"
                                                 style="white-space: nowrap;font-size: small;">Today
                                             </button>
-                                            <div class="dropdown-menu" aria-labelledby="statusDropdown2">
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown3">
                                                 <a class="dropdown-item" href="#"
-                                                    onclick="updateDropdownText('Weekly', 'statusDropdown2')">Weekly</a>
+                                                    onclick="updateDropdownText('Weekly', 'statusDropdown3')">Weekly</a>
                                                 <a class="dropdown-item" href="#"
-                                                    onclick="updateDropdownText('Monthly', 'statusDropdown2')">Monthly</a>
+                                                    onclick="updateDropdownText('Monthly', 'statusDropdown3')">Monthly</a>
                                                     <a class="dropdown-item" href="#"
-                                                    onclick="updateDropdownText('3-months', 'statusDropdown2')">3-months</a>
+                                                    onclick="updateDropdownText('3-months', 'statusDropdown3')">3-months</a>
                                                     <a class="dropdown-item" href="#"
-                                                    onclick="updateDropdownText('6-months', 'statusDropdown2')">6-months</a>
+                                                    onclick="updateDropdownText('6-months', 'statusDropdown3')">6-months</a>
                                                     <a class="dropdown-item" href="#"
-                                                    onclick="updateDropdownText('Yearly', 'statusDropdown2')">Yearly</a>
+                                                    onclick="updateDropdownText('Yearly', 'statusDropdown3')">Yearly</a>
                                             </div>
                                         </div>
                                     </div>
@@ -548,7 +545,7 @@
                             <div class="doughnut py-0 pb-0">
                                 <canvas id="myDoughnutChart" style="width: 150px;"></canvas>
                             </div>
-                            <div style="width: 80%; margin: auto; margin-bottom: 10px;">
+                            <div class="under-doughnut" style="width: 80%; margin: auto; margin-bottom: 10px;">
                                 <div class="d-flex justify-content-between mt32">
                                     <p style="font-size: 14px; font-weight: 400;"><span><i
                                                 class="bi bi-circle-fill" style="color: #006AFF;"></i></span>
@@ -565,7 +562,7 @@
                                             style="color:#52C93F;"></i></p>
                                 </div>
 
-                                <div class="d-flex justify-content-between mb-5 pb-5">
+                                <div class="d-flex exp-goods justify-content-between mb-5 pb-5">
                                     <p style="font-size: 14px; font-weight: 400;"><span><i
                                                 class="bi bi-circle-fill" style="color: #FF2727;"></i></span>
                                         Total Expired Goods</p>
@@ -583,10 +580,10 @@
     <button class="btn blue-cta-btn upgrade-btn" onclick="upgradePlan()">Upgrade Plan</button>
     <p style="color: #000;">Click here to access these features</p>
 </div>
-<div class="card shadow p-4" style="height: 30rem;">
+<div class="card datatable shadow p-4" style="height: 30rem;">
     <!-- Content for Column 2 -->
     <div class="card-body">
-        <!-- DataTales Example -->
+        <!-- DataTables Example -->
         <div class="card border-0">
             <div class="card-body">
                 <div class="container pb-1">
@@ -644,7 +641,7 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="rounded-circle mr-2">
-                                            <img src="./assets/img/tb-Image.png" alt="" srcset="" style="height: 2rem;">
+                                            <img src="./assets/img/tb-Image.png" alt="" srcset="" style="height:2rem;">
                                         </div>
                                         <div>
                                             <p class="mb-0">Halda Joseph</p>
@@ -756,72 +753,108 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
     <!-- Page level plugins -->
     <script src="vendor/chart.min.js"></script>
+
+     <!-- Custom scripts for all pages-->
+     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level custom scripts -->
     <script src="assets/script/chart-area-demo.js"></script>
     <script src="assets/script/chart-pie-demo.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 
+    
     <script>
         // Dropdown for the status button
         function updateDropdownText(text, dropdownId) {
-        $('#' + dropdownId).text(text);
-    }
+            $('#' + dropdownId).text(text);
+        }
 
         // Data for the chart
         var data = {
-        //   labels: ['Blue', 'green', 'red'],
-          datasets: [{
-            data: [54, 20, 25,],
-            backgroundColor: ['#006AFF', '#52C93F', '#FF2727']
-          }]
+            //   labels: ['Blue', 'green', 'red'],
+            datasets: [{
+                data: [54, 20, 25,],
+                backgroundColor: ['#006AFF', '#52C93F', '#FF2727']
+            }]
         };
-    
+
         // Options for the chart
         var options = {
-          cutout: '70%', // Adjust the cutout percentage for the doughnut effect
-          responsive: true,
-          maintainAspectRatio: false
+            cutout: '70%', // Adjust the cutout percentage for the doughnut effect
+            responsive: true,
+            maintainAspectRatio: false
         };
-    
+
         // Get the context of the canvas element we want to select
         var ctx = document.getElementById('myDoughnutChart').getContext('2d');
-    
+
         // Create the doughnut chart
         var myDoughnutChart = new Chart(ctx, {
-          type: 'doughnut',
-          data: data,
-          options: options
+            type: 'doughnut',
+            data: data,
+            options: options
         });
 
-          // Handle upgrade plan action
-          function upgradePlan() {
-           
+        const logoutElements = document.querySelectorAll('#logout');
+
+        function btnLogout() {
+            window.location.href = "login.html";
         }
 
-// create a function to update the date and time
-function updateDateTime() {
-    // create a new `Date` object
-    const now = new Date();
+        logoutElements.forEach(element => {
+            element.addEventListener('click', btnLogout);
+        });
 
-    // get the current date and time as a string
-    const currentDateTime = now.toLocaleString();
+        // Get Current date
+        // date
+        function updateDateTime() {
+            const now = new Date();
 
-    // update the `textContent` property of the `span` elements with the ids of `datetime1` and `datetime2`
-    document.querySelectorAll('#datetime1, #datetime2').forEach(element => {
-        element.textContent = currentDateTime;
-    });
-}
+            // Get the current date and time as a string with long date format
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true,
+            };
+            const currentDateTime = now.toLocaleDateString(undefined, options);
+            document.querySelectorAll('#datetime1, #datetime2').forEach(element => {
+                element.textContent = currentDateTime;
+            });
+        }
+        updateDateTime();
 
-// call the `updateDateTime` function every second
-setInterval(updateDateTime, 1000);
 
-      </script>
+        function getTimeOfDay() {
+            const now = new Date();
+            const currentHour = now.getHours();
+
+            let timeOfDay;
+
+            if (currentHour >= 5 && currentHour < 12) {
+                timeOfDay = 'Morning';
+            } else if (currentHour >= 12 && currentHour < 18) {
+                timeOfDay = 'Afternoon';
+            } else {
+                timeOfDay = 'Evening';
+            }
+
+            // Assuming you want to select an element with ID 'salute' and set its content
+            const saluteElement = document.querySelector('#salute');
+
+            // Check if the element exists before trying to manipulate it
+            if (saluteElement) {
+                saluteElement.textContent = `Good ${timeOfDay}!`;
+            }
+        }
+        getTimeOfDay()
+    </script>
     
  
 

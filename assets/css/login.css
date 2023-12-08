@@ -80,6 +80,15 @@ body {
     /* Center the div */
 }
 
+.error-message {
+    color: red;
+    margin-top: 5px;
+  }
+
+  .input-error {
+    border: 1px solid red;
+  }
+  
 @media (max-width: 767px) {
   .row {
       flex-direction: column-reverse;

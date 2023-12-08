@@ -1,43 +1,9 @@
-/*!
- * Start Bootstrap - SB Admin 2 v4.1.4 (https://startbootstrap.com/theme/sb-admin-2)
- * Copyright 2013-2021 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin-2/blob/master/LICENSE)
- */
-/*!
- * Bootstrap v4.6.0 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-:root {
-    --blue: #4e73df;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #e74a3b;
-    --orange: #fd7e14;
-    --yellow: #f6c23e;
-    --green: #1cc88a;
-    --teal: #20c9a6;
-    --cyan: #36b9cc;
-    --white: #fff;
-    --gray: #858796;
-    --gray-dark: #5a5c69;
-    --primary: #4e73df;
-    --secondary: #858796;
-    --success: #1cc88a;
-    --info: #36b9cc;
-    --warning: #f6c23e;
-    --danger: #e74a3b;
-    --light: #f8f9fc;
-    --dark: #5a5c69;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+    
 
 .pri-text-col{
     color: #0074E4 !important;
@@ -69,32 +35,34 @@
     background-color: #003c77 !important;
   }
 
-  .transparent-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+  .btn-outline-col {
+    font-size: 12px;
+    border: 1px solid #FF5722 !important;
+    color: #FF5722 !important;
+    transition: background-color 1.5s ease-in-out !important;
+    padding: 12px 22px 12px 22px !important;
+    padding: 12px 22px 12px 22px !important;
+  }
+  
+  .btn-outline-col:hover {
+    background-color: #852d12 !important;
+    color: #fff !important;
+    transform: scale(1.0);
+    transform: scale(1.0);
+  
+  }
 
-.upgrade-btn {
-    width: 150px;
-    white-space: nowrap;
-    font-size: 11px;
-    font-weight: 500;
-}
+  .upgradeplan{
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('/assets/img/upgrade-plan.png');
+    height: 60vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+   
+    
+  }
 
-*,
-::after,
-::before {
-    box-sizing: border-box
-}
+
 
 html {
     font-family: sans-serif;
@@ -120,7 +88,6 @@ section {
 nav{
     background-color: #F2F2F5 !important;
 }
-
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;    
@@ -651,10 +618,6 @@ pre code {
     .container-sm {
         max-width: 540px
     }
-
-    .greetings-img{
-        display:none
-    }
 }
 
 @media (min-width:768px) {
@@ -663,10 +626,6 @@ pre code {
     .container-md,
     .container-sm {
         max-width: 720px
-    }
-
-    #greetings{
-        display:none
     }
 }
 
@@ -1842,19 +1801,19 @@ pre code {
 .table {
     width: 100%;
     margin-bottom: 1rem;
-    color: #858796;
+    color: #858796
 }
 
 .table td,
 .table th {
     padding: .75rem;
     vertical-align: top;
-    border-top: 1px solid #e3e6f0;
+    border-top: 1px solid #e3e6f0
 }
 
 .table thead th {
     vertical-align: bottom;
-    /* border-bottom: 2px solid #e3e6f0; */
+    border-bottom: 2px solid #e3e6f0
 }
 
 .table tbody+tbody {
@@ -1863,98 +1822,90 @@ pre code {
 
 .table-sm td,
 .table-sm th {
-    padding: .5rem
+    padding: .3rem
 }
 
 .table-bordered {
-    /* border: 1px solid #e3e6f0; */
-    /* background-color: #8cb1d3; */
+    border: 1px solid #e3e6f0
 }
 
 .table-bordered td,
 .table-bordered th {
-    /* border: 1px solid #e3e6f0 */
+    border: 1px solid #e3e6f0
 }
 
-.table-bordered tr {
-    /* border: 2px solid rgba(0, 128, 255, .9) !important; */
-    /* border-bottom-right-radius: 25px !important;
-    border-bottom-left-radius: 25px !important; */
-
-    /* border-color: #000 !important; */
-}
 .table-bordered thead td,
 .table-bordered thead th {
-    /* border-bottom-width: 2px; */
+    border-bottom-width: 2px
 }
 
 .table-borderless tbody+tbody,
 .table-borderless td,
 .table-borderless th,
 .table-borderless thead th {
-    /* border: 0 */
+    border: 0
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-    /* background-color: rgba(0, 0, 0, .05) */
+    background-color: rgba(0, 0, 0, .05)
 }
 
 .table-hover tbody tr:hover {
-    /* color: #858796; */
-    /* background-color: rgba(0, 0, 0, .075) */
+    color: #858796;
+    background-color: rgba(0, 0, 0, .075)
 }
 
 .table-primary,
 .table-primary>td,
 .table-primary>th {
-    /* background-color: #cdd8f6 */
+    background-color: #cdd8f6
 }
 
 .table-primary tbody+tbody,
 .table-primary td,
 .table-primary th,
 .table-primary thead th {
-    /* border-color: #14161d */
+    border-color: #a3b6ee
 }
 
 .table-hover .table-primary:hover {
-    /* background-color: #b7c7f2 */
+    background-color: #b7c7f2
 }
 
 .table-hover .table-primary:hover>td,
 .table-hover .table-primary:hover>th {
-    /* background-color: #b7c7f2 */
+    background-color: #b7c7f2
 }
 
 .table-secondary,
 .table-secondary>td,
 .table-secondary>th {
-    /* background-color: #dddde2 */
+    background-color: #dddde2
 }
 
 .table-secondary tbody+tbody,
 .table-secondary td,
 .table-secondary th,
 .table-secondary thead th {
-    /* border-color: #c0c1c8 */
+    border-color: #c0c1c8
 }
 
 .table-hover .table-secondary:hover {
-    /* background-color: #cfcfd6 */
+    background-color: #cfcfd6
 }
 
 .table-hover .table-secondary:hover>td,
 .table-hover .table-secondary:hover>th {
-    /* background-color: #cfcfd6 */
+    background-color: #cfcfd6
 }
 
 .table-success,
 .table-success>td,
 .table-success>th {
-    /* background-color: #bff0de */
+    background-color: #bff0de
 }
 
-/* .table-success tbody+tbody,
+.table-success tbody+tbody,
 .table-success td,
 .table-success th,
 .table-success thead th {
@@ -2040,19 +1991,19 @@ pre code {
 .table-light>td,
 .table-light>th {
     background-color: #fdfdfe
-} */
+}
 
-/* .table-light tbody+tbody,
+.table-light tbody+tbody,
 .table-light td,
 .table-light th,
 .table-light thead th {
     border-color: #fbfcfd
-} */
-/* 
+}
+
 .table-hover .table-light:hover {
     background-color: #ececf6
-} */
-/* 
+}
+
 .table-hover .table-light:hover>td,
 .table-hover .table-light:hover>th {
     background-color: #ececf6
@@ -2088,14 +2039,14 @@ pre code {
 
 .table-hover .table-active:hover {
     background-color: rgba(0, 0, 0, .075)
-} */
-/* 
+}
+
 .table-hover .table-active:hover>td,
 .table-hover .table-active:hover>th {
     background-color: rgba(0, 0, 0, .075)
-} */
+}
 
-/* .table .thead-dark th {
+.table .thead-dark th {
     color: #fff;
     background-color: #5a5c69;
     border-color: #6c6e7e
@@ -2128,8 +2079,8 @@ pre code {
 
 .table-dark.table-hover tbody tr:hover {
     color: #fff;
-    background-color: rgba(255, 255, 255, .075) */
-/* } */
+    background-color: rgba(255, 255, 255, .075)
+}
 
 @media (max-width:575.98px) {
     .table-responsive-sm {
@@ -12172,69 +12123,6 @@ hr{
     }
 }
 
-
-/* Media query to hide the graph card on screens with a maximum width of 767 pixels */
-@media (max-width: 767px) {
-    .topbar{
-        padding: 5px;
-    }
-
-    .graph.card {
-        display: none;
-    }
-
-    .greetings{
-        display: none !important;
-    }
-    
-    .greetings .btn{
-        max-width: 100%   
-    }
-
-    .card.overview .bread-section {
-        display: none !important;
-    }
-
-    /*  */
-    .pstatus .pie-div{
-        padding:-10px !important;
-        margin: -10px !important;
-    }
-
-    .pstatus .pie-div .col1{
-          padding-left: -5px;
-    }
-    .pstatus .pie-div .col2{
-        padding-left: -10px !important;
-    }
-
-    .col3{
-        height: auto !important;
-    }
-
-    .sales{
-        margin-top: 10px;
-    }
-    
-    .sales .doughnut canvas{
-        margin: 0 !important;
-        margin-top: 0 !important;
-    }
-
-    .under-doughnut{
-        padding-top: 20px !important;
-    }
-
-    .exp-goods{
-        padding-bottom: 0 !important
-    }
-
-    .datatable, .transparent-cover{
-        display:none;
-    }
-    
-}
-
 .chart-bar {
     position: relative;
     height: 10rem;
@@ -12369,376 +12257,8 @@ form.user .btn-user {
     border-color: #dfdfdf
 }
 
-.btn-facebook:not(:disabled):not(.disabled).active:focus,
-.btn-facebook:not(:disabled):not(.disabled):active:focus,
-.show>.btn-facebook.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .5)
-}
 
-.error {
-    color: #5a5c69;
-    font-size: 7rem;
-    position: relative;
-    line-height: 1;
-    width: 12.5rem
-}
 
-@-webkit-keyframes noise-anim {
-    0% {
-        clip: rect(81px, 9999px, 74px, 0)
-    }
-
-    5% {
-        clip: rect(2px, 9999px, 29px, 0)
-    }
-
-    10% {
-        clip: rect(1px, 9999px, 15px, 0)
-    }
-
-    15% {
-        clip: rect(50px, 9999px, 8px, 0)
-    }
-
-    20% {
-        clip: rect(99px, 9999px, 79px, 0)
-    }
-
-    25% {
-        clip: rect(85px, 9999px, 15px, 0)
-    }
-
-    30% {
-        clip: rect(41px, 9999px, 53px, 0)
-    }
-
-    35% {
-        clip: rect(22px, 9999px, 36px, 0)
-    }
-
-    40% {
-        clip: rect(73px, 9999px, 79px, 0)
-    }
-
-    45% {
-        clip: rect(82px, 9999px, 100px, 0)
-    }
-
-    50% {
-        clip: rect(47px, 9999px, 96px, 0)
-    }
-
-    55% {
-        clip: rect(10px, 9999px, 44px, 0)
-    }
-
-    60% {
-        clip: rect(7px, 9999px, 24px, 0)
-    }
-
-    65% {
-        clip: rect(29px, 9999px, 88px, 0)
-    }
-
-    70% {
-        clip: rect(12px, 9999px, 44px, 0)
-    }
-
-    75% {
-        clip: rect(25px, 9999px, 57px, 0)
-    }
-
-    80% {
-        clip: rect(38px, 9999px, 35px, 0)
-    }
-
-    85% {
-        clip: rect(20px, 9999px, 96px, 0)
-    }
-
-    90% {
-        clip: rect(58px, 9999px, 44px, 0)
-    }
-
-    95% {
-        clip: rect(72px, 9999px, 41px, 0)
-    }
-
-    100% {
-        clip: rect(69px, 9999px, 72px, 0)
-    }
-}
-
-@keyframes noise-anim {
-    0% {
-        clip: rect(81px, 9999px, 74px, 0)
-    }
-
-    5% {
-        clip: rect(2px, 9999px, 29px, 0)
-    }
-
-    10% {
-        clip: rect(1px, 9999px, 15px, 0)
-    }
-
-    15% {
-        clip: rect(50px, 9999px, 8px, 0)
-    }
-
-    20% {
-        clip: rect(99px, 9999px, 79px, 0)
-    }
-
-    25% {
-        clip: rect(85px, 9999px, 15px, 0)
-    }
-
-    30% {
-        clip: rect(41px, 9999px, 53px, 0)
-    }
-
-    35% {
-        clip: rect(22px, 9999px, 36px, 0)
-    }
-
-    40% {
-        clip: rect(73px, 9999px, 79px, 0)
-    }
-
-    45% {
-        clip: rect(82px, 9999px, 100px, 0)
-    }
-
-    50% {
-        clip: rect(47px, 9999px, 96px, 0)
-    }
-
-    55% {
-        clip: rect(10px, 9999px, 44px, 0)
-    }
-
-    60% {
-        clip: rect(7px, 9999px, 24px, 0)
-    }
-
-    65% {
-        clip: rect(29px, 9999px, 88px, 0)
-    }
-
-    70% {
-        clip: rect(12px, 9999px, 44px, 0)
-    }
-
-    75% {
-        clip: rect(25px, 9999px, 57px, 0)
-    }
-
-    80% {
-        clip: rect(38px, 9999px, 35px, 0)
-    }
-
-    85% {
-        clip: rect(20px, 9999px, 96px, 0)
-    }
-
-    90% {
-        clip: rect(58px, 9999px, 44px, 0)
-    }
-
-    95% {
-        clip: rect(72px, 9999px, 41px, 0)
-    }
-
-    100% {
-        clip: rect(69px, 9999px, 72px, 0)
-    }
-}
-
-.error:after {
-    content: attr(data-text);
-    position: absolute;
-    left: 2px;
-    text-shadow: -1px 0 #e74a3b;
-    top: 0;
-    color: #5a5c69;
-    background: #f8f9fc;
-    overflow: hidden;
-    clip: rect(0, 900px, 0, 0);
-    animation: noise-anim 2s infinite linear alternate-reverse
-}
-
-@-webkit-keyframes noise-anim-2 {
-    0% {
-        clip: rect(82px, 9999px, 93px, 0)
-    }
-
-    5% {
-        clip: rect(13px, 9999px, 71px, 0)
-    }
-
-    10% {
-        clip: rect(22px, 9999px, 90px, 0)
-    }
-
-    15% {
-        clip: rect(17px, 9999px, 11px, 0)
-    }
-
-    20% {
-        clip: rect(21px, 9999px, 91px, 0)
-    }
-
-    25% {
-        clip: rect(37px, 9999px, 33px, 0)
-    }
-
-    30% {
-        clip: rect(37px, 9999px, 80px, 0)
-    }
-
-    35% {
-        clip: rect(6px, 9999px, 49px, 0)
-    }
-
-    40% {
-        clip: rect(86px, 9999px, 60px, 0)
-    }
-
-    45% {
-        clip: rect(46px, 9999px, 83px, 0)
-    }
-
-    50% {
-        clip: rect(16px, 9999px, 83px, 0)
-    }
-
-    55% {
-        clip: rect(73px, 9999px, 36px, 0)
-    }
-
-    60% {
-        clip: rect(58px, 9999px, 98px, 0)
-    }
-
-    65% {
-        clip: rect(20px, 9999px, 93px, 0)
-    }
-
-    70% {
-        clip: rect(43px, 9999px, 67px, 0)
-    }
-
-    75% {
-        clip: rect(66px, 9999px, 75px, 0)
-    }
-
-    80% {
-        clip: rect(66px, 9999px, 41px, 0)
-    }
-
-    85% {
-        clip: rect(17px, 9999px, 47px, 0)
-    }
-
-    90% {
-        clip: rect(49px, 9999px, 68px, 0)
-    }
-
-    95% {
-        clip: rect(8px, 9999px, 85px, 0)
-    }
-
-    100% {
-        clip: rect(83px, 9999px, 50px, 0)
-    }
-}
-
-@keyframes noise-anim-2 {
-    0% {
-        clip: rect(82px, 9999px, 93px, 0)
-    }
-
-    5% {
-        clip: rect(13px, 9999px, 71px, 0)
-    }
-
-    10% {
-        clip: rect(22px, 9999px, 90px, 0)
-    }
-
-    15% {
-        clip: rect(17px, 9999px, 11px, 0)
-    }
-
-    20% {
-        clip: rect(21px, 9999px, 91px, 0)
-    }
-
-    25% {
-        clip: rect(37px, 9999px, 33px, 0)
-    }
-
-    30% {
-        clip: rect(37px, 9999px, 80px, 0)
-    }
-
-    35% {
-        clip: rect(6px, 9999px, 49px, 0)
-    }
-
-    40% {
-        clip: rect(86px, 9999px, 60px, 0)
-    }
-
-    45% {
-        clip: rect(46px, 9999px, 83px, 0)
-    }
-
-    50% {
-        clip: rect(16px, 9999px, 83px, 0)
-    }
-
-    55% {
-        clip: rect(73px, 9999px, 36px, 0)
-    }
-
-    60% {
-        clip: rect(58px, 9999px, 98px, 0)
-    }
-
-    65% {
-        clip: rect(20px, 9999px, 93px, 0)
-    }
-
-    70% {
-        clip: rect(43px, 9999px, 67px, 0)
-    }
-
-    75% {
-        clip: rect(66px, 9999px, 75px, 0)
-    }
-
-    80% {
-        clip: rect(66px, 9999px, 41px, 0)
-    }
-
-    85% {
-        clip: rect(17px, 9999px, 47px, 0)
-    }
-
-    90% {
-        clip: rect(49px, 9999px, 68px, 0)
-    }
-
-    95% {
-        clip: rect(8px, 9999px, 85px, 0)
-    }
-
-    100% {
-        clip: rect(83px, 9999px, 50px, 0)
-    }
-}
 
 .error:before {
     content: attr(data-text);

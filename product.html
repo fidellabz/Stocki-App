@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Kodecamp-Dashboard</title>
+    <title>Dashboard | Products</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -33,246 +33,246 @@
     <!-- bootstrap icon cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
+    <script src="assets/script/stocki-api.js"></script>
+
 </head>
 
 <body id="page-top" >
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+   <!-- Page Wrapper -->
+   <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav  sidebar sidebar-dark accordion shadow" id="accordionSidebar" style="background-color: #FAFAFC;">
+    <!-- Sidebar -->
+    <ul class="navbar-nav  sidebar sidebar-dark accordion shadow" id="accordionSidebar" style="background-color: #FAFAFC;">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                </div>
-                <div class="sidebar-brand-text text-start " style="margin-right: 80px;">
-                    <img src="assets/img/logo word.png" alt="">
-                </div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0 mt-4">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active mt-2">
-                <a class="nav-link" href="" style="color: #0074E4;">
-                    <span><img src="assets/img/Dashboard.png" alt=""></span>
-                    <span class="pt-2" style="font-size: 16px; font-weight: 700;">Dashboard</span></a>
-            </li>
-
-          
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item mt-2">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo" style="color: #1b1b1b;">
-                    <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                    <span style="font-size: 16px; font-weight: 400;">Users</span>
-                </a>
-                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded" style="color: #1b1b1b;">
-                        <h6 class="collapse-header">User Profile</h6>
-                        <a class="collapse-item" href="">Admin</a>
-                        <a class="collapse-item" href="">Client</a>
-                    </div>
-                </div> -->
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link" href="#" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities" style="color: #1b1b1b;">
-                    <span><i class="bi bi-clock" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                    <span style="font-size: 16px; font-weight: 400;">Notification</span>
-                </a>
-            </li>
-
-            <li class="nav-item ">
-                <a class="nav-link collapsed" href="#" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities" style="color: #1b1b1b;">
-                    <span><i class="bi bi-calendar-week" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                    <span class="" style="font-size: 16px; font-weight: 400;">Report</span>
-                </a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider mt-2">
-
-            <!-- Heading -->
-            <div class="sidebar-heading mt-2" style="color: #b2b2b2;">
-               Inventory
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+            <div class="sidebar-brand-icon rotate-n-15">
             </div>
+            <div class="sidebar-brand-text text-start " style="margin-right: 80px;">
+                <img src="assets/img/logo word.png" alt="">
+            </div>
+        </a>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
-                  <span><i class="bi bi-kanban" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                    <span style="font-size: 16px; font-weight: 400;">Product</span>
-                </a>
-            </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0 mt-4">
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" style="color: #1b1b1b;">
-                  <span><i class="bi bi-graph-up" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                    <span style="font-size: 16px; font-weight: 400;">Stock Level</span></a>
-            </li>
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active mt-2">
+            <a class="nav-link" href="/dashboard.html" style="color: #0074E4;">
+                <span><img src="assets/img/Dashboard.png" alt=""></span>
+                <span class="pt-2" style="font-size: 16px; font-weight: 700;">Dashboard</span></a>
+        </li>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" style="color: #1b1b1b;">
-                    <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                    <span style="font-size: 16px; font-weight: 400;">Supplier</span></a>
-            </li>
+      
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item mt-2">
+            <a class="nav-link collapsed" href="/users.html"
+                aria-expanded="true" aria-controls="collapseTwo" style="color: #1b1b1b;">
+                <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                <span style="font-size: 16px; font-weight: 400;">Users</span>
+            </a>
+            <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded" style="color: #1b1b1b;">
+                    <h6 class="collapse-header">User Profile</h6>
+                    <a class="collapse-item" href="">Admin</a>
+                    <a class="collapse-item" href="">Client</a>
+                </div>
+            </div> -->
+        </li>
 
-             <!-- Nav Item - Tables -->
-             <li class="nav-item">
-                <a class="nav-link" style="color: #1b1b1b;">
-                    <span><i class="bi bi-hourglass" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                    <span style="font-size: 16px; font-weight: 400;">Expiring Date</span></a>
-            </li>
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+            <a href="/coming-soon.html" class="nav-link" href="#" data-target="#collapseUtilities"
+                aria-expanded="true" aria-controls="collapseUtilities" style="color: #1b1b1b;">
+                <span><i class="bi bi-clock" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                <span style="font-size: 16px; font-weight: 400;">Notification</span>
+            </a>
+        </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block mt-2"></hr>
+        <li class="nav-item ">
+            <a href="/coming-soon.html" class="nav-link collapsed" href="#" data-target="#collapseUtilities"
+                aria-expanded="true" aria-controls="collapseUtilities" style="color: #1b1b1b;">
+                <span><i class="bi bi-calendar-week" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                <span class="" style="font-size: 16px; font-weight: 400;">Report</span>
+            </a>
+        </li>
 
-               <!-- Heading -->
-            <div class="sidebar-heading mt-2" style="color: #b2b2b2;">
-                Finance
-             </div>
- 
-             <!-- Nav Item - Pages Collapse Menu -->
-             <li class="nav-item">
-                 <a class="nav-link collapsed" data-target="#collapsePages"
-                     aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
-                     <span><i class="bi bi-coin" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                     <span style="font-size: 16px; font-weight: 400;">Sales Tracking</span>
-                 </a>
-              
-             </li>
- 
-             <!-- Nav Item - Charts -->
-             <li class="nav-item">
-                 <a class="nav-link" style="color: #1b1b1b;">
-                     <span><i class="bi bi-credit-card" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                     <span style="font-size: 16px; font-weight: 400;">Expenses</span></a>
-             </li>
- 
-             <!-- Nav Item - Tables -->
-             <li class="nav-item">
-                 <a class="nav-link" style="color: #1b1b1b;">
-                     <span><i class="bi bi-bar-chart-line" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                     <span style="font-size: 16px; font-weight: 400;">Profit Analysis</span></a>
-             </li>
- 
-             
-              <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block mt-2">
+        <!-- Divider -->
+        <hr class="sidebar-divider mt-2">
+
+        <!-- Heading -->
+        <div class="sidebar-heading mt-2" style="color: #b2b2b2;">
+           Inventory
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a href="/product.html" class="nav-link collapsed" data-target="#collapsePages"
+                aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
+              <span><i class="bi bi-kanban" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                <span style="font-size: 16px; font-weight: 400;">Product</span>
+            </a>
+        </li>
+
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a href="/coming-soon.html" class="nav-link" style="color: #1b1b1b;">
+              <span><i class="bi bi-graph-up" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                <span style="font-size: 16px; font-weight: 400;">Stock Level</span></a>
+        </li>
+
+        <!-- Nav Item - Tables -->
+        <li class="nav-item">
+            <a href="/coming-soon.html" class="nav-link" style="color: #1b1b1b;">
+                <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                <span style="font-size: 16px; font-weight: 400;">Supplier</span></a>
+        </li>
+
+         <!-- Nav Item - Tables -->
+         <li class="nav-item">
+            <a href="/coming-soon.html" class="nav-link" style="color: #1b1b1b;">
+                <span><i class="bi bi-hourglass" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                <span style="font-size: 16px; font-weight: 400;">Expiring Date</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block mt-2"></hr>
+
+           <!-- Heading -->
+        <div class="sidebar-heading mt-2" style="color: #b2b2b2;">
+            Finance
+         </div>
+
+         <!-- Nav Item - Pages Collapse Menu -->
+         <li class="nav-item">
+             <a href="/coming-soon.html" class="nav-link collapsed" data-target="#collapsePages"
+                 aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
+                 <span><i class="bi bi-coin" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                 <span style="font-size: 16px; font-weight: 400;">Sales Tracking</span>
+             </a>
+          
+         </li>
+
+         <!-- Nav Item - Charts -->
+         <li class="nav-item">
+             <a href="/coming-soon.html" class="nav-link" style="color: #1b1b1b;">
+                 <span><i class="bi bi-credit-card" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                 <span style="font-size: 16px; font-weight: 400;">Expenses</span></a>
+         </li>
+
+         <!-- Nav Item - Tables -->
+         <li class="nav-item">
+             <a href="/coming-soon.html" class="nav-link" style="color: #1b1b1b;">
+                 <span><i class="bi bi-bar-chart-line" style="color: #1b1b1b; font-size: 18px;"></i></span>
+                 <span style="font-size: 16px; font-weight: 400;">Profit Analysis</span></a>
+         </li>
 
          
+          <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block mt-2">
 
-          <!-- Nav Item - Pages Collapse Menu -->
-          <li class="nav-item mt-2">
-              <a class="nav-link collapsed" data-target="#collapsePages"
-                  aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
-                  <span><i class="bi bi-gear" style="color: #1b1b1b; font-size: 18px;"></i></span>
-                  <span style="font-size: 16px; font-weight: 400;">Settings</span>
-              </a>
-          </li>
+     
 
-          <!-- Nav Item - Charts -->
-          <li class="nav-item">
-              <a class="nav-link" href="logout.html" style="color: #ff0000;">
-                  <span><i class="bi bi-box-arrow-in-right" style="color: #ff0000; font-size: 18px;"></i></span>
-                  <span style="font-size: 16px; font-weight: 400;">Logout</span></a>
-          </li>
-        </ul>
-        <!-- End of Sidebar -->
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item mt-2">
+          <a href="/settings.html" class="nav-link collapsed" data-target="#collapsePages"
+              aria-expanded="true" aria-controls="collapsePages" style="color: #1b1b1b;">
+              <span><i class="bi bi-gear" style="color: #1b1b1b; font-size: 18px;"></i></span>
+              <span style="font-size: 16px; font-weight: 400;">Settings</span>
+          </a>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="/logout.html" style="color: #ff0000;">
+            <span><i class="bi bi-box-arrow-in-right" style="color: #ff0000; font-size: 18px;"></i></span>
+            <span id="logout" class="logout" style="font-size: 16px; font-weight: 400;">Logout</span></a>
+    </li>
+    </ul>
+    <!-- End of Sidebar -->
 
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
 
-    <main class="bg-white" style="margin: 0;">
-        <!-- Main Content -->
-        <div id="content">
+<main class="bg-white" style="margin: 0;">
+    <!-- Main Content -->
+    <div id="content">
 
-            <!-- Topbar -->
-            <nav
-                class="m-3 py-5 navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm rounded">
-                <div style="width:70rem">
-                    <h3 class="pt-4" style="font-size: 16px;font-weight:bold;">Dashboard - Kodecamp
-                        SuperMarket</h3>
-                    <p class="pb-3" style="font-size: 12px; font-weight: 400px;" id="datetime2"></p>
+        <!-- Topbar -->
+        <nav
+            class="m-3 py-5 navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm rounded">
+            <div style="width:70rem">
+                <h3 class="pt-4" style="font-size: 16px;font-weight:bold;">Dashboard - <span id="companyName"></span></h3>
+                <p class="pb-3" style="font-size: 12px; font-weight: 400px;" id="datetime2"></p>
+            </div>
+            <!-- Topbar Search -->
+            <form class=" d-none d-sm-inline-block form-inline mr-5 ml-md-3 my-2 my-md-0 navbar-search"
+                style="width:80rem">
+                <div class="input-group">
+                    <input type="text" class="form-control border" placeholder="Search..."
+                        aria-label="Search" aria-describedby="basic-addon2">
                 </div>
-                <!-- Topbar Search -->
-                <form class=" d-none d-sm-inline-block form-inline mr-5 ml-md-3 my-2 my-md-0 navbar-search"
-                    style="width:80rem">
-                    <div class="input-group">
-                        <input type="text" class="form-control border" placeholder="Search..."
-                            aria-label="Search" aria-describedby="basic-addon2">
-                    </div>
-                </form>
+            </form>
 
-                <div class=" d-flex ml-5" style="margin-right: 10px;">
-                    <div style="margin-left: 20px;">
-                        <img src="assets/img/iconamoon_scanner-light.png" alt="">
-                    </div>
+            <div class=" d-flex ml-5" style="margin-right: 10px;">
+                <!-- <div style="margin-left: 20px;">
+                    <img src="assets/img/iconamoon_scanner-light.png" alt="">
+                </div> -->
 
-                    <div style="margin-left: 20px;">
-                        <img src="assets/img/Notifications.png" alt="">
-                    </div>
+                <div style="margin-left: 20px;">
+                    <img src="assets/img/Notifications.png" alt="">
                 </div>
+            </div>
 
-                <div class="d-flex ml-5 mr-5">
-                    <img src="assets/img/Button Dark Mode.png" alt="">
-                </div>
-                <!-- Topbar Navbar -->
+            <!-- <div class="d-flex ml-5 mr-5">
+                <img src="assets/img/Button Dark Mode.png" alt="">
+            </div> -->
+            <!-- Topbar Navbar -->
 
 
 
-                <!-- Nav Item - User Information -->
-                <div class="nav-item dropdown no-arrow">
-                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">   
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee <br> Admin</span>
-                        <img class="img-profile rounded-circle mr-2" src="assets/img/Douglas.png">
-                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.563 6.46634L8.56302 10.4663C8.42969 10.5997 8.29635 10.6663 8.09635 10.6663C7.89635 10.6663 7.76302 10.5997 7.62969 10.4663L3.62969 6.46634C3.36302 6.19967 3.36302 5.79967 3.62969 5.53301C3.89635 5.26634 4.29635 5.26634 4.56302 5.53301L8.09635 9.06634L11.6297 5.53301C11.8964 5.26634 12.2964 5.26634 12.563 5.53301C12.8297 5.79967 12.8297 6.19967 12.563 6.46634Z" fill="black"/>
-                            <mask id="mask0_1675_2336" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="3" y="5" width="10" height="6">
-                            <path d="M12.563 6.46634L8.56302 10.4663C8.42969 10.5997 8.29635 10.6663 8.09635 10.6663C7.89635 10.6663 7.76302 10.5997 7.62969 10.4663L3.62969 6.46634C3.36302 6.19967 3.36302 5.79967 3.62969 5.53301C3.89635 5.26634 4.29635 5.26634 4.56302 5.53301L8.09635 9.06634L11.6297 5.53301C11.8964 5.26634 12.2964 5.26634 12.563 5.53301C12.8297 5.79967 12.8297 6.19967 12.563 6.46634Z" fill="white"/>
-                            </mask>
-                            <g mask="url(#mask0_1675_2336)">
-                            <rect x="-7.90234" width="16" height="16" fill="#6E6B7B"/>
-                            </g>
-                            </svg>
+            <!-- Nav Item - User Information -->
+            <div class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">   
+                    <span id="userName" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                    <!-- <span id="userName" class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee <br> Admin</span> -->
+                    <img class="img-profile rounded-circle mr-2" src="assets/img/Douglas.png">
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.563 6.46634L8.56302 10.4663C8.42969 10.5997 8.29635 10.6663 8.09635 10.6663C7.89635 10.6663 7.76302 10.5997 7.62969 10.4663L3.62969 6.46634C3.36302 6.19967 3.36302 5.79967 3.62969 5.53301C3.89635 5.26634 4.29635 5.26634 4.56302 5.53301L8.09635 9.06634L11.6297 5.53301C11.8964 5.26634 12.2964 5.26634 12.563 5.53301C12.8297 5.79967 12.8297 6.19967 12.563 6.46634Z" fill="black"/>
+                        <mask id="mask0_1675_2336" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="3" y="5" width="10" height="6">
+                        <path d="M12.563 6.46634L8.56302 10.4663C8.42969 10.5997 8.29635 10.6663 8.09635 10.6663C7.89635 10.6663 7.76302 10.5997 7.62969 10.4663L3.62969 6.46634C3.36302 6.19967 3.36302 5.79967 3.62969 5.53301C3.89635 5.26634 4.29635 5.26634 4.56302 5.53301L8.09635 9.06634L11.6297 5.53301C11.8964 5.26634 12.2964 5.26634 12.563 5.53301C12.8297 5.79967 12.8297 6.19967 12.563 6.46634Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_1675_2336)">
+                        <rect x="-7.90234" width="16" height="16" fill="#6E6B7B"/>
+                        </g>
+                        </svg>
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                    aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="/settings.html">
+                            <i class="bi bi-gear mr-2 text-gray-40"></i>
+                        Settings
                     </a>
-                    <!-- Dropdown - User Information -->
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                        aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="#">
-                                <i class="bi bi-gear mr-2 text-gray-40"></i>
-                            Settings
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="bi bi-sliders2 mr-2 text-gray-400"></i>
-                            Preferences
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="bi bi-credit-card mr-2 text-gray-400"></i>
-                            Plan & Billings
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2" style="color:red"></i>
-                            Logout
-                        </a>
-                    </div>
+                    <a class="dropdown-item" href="#">
+                        <i class="bi bi-sliders2 mr-2 text-gray-400"></i>
+                        Preferences
+                    </a>
+                    <a class="dropdown-item" href="pricingpg.html">
+                        <i class="bi bi-credit-card mr-2 text-gray-400"></i>
+                        Plan & Billings
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a id="logout" class="dropdown-item logout" href="logout.html" data-toggle="modal" data-target="#logoutModal">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2" style="color:red"></i>
+                        Logout
+                    </a>
                 </div>
-
-                </ul>
-            </nav>
-            <!-- End of Topbar -->
+            </div>
+        </nav>
+        <!-- End of Topbar -->
                 
 
                 <!-- Begin Page Content -->
@@ -312,35 +312,15 @@
                                        
                                         <tbody>
                                             <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
                                                 <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="rounded-circle mr-3">
-                                                            <img src="./assets/img/tb-Image.png" alt="" srcset="">
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0">Coca cola Pet Bottle</p>
-                                                            <p class="mb-0">35cl X 12</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Drinks</td>
-                                                <td>4,000.00</td>
-                                                <td>32</td>
-                                                <td>15</td>
-                                                <td>DR2345</td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="statusDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Status
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="statusDropdown2">
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Expiry soon', 'statusDropdown1')">Expiry soon</a>
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Good', 'statusDropdown1')">Good</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <div class="dropdown">
+                                                    <!-- <div class="dropdown">
                                                         <button class="btn dropdown-toggle" type="button" id="actionDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                             <i class="fas fa-ellipsis-h"></i>
                                                         </button>
@@ -349,338 +329,9 @@
                                                             <a class="dropdown-item" href="#">Export</a>
                                                             <a class="dropdown-item" href="#">Delete</a>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                 </td>
                                             </tr>
-                                            <tr class="rounded-4">
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="rounded-circle mr-3">
-                                                            <img src="./assets/img/tb-Image.png" alt="" srcset="">
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0">Coca cola Pet Bottle</p>
-                                                            <p class="mb-0">35cl X 12</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Drinks</td>
-                                                <td>4,000.00</td>
-                                                <td>32</td>
-                                                <td>15</td>
-                                                <td>DR2345</td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Status
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="statusDropdown2">
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Expiry soon', 'statusDropdown2')">Expiry soon</a>
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Good', 'statusDropdown2')">Good</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="actionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-h"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="actionDropdown">
-                                                            <a class="dropdown-item" href="#">Edit</a>
-                                                            <a class="dropdown-item" href="#">Export</a>
-                                                            <a class="dropdown-item" href="#">Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="rounded-4">
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="rounded-circle mr-3">
-                                                            <img src="./assets/img/tb-Image.png" alt="" srcset="">
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0">Coca cola Pet Bottle</p>
-                                                            <p class="mb-0">35cl X 12</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Drinks</td>
-                                                <td>4,000.00</td>
-                                                <td>32</td>
-                                                <td>15</td>
-                                                <td>DR2345</td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Status
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="statusDropdown2">
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Expiry soon', 'statusDropdown2')">Expiry soon</a>
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Good', 'statusDropdown2')">Good</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="actionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-h"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="actionDropdown">
-                                                            <a class="dropdown-item" href="#">Edit</a>
-                                                            <a class="dropdown-item" href="#">Export</a>
-                                                            <a class="dropdown-item" href="#">Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="rounded-4">
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="rounded-circle mr-3">
-                                                            <img src="./assets/img/tb-Image.png" alt="" srcset="">
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0">Coca cola Pet Bottle</p>
-                                                            <p class="mb-0">35cl X 12</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Drinks</td>
-                                                <td>4,000.00</td>
-                                                <td>32</td>
-                                                <td>15</td>
-                                                <td>DR2345</td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Status
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="statusDropdown2">
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Expiry soon', 'statusDropdown2')">Expiry soon</a>
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Good', 'statusDropdown2')">Good</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="actionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-h"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="actionDropdown">
-                                                            <a class="dropdown-item" href="#">Edit</a>
-                                                            <a class="dropdown-item" href="#">Export</a>
-                                                            <a class="dropdown-item" href="#">Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="rounded-4">
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="rounded-circle mr-3">
-                                                            <img src="./assets/img/tb-Image.png" alt="" srcset="">
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0">Coca cola Pet Bottle</p>
-                                                            <p class="mb-0">35cl X 12</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Drinks</td>
-                                                <td>4,000.00</td>
-                                                <td>32</td>
-                                                <td>15</td>
-                                                <td>DR2345</td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Status
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="statusDropdown2">
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Expiry soon', 'statusDropdown2')">Expiry soon</a>
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Good', 'statusDropdown2')">Good</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="actionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-h"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="actionDropdown">
-                                                            <a class="dropdown-item" href="#">Edit</a>
-                                                            <a class="dropdown-item" href="#">Export</a>
-                                                            <a class="dropdown-item" href="#">Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="rounded-4">
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="rounded-circle mr-3">
-                                                            <img src="./assets/img/tb-Image.png" alt="" srcset="">
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0">Coca cola Pet Bottle</p>
-                                                            <p class="mb-0">35cl X 12</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Drinks</td>
-                                                <td>4,000.00</td>
-                                                <td>32</td>
-                                                <td>15</td>
-                                                <td>DR2345</td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Status
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="statusDropdown2">
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Expiry soon', 'statusDropdown2')">Expiry soon</a>
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Good', 'statusDropdown2')">Good</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="actionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-h"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="actionDropdown">
-                                                            <a class="dropdown-item" href="#">Edit</a>
-                                                            <a class="dropdown-item" href="#">Export</a>
-                                                            <a class="dropdown-item" href="#">Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="rounded-4">
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="rounded-circle mr-3">
-                                                            <img src="./assets/img/tb-Image.png" alt="" srcset="">
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0">Coca cola Pet Bottle</p>
-                                                            <p class="mb-0">35cl X 12</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Drinks</td>
-                                                <td>4,000.00</td>
-                                                <td>32</td>
-                                                <td>15</td>
-                                                <td>DR2345</td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Status
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="statusDropdown2">
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Expiry soon', 'statusDropdown2')">Expiry soon</a>
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Good', 'statusDropdown2')">Good</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="actionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-h"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="actionDropdown">
-                                                            <a class="dropdown-item" href="#">Edit</a>
-                                                            <a class="dropdown-item" href="#">Export</a>
-                                                            <a class="dropdown-item" href="#">Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="rounded-4">
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="rounded-circle mr-3">
-                                                            <img src="./assets/img/tb-Image.png" alt="" srcset="">
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0">Coca cola Pet Bottle</p>
-                                                            <p class="mb-0">35cl X 12</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Drinks</td>
-                                                <td>4,000.00</td>
-                                                <td>32</td>
-                                                <td>15</td>
-                                                <td>DR2345</td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Status
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="statusDropdown2">
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Expiry soon', 'statusDropdown2')">Expiry soon</a>
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Good', 'statusDropdown2')">Good</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="actionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-h"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="actionDropdown">
-                                                            <a class="dropdown-item" href="#">Edit</a>
-                                                            <a class="dropdown-item" href="#">Export</a>
-                                                            <a class="dropdown-item" href="#">Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="rounded-4">
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="rounded-circle mr-3">
-                                                            <img src="./assets/img/tb-Image.png" alt="" srcset="">
-                                                        </div>
-                                                        <div>
-                                                            <p class="mb-0">Coca cola Pet Bottle</p>
-                                                            <p class="mb-0">35cl X 12</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>Drinks</td>
-                                                <td>4,000.00</td>
-                                                <td>32</td>
-                                                <td>15</td>
-                                                <td>DR2345</td>
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Status
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="statusDropdown2">
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Expiry soon', 'statusDropdown2')">Expiry soon</a>
-                                                            <a class="dropdown-item" href="#" onclick="updateDropdownText('Good', 'statusDropdown2')">Good</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <div class="dropdown">
-                                                        <button class="btn dropdown-toggle" type="button" id="actionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <i class="fas fa-ellipsis-h"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="actionDropdown">
-                                                            <a class="dropdown-item" href="#">Edit</a>
-                                                            <a class="dropdown-item" href="#">Export</a>
-                                                            <a class="dropdown-item" href="#">Delete</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                          
                                         </tbody>
                                     </table>              
                                 </div>
@@ -713,61 +364,15 @@
 
         </div>
     
-    <!-- End of Page Wrapper --> 
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="assets/script/chart-area-demo.js"></script>
-    <script src="assets/script/chart-pie-demo.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
-
+   
     <script>
         // Dropdown for the status button
         function updateDropdownText(text, dropdownId) {
         $('#' + dropdownId).text(text);
     }
     
-        // Data for the chart
-        var data = {
-        //   labels: ['Blue', 'green', 'red'],
-          datasets: [{
-            data: [54, 20, 25,],
-            backgroundColor: ['#006AFF', '#52C93F', '#FF2727']
-          }]
-        };
-    
-        // Options for the chart
-        var options = {
-          cutout: '70%', // Adjust the cutout percentage for the doughnut effect
-          responsive: true,
-          maintainAspectRatio: false
-        };
-    
-        // Get the context of the canvas element we want to select
-        var ctx = document.getElementById('myDoughnutChart').getContext('2d');
-    
-        // Create the doughnut chart
-        var myDoughnutChart = new Chart(ctx, {
-          type: 'doughnut',
-          data: data,
-          options: options
-        });
-      </script>
+    // Pagination Script
 
-      <!-- Pagination Script -->
-    <script>
         $.fn.pageMe = function(opts){
     var $this = this,
         defaults = {
@@ -870,13 +475,77 @@
     }
 };
 
-$(document).ready(function(){
-    
-  $('#myTable').pageMe({pagerSelector:'#myPager',showPrevNext:true,hidePageNumbers:false,perPage:4});
-    
-});
+$(document).ready(function () {
+        $('#dataTable').pageMe({
+            pagerSelector: '#myPager',
+            showPrevNext: true,
+            hidePageNumbers: false,
+            perPage: 4
+        });
+    });
     </script>
- 
+ <script>
+    
+    const logoutElements = document.querySelectorAll('#logout');
+
+    function btnLogout() {
+        window.location.href = "index.html";
+    }
+
+    logoutElements.forEach(element => {
+        element.addEventListener('click', btnLogout);
+    });
+
+    // Get Current date
+    // date
+    function updateDateTime() {
+        const now = new Date();
+
+        // Get the current date and time as a string with long date format
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: true,
+        };
+        const currentDateTime = now.toLocaleDateString(undefined, options);
+        document.querySelectorAll('#datetime1, #datetime2').forEach(element => {
+            element.textContent = currentDateTime;
+        });
+    }
+    updateDateTime();
+
+
+    function getTimeOfDay() {
+        const now = new Date();
+        const currentHour = now.getHours();
+
+        let timeOfDay;
+
+        if (currentHour >= 5 && currentHour < 12) {
+            timeOfDay = 'Morning';
+        } else if (currentHour >= 12 && currentHour < 18) {
+            timeOfDay = 'Afternoon';
+        } else {
+            timeOfDay = 'Evening';
+        }
+
+        // Assuming you want to select an element with ID 'salute' and set its content
+        const saluteElement = document.querySelector('#salute');
+
+        // Check if the element exists before trying to manipulate it
+        if (saluteElement) {
+            saluteElement.textContent = `Good ${timeOfDay}!`;
+        }
+    }
+    getTimeOfDay()
+
+
+</script>
 
 </body>
 

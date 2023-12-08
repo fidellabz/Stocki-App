@@ -30,6 +30,18 @@ form{
 .password-container{
     position: relative;
 }
+/* btn */
+.btn-b{
+    color: #fff;
+    transition: background-color 1.5s ease-in-out !important;
+    padding: 12px 20px 12px 20px !important;
+}
+
+.btn-b:hover {
+    background-color: #003c77 !important;
+    color: #fff;
+}
+
   .fa-eye{
     position: absolute;
     top: 28%;

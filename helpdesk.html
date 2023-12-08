@@ -19,12 +19,12 @@
     <!-- Header -->
     <header class="container-fluid position-fixed w-100 ">
         <nav class="navbar navbar-expand-lg">
-            <div class="container" style="gap: 700px;"> 
-                <a class="navbar-brand  fs-6 ms-3" href="#"><img src="assets/img/stocki logo.png" alt=""></a>            
+            <div class="container" style="gap: 850px;"> 
+                <a class="navbar-brand  fs-6 ms-3" href="./index.html"><img src="assets/img/stocki logo.png" alt=""></a>            
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="gap: 20px;">
                     <div>
                         <div class="d-flex gap-2">
-                           <button class="btn text-primary"><span> <a><i class="bi bi-search text-primary"></i></a></span>  Submit a Request </button>
+                           <button class="btn text-primary" href="./submit.html"><span> <a><i class="bi bi-search text-primary" style="white-space: nowrap !important;"></i></a></span>  Submit a Request </button>
                         </div>                
                     </div>
                     <a href="./login.html" class="btn btn-outline-col me-3 " style="white-space: nowrap;font-size: 12px;">Sign In</a>
@@ -32,7 +32,7 @@
             </div>
         </nav>
   </header> 
-    <section class="container top" style="background-color: #ff5722;">
+    <section class="container top" style="background-color: #ff5722;max-width: 100% !important;">
         <div class="container-hero" style="padding-left:18%;">
             <div class="hero-title text-white" style="width:718px; height:178px;">
                 <h1 class="text-center">How can we help?</h1>
@@ -51,26 +51,26 @@
             <div class="col">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                      <h5 class="card-title py-5 text-center">Getting Started</h5>                  
-                      <p class="card-text text-center">Get the basics on Stocki best practice adding and updating
+                      <h5 class="card-title py-5 text-center" style="font-family: poppins sans-serif;">Getting Started</h5>                  
+                      <p class="card-text text-center" style="font-family: poppins sans-serif;">Get the basics on Stocki best practice adding and updating
                         items, setting up inventory and more.</p>                  
                     </div>
                   </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem;font-family: poppins sans-serif;">
                   <div class="card-body">
-                    <h5 class="card-title py-5 text-center">Training Resources</h5>                  
-                    <p class="card-text text-center ">How to make Subscription changes and manage and update your
+                    <h5 class="card-title py-5 text-center" style="font-family: poppins sans-serif;">Training Resources</h5>                  
+                    <p class="card-text text-center " style="font-family: poppins sans-serif;">How to make Subscription changes and manage and update your
                         account settings.</p>                  
                   </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title py-5 text-center">FAQs</h5>                  
-                    <p class="card-text text-center">Commonly asked questions including plan information accessing 
+                <div class="card" style="width: 18rem;font-family: poppins sans-serif;">
+                  <div class="card-body" style="font-family: poppins sans-serif;">
+                    <h5 class="card-title py-5 text-center" style="font-family: poppins sans-serif;">FAQs</h5>                  
+                    <p class="card-text text-center" style="font-family: poppins sans-serif;">Commonly asked questions including plan information accessing 
                         Stocki and upcoming features.</p>                  
                   </div>
                 </div>
@@ -130,9 +130,16 @@
         <div class="foot-text" style="width:100%; height:178px; color:#ff5722; padding-top:150px;">
             <h1>Cant find what you are looking for?</h1>
             <h4 class="py-3">Let us help you!</h4>
-            <div class="pt-3 btn">                
-                <a href="./login.html" class="btn btn-outline-col" style="white-space: nowrap;font-size: 12px;">Submit a Request</a>
-            </div>                   
+            <!--
+                <div>
+                    <a href="./submit.html"><button class="btn btn-outline-col" Style="">Submit a Request</button></a>
+                </div>
+            -->
+            <div class="d-flex justify-content-center">
+                <a href="./submit.html" class="btn btn-outline-col" style="white-space: nowrap;font-size: 12px;">Submit a Request</a>
+            </div>
+             
+                              
         </div>         
     </section>
     <footer>

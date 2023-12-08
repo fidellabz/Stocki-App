@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Dashboard | Settings</title>
+    <title>Dashboard | coming soon</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -29,24 +29,25 @@
 
     <!-- Custom styles for this template-->
     <link href="assets/css/dashboard1.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/users.css">
 
     <!-- bootstrap icon cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
     <script src="assets/script/stocki-api.js"></script>
-
+    
 </head>
 
 <body id="page-top" >
 
-     <!-- Page Wrapper -->
-     <div id="wrapper">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
 
         <!-- Sidebar -->
         <ul class="navbar-nav  sidebar sidebar-dark accordion shadow" id="accordionSidebar" style="background-color: #FAFAFC;">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon rotate-n-15">
                 </div>
                 <div class="sidebar-brand-text text-start " style="margin-right: 80px;">
@@ -59,7 +60,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active mt-2">
-                <a class="nav-link" href="" style="color: #0074E4;">
+                <a class="nav-link" href="/dashboard.html" style="color: #0074E4;">
                     <span><img src="assets/img/Dashboard.png" alt=""></span>
                     <span class="pt-2" style="font-size: 16px; font-weight: 700;">Dashboard</span></a>
             </li>
@@ -185,10 +186,10 @@
 
           <!-- Nav Item - Charts -->
           <li class="nav-item">
-              <a class="nav-link" href="/logout.html" style="color: #ff0000;">
-                  <span><i class="bi bi-box-arrow-in-right" style="color: #ff0000; font-size: 18px;"></i></span>
-                  <span id="logout" class="logout" style="font-size: 16px; font-weight: 400;">Logout</span></a>
-          </li>
+            <a class="nav-link" href="/logout.html" style="color: #ff0000;">
+                <span><i class="bi bi-box-arrow-in-right" style="color: #ff0000; font-size: 18px;"></i></span>
+                <span id="logout" class="logout" style="font-size: 16px; font-weight: 400;">Logout</span></a>
+        </li>
         </ul>
         <!-- End of Sidebar -->
 
@@ -273,112 +274,20 @@
                 </div>
             </nav>
             <!-- End of Topbar -->
-                
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid bg-white">
-                  
-                    <!-- Table Content Row -->
-                    <div class="container-fluid ">
-                <div class="shadow" style="width:100%;border-radius:12px; height: 100%;">
-                </nav>
-
-            <section>
-                <div class="shadow mb-5" style="width: 90%; margin: auto; border-radius: 12px; ">
-                  <div> 
-                <div class="setings-header d-flex justify-content-center mt-5 pt-5" 
-                style=" width: 80%; white-space: nowrap;">
-
-                  <div class="px-3" style=" color: #0074E4; border-bottom: 1px solid  #0074E4; font-size: 18px; font-weight: 500;"><p>Account Setting</p></div>
-                  <div class="px-3" style=" border-bottom: 1px solid #b2b2b2; font-size: 18px; font-weight: 500;"><p>Login & Security</p></div>
-                  <div class="px-3" style=" border-bottom: 1px solid #b2b2b2; font-size: 18px; font-weight: 500;"><p>Preferences</p></div>
-                  <div class="px-3" style=" border-bottom: 1px solid #b2b2b2; font-size: 18px; font-weight: 500;"><p>Manage store</p></div>
-                  <div class="px-3" style=" border-bottom: 1px solid #b2b2b2; font-size: 18px; font-weight: 500;"><p>Plan & Billing</p></div>
-
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <main class="bg-white text-center" style="margin: 0; height:140vh;">
+                <div class="pt-5 mt-5">
+                    <svg width="131" height="130" viewBox="0 0 131 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="65.5" cy="65" r="65" fill="#EBEBF0"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M103.336 92.9729L67.212 25.7238C66.9727 25.278 66.5085 25 66.0034 25C65.4984 25 65.0341 25.278 64.7948 25.7238L28.6638 92.9729C28.4349 93.3993 28.4466 93.9149 28.6945 94.3304C28.9425 94.746 29.3901 95.0003 29.8732 95H102.135C102.617 94.9973 103.062 94.7418 103.308 94.3268C103.554 93.9117 103.564 93.3979 103.336 92.9729ZM69.4325 86.7329H62.5703V79.8555H69.4325V86.7329ZM63.2559 75.7431H68.7456L69.7749 48.2334H62.2266L63.2559 75.7431Z" fill="#FF1313" fill-opacity="0.8"/>
+                    </svg>
                 </div>
-
-                <div class="col-auto mt-5 "
-                 style="width: 170px; height: 25vh; border: 1px dashed #000; 
-                 border-radius: 18px; background-color: #EDF2F6; margin-left: 50px;">
-                 <div class="mt-4 text-center">
-                    <img src="assets/img/gallery-add.png" alt="">
-                    <p class="pt-2" style="font-size: 12px; font-weight: 500;">Upload your <br> photo</p>
-                 </div>
-                </div>
-
-               <hr  style="width: 88%; margin: auto; margin-top: 20px;">
-
-
-               <div class="input-tag d-flex justify-content-between mt-5" style="width: 80%; margin: auto;">
-                 <div style="margin-left: -50px;">
-                    <form action="submit_form.php" method="post">
-                        <div class="mb-3 my-4">
-                            <label for="Companyname" style="font-size: 14px; font-weight: 500;">Company name</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Input your company name " 
-                            style="color: #C7C9D9; width: 350px; height: 50px; font-size: 14px; font-weight: 400;">
-                          </div>
-
-                          <div class="mb-3 my-4">
-                            <label for="Companyname" style="font-size: 14px; font-weight: 500;">Phone number</label>
-                            <input type="phon number" class="form-control" id="exampleFormControlInput1" placeholder="Phone number" 
-                            style="color: #C7C9D9; width: 350px; height: 50px; font-size: 14px; font-weight: 400;">
-                          </div>
-
-                          <div class="d-flex my-4">
-
-                          <div class="mb-3 ">
-                            <label for="Companyname" style="font-size: 14px; font-weight: 500;">Date format</label>
-                            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="" 
-                            style="color: #C7C9D9; width: 150px; height: 50px; font-size: 14px; font-weight: 400;">
-                          </div>
-
-                          <div class="mb-3 mx-4">
-                            <label for="Companyname" style="font-size: 14px; font-weight: 500;">Country</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nigeria " 
-                            style="color: #C7C9D9; width: 150px; height: 50px; font-size: 14px; font-weight: 400;">
-                          </div>
-
-                        </div>
-                    </form>
-                 </div>
-
-                 <div style="margin-right: -80px ;">
-                    <form action="">
-                        <div class="mb-3 mx-5 my-4">
-                            <label for="Companyname" style="font-size: 14px; font-weight: 500;">E-mail</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="hello@example.com " 
-                            style="color: #C7C9D9; width: 350px; height: 50px; font-size: 14px; font-weight: 400;">
-                          </div>
-
-                          <div class="mb-3 mx-5 my-4">
-                            <label for="Companyname" style="font-size: 14px; font-weight: 500;">Currency</label>
-                            <input type="currency" class="form-control" id="exampleFormControlInput1" placeholder="NGN- Nigeria Currency" 
-                            style="color: #C7C9D9; width: 350px; height: 50px; font-size: 14px; font-weight: 400;">
-                          </div>
-
-                          <div class="mb-3 mx-5 my-4">
-                            <label for="time" style="font-size: 14px; font-weight: 500;">Time Zone</label>
-                            <input type="phon number" class="form-control" id="exampleFormControlInput1" placeholder="(GMT 1:00) Western African Time (Africa/Lagos)" 
-                            style="color: #C7C9D9; width: 350px; height: 50px; font-size: 14px; font-weight: 400;">
-                          </div>
-
-                         
-
-                        </div>
-                    </form>
-                 </div>
-
-                 <div class="mt-5" style="height: 20vh;">
-                    <button class="btn blue-cta-btn " style="width: 150px; white-space: nowrap; margin-left: 50px;"> Update Profile</button>
-                    <button class="btn  btn-outline-col mx-3" style="width: 150px; white-space: nowrap;"> Reset changes</button>
-                 </div>
-
-               </div>
-
-                </div>
-                </div> 
-            </section>
-                
+                <h1 style="font-size: 48px; font-weight: 400;">Not Available</h1>
+                <h1 style="font-size: 30px; font-weight: 400;">
+                    This feature is currently not Available. 
+                    <br>We will be back shortly.</h1>
                 </main>
                 <!-- End of Topbar -->
                 
@@ -409,14 +318,6 @@
     <script src="assets/script/chart-pie-demo.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 
-    <script>
-        $("#phone").intlTelInput({
-          utilsScript: "path/to/intl-tel-input/js/utils.js", // Include utils.js for better performance
-          autoPlaceholder: true,
-          nationalMode: false, // Allows entering national numbers (without the country code)
-          initialCountry: "+234", // Country code for Nigeria
-        });
-      </script>
     <script>
     
         const logoutElements = document.querySelectorAll('#logout');

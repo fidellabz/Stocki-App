@@ -1,5 +1,38 @@
+
+
+header {
+    background-color: #fff !important;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 100 !important;
+  }
+  
+.navbar.nav{
+    column-gap: 40px !important;
+  }
+
+.btn-outline-col {
+    font-size: 12px;
+    border: 1px solid #FF5722 !important;
+    color: #FF5722 !important;
+    transition: background-color 1.5s ease-in-out !important;
+    padding: 12px 22px 12px 22px !important;
+    padding: 12px 22px 12px 22px !important;
+  }
+
+  .btn-outline-col:hover {
+    background-color: #852d12 !important;
+    color: #fff !important;
+    transform: scale(1.0);
+    transform: scale(1.0);
+  
+  }
+  
+
 .b{
     background-color: #0074E4;
+    width: 100% !important;
 }
 .a{
     color: #FF5722;
@@ -20,6 +53,13 @@ option{
     width: auto !important;
 }
 
+main{
+    margin-top: 100px !important;
+}
+
+footer{
+    height: 5px !important;
+}
 
 @media only screen and  (max-width: 500px) {
 .s{
