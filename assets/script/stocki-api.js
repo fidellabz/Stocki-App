@@ -87,9 +87,7 @@ function openModal(modalId) {
   $('#' + modalId).modal('show');
 }
 
-
 // Login function
-
 function loginUser() {
   const form = document.getElementById('loginForm');
   const companyEmail = form.elements.companyEmail.value;
@@ -311,12 +309,12 @@ function addProduct() {
   }
 
   const productDetails = document.getElementById('productDetails').value;
-const category = document.getElementById('category').value;
-const price = parseFloat(document.getElementById('price').value);
-const stock = parseInt(document.getElementById('stock').value);
-const quantitySold = parseInt(document.getElementById('quantitySold').value);
-const sku = document.getElementById('sku').value;
-const status = document.getElementById('status').value;
+  const category = document.getElementById('category').value;
+  const price = parseFloat(document.getElementById('price').value);
+  const stock = parseInt(document.getElementById('stock').value);
+  const quantitySold = parseInt(document.getElementById('quantitySold').value);
+  const sku = document.getElementById('sku').value;
+  const status = document.getElementById('status').value;
 
 
   const payload = {
@@ -340,11 +338,12 @@ const status = document.getElementById('status').value;
   })
     .then(response => response.json())
     .then(data => {
-      console.log('Product added successfully:', data);
+      
       // You can handle the response as needed
-
-      if (data._id) {
+      if (!data._id) {
         openModal('addProductModal');
+        console.log('Product added successfully:', data);
+
       } else {
         openModal('errorProductModal');
       }

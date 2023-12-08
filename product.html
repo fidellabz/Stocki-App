@@ -419,10 +419,9 @@
     
                     </div>
                 </main>
-
         </div>
  <!-- Add Product Successful Modal -->
-<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content text-center" style="padding-top: 30px; padding-bottom: 30px;">
           <!-- Centered image -->
@@ -431,7 +430,7 @@
           </div>
         <h2 class="modal-title text-center">Product Added Successful!</h2>
         <div class="modal-body">
-            <button type="button" class="btn btn-secondary" onclick="closeModal('errorModal')">Close</button>
+            <button type="button" class="btn btn-secondary" onclick="closeModal('addProductModal')">Close</button>
         </div>
       </div>
     </div>
@@ -448,7 +447,7 @@
         <h5 class="modal-title">Error</h5>
         <div class="modal-body">
           <p>An error occurred Product not added. Please try again.</p>
-          <button type="button" class="btn btn-secondary" onclick="closeModal('errorModal')">Close</button>
+          <button type="button" class="btn btn-secondary" onclick="closeModal('errorProductModal')">Close</button>
         </div>
       </div>
     </div>
@@ -579,7 +578,7 @@ $(document).ready(function () {
     const logoutElements = document.querySelectorAll('#logout');
 
     function btnLogout() {
-        window.location.href = "index.html";
+        window.location.href = "login.html";
     }
 
     logoutElements.forEach(element => {
@@ -609,6 +608,14 @@ $(document).ready(function () {
     }
     updateDateTime();
 </script>
+
+<script>
+    document.getElementById('addProductForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission
+    
+      addProduct(); // Call the function when the form is submitted
+    });
+    </script>
 
 </body>
 
