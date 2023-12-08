@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Stocki | Dashboard</title>
+    <title>Stocki | Dashboard</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -35,6 +36,9 @@
 
     <script src="assets/script/stocki-api.js"></script>
     
+
+    <script src="assets/script/stocki-api.js"></script>
+    
 </head>
 
 <body id="page-top" >
@@ -46,6 +50,7 @@
         <ul class="navbar-nav  sidebar sidebar-dark accordion shadow" id="accordionSidebar" style="background-color: #FAFAFC;">
 
             <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon rotate-n-15">
                 </div>
@@ -67,6 +72,7 @@
           
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item mt-2">
+                <a class="nav-link collapsed" href="/users.html"
                 <a class="nav-link collapsed" href="/users.html"
                     aria-expanded="true" aria-controls="collapseTwo" style="color: #1b1b1b;">
                     <span><i class="bi bi-people" style="color: #1b1b1b; font-size: 18px;"></i></span>
@@ -797,20 +803,15 @@
             options: options
         });
 
-        const logoutElements = document.querySelectorAll('#logout');
-
-        function btnLogout() {
-            window.location.href = "login.html";
+          // Handle upgrade plan action
+          function upgradePlan() {
+           
         }
 
-        logoutElements.forEach(element => {
-            element.addEventListener('click', btnLogout);
-        });
-
-        // Get Current date
-        // date
-        function updateDateTime() {
-            const now = new Date();
+// create a function to update the date and time
+function updateDateTime() {
+    // create a new `Date` object
+    const now = new Date();
 
             // Get the current date and time as a string with long date format
             const options = {

@@ -61,6 +61,15 @@ font-weight: 700;
 .signup-form select {
   border: none;
   margin: auto;
+  /* color: #c7c9d9 !important; */
+  font-size: 12px;
+  font-weight: 600;
+  /* border: 1px solid #c7c9d9; */
+}
+
+.signup-form select {
+  border: none;
+  margin: auto;
   color: #c7c9d9 !important;
   font-size: 12px;
   font-weight: 600;
