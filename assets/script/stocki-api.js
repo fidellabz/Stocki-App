@@ -299,7 +299,7 @@ function updateTableWithData(data) {
 getItemsWithToken();
 
 function addProduct() {
-  const apiUrl = "https://bg-group2-backend.onrender.com/v1/products"; // Replace with your actual API endpoint
+  const apiUrl = "https://bg-group2-backend.onrender.com/v1/products";
   const token = localStorage.getItem('token'); // Retrieve the token from local storage
 
   if (!token) {
@@ -340,7 +340,7 @@ function addProduct() {
     .then(data => {
       
       // You can handle the response as needed
-      if (!data._id) {
+      if (data._id) {
         openModal('addProductModal');
         console.log('Product added successfully:', data);
 
